@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="gbk"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-bean"
 	prefix="bean"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-html"
@@ -10,289 +10,289 @@ String path = request.getContextPath();
 
 <html>
 	<head>
-		<title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---ÌîĞ´¶©µ¥</title>
+		<title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---å¡«å†™è®¢å•</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
 		<link rel="stylesheet" type="text/css" href="<%=path %>/style/wuliu_back.css" />
 
 		<script type="text/javascript"> 
-		  <%--  ÅĞ¶ÏÊÕ¼şÈËĞÕÃû --%>
+		  <%--  åˆ¤æ–­æ”¶ä»¶äººå§“å --%>
 		function checkReceiveName() {
 	    var receivename = document.getElementById("rn").childNodes[0].value;
 	    if(receivename=="") {
-	      var msg="<font color=red><b>¡Á</b></font>";
+	      var msg="<font color=red><b>Ã—</b></font>";
 	       document.getElementById("rname").innerHTML = msg;
 	       return false;
 	    }
 	    else if(!(/^\S{1,19}$/.test(receivename))){
-	       var msg="<font color=red><b>¡Á</b></font>";
+	       var msg="<font color=red><b>Ã—</b></font>";
 	       document.getElementById("rname").innerHTML = msg;
 	       return false;
 	      }
 	    else {
-	       var msg="<font color=green><b>¡Ì</b></font>";
+	       var msg="<font color=green><b>âˆš</b></font>";
 	       document.getElementById("rname").innerHTML = msg;
 	      return true;
 	   }
 	}
 	
-	  <%--  ÅĞ¶Ï¼Ä¼şÈËĞÕÃû --%>
+	  <%--  åˆ¤æ–­å¯„ä»¶äººå§“å --%>
 		function checkSendName() {
 	       var sendname = document.getElementById("sn").childNodes[0].value;
 	       if(sendname=="") {
-	         var msg="<font color=red><b>¡Á</b></font>";
+	         var msg="<font color=red><b>Ã—</b></font>";
 	         document.getElementById("sname").innerHTML = msg;
 	         return false;
 	       }
 	        else if(!(/^\S{1,19}$/.test(sendname))){
-	        var msg="<font color=red><b>¡Á</b></font>";
+	        var msg="<font color=red><b>Ã—</b></font>";
 	         document.getElementById("sname").innerHTML = msg;
 	         return false;
 	        }
 	       else {
-	        var msg="<font color=green><b>¡Ì</b></font>";
+	        var msg="<font color=green><b>âˆš</b></font>";
 	       document.getElementById("sname").innerHTML = msg;
 	         return true;
 	       }
 	  }
 	
 	
-	     <%--  ÅĞ¶ÏÊÕ¼şÈËµØÖ· --%>
+	     <%--  åˆ¤æ–­æ”¶ä»¶äººåœ°å€ --%>
 		function checkReceiveAddress() {
 	       var receiveraddress = document.getElementById("ra").childNodes[0].value;
 	  if(receiveraddress=="") {
-	    var msg2="<font color=red><b>¡Á</b></font>";
+	    var msg2="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("raddress").innerHTML = msg2;
 	    return false;
 	    }
 	   else if(receiveraddress.length > 200){
-	     var msg2="<font color=red><b>¡Á</b></font>";
+	     var msg2="<font color=red><b>Ã—</b></font>";
 	     document.getElementById("raddress").innerHTML = msg2;
 	      return false;
 	   }
 	    else {
-	     var msg="<font color=green><b>¡Ì</b></font>";
+	     var msg="<font color=green><b>âˆš</b></font>";
 	       document.getElementById("raddress").innerHTML = msg;
 	     return true;
 	    }
     }
-       <%--  ÅĞ¶Ï¼Ä¼şÈËµØÖ· --%>
+       <%--  åˆ¤æ–­å¯„ä»¶äººåœ°å€ --%>
        function checkSendAddress() {
 	   var receivename = document.getElementById("sa").childNodes[0].value;
 	   if(receivename=="") {
-	    var msg="<font color=red><b>¡Á</b></font>";
+	    var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("saddress").innerHTML = msg;
 	    return false;
 	   }
 	    else if(receivename.length > 200){
-	    var msg="<font color=red><b>¡Á</b></font>";
+	    var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("saddress").innerHTML = msg;
 	    return false;
 	    }
 	   else {
-	    var msg="<font color=green><b>¡Ì</b></font>";
+	    var msg="<font color=green><b>âˆš</b></font>";
 	       document.getElementById("saddress").innerHTML = msg;
 	     return true;
 	   }
 	}
 	
-	 <%--  ÅĞ¶ÏÊÕ¼şÈË¹Ì¶¨µç»° --%>
+	 <%--  åˆ¤æ–­æ”¶ä»¶äººå›ºå®šç”µè¯ --%>
 	 function checkReceiveTel() {
 	   var receivename = document.getElementById("rt").childNodes[0].value;
 	   if(receivename!="" &&!(/^((\d{3}-\d{8})|(\d{4}-\d{7})|(\d{11}))$/.test(receivename))){
-		   var msg="<font color=red><b>¡Á</b></font>";
+		   var msg="<font color=red><b>Ã—</b></font>";
 	       document.getElementById("rtel").innerHTML = msg;
 		   return false;
 		 } 
 	   else {
-	     var msg="<font color=green><b>¡Ì</b></font>";
+	     var msg="<font color=green><b>âˆš</b></font>";
 	     document.getElementById("rtel").innerHTML = msg;
 	     return true;
 	   }
 	}
 	
-	<%--  ÅĞ¶Ï¼Ä¼şÈË¹Ì¶¨µç»° --%>
+	<%--  åˆ¤æ–­å¯„ä»¶äººå›ºå®šç”µè¯ --%>
 	 function checkSendTel() {
 	   var receivename = document.getElementById("st").childNodes[0].value;
 	   if(receivename!=""&&!(/^((\d{3}-\d{8})|(\d{4}-\d{7})|(\d{11}))$/.test(receivename))){
-		   var msg="<font color=red><b>¡Á</b></font>";
+		   var msg="<font color=red><b>Ã—</b></font>";
 	       document.getElementById("stel").innerHTML = msg;
 		   return false;
 		 }  else {
-		  var msg="<font color=green><b>¡Ì</b></font>";
+		  var msg="<font color=green><b>âˆš</b></font>";
 	       document.getElementById("stel").innerHTML = msg;
 	     return true;
 	   }
 	}
 	
 	
-	<%--  ÅĞ¶ÏÊÕ¼şÈËÒÆ¶¯µç»° --%>
+	<%--  åˆ¤æ–­æ”¶ä»¶äººç§»åŠ¨ç”µè¯ --%>
 	function checkReceiveMobile() {
 	   var receivename = document.getElementById("rm").childNodes[0].value;
 	   if(receivename=="") {
-	    var msg="<font color=red><b>¡Á</b></font>";
+	    var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("rmobile").innerHTML = msg;
 	    return false;
 	   }else if(!(/^\d{11}$/.test(receivename))){
-		   var msg="<font color=red><b>¡Á</b></font>";
+		   var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("rmobile").innerHTML = msg;
 		   return false;
 		 }else {
-		  var msg="<font color=green><b>¡Ì</b></font>";
+		  var msg="<font color=green><b>âˆš</b></font>";
 	       document.getElementById("rmobile").innerHTML = msg;
 	        return true;
 	    }
 	}
 	
-   <%--  ÅĞ¶Ï¼Ä¼şÈËÒÆ¶¯µç»° --%>
+   <%--  åˆ¤æ–­å¯„ä»¶äººç§»åŠ¨ç”µè¯ --%>
    function checkSendMobile() {
 	    var receivename = document.getElementById("sm").childNodes[0].value;
 	    if(receivename=="") {
-	    var msg="<font color=red><b>¡Á</b></font>";
+	    var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("smobile").innerHTML = msg;
 	    return false;
 	   }else if(!(/^\d{11}$/.test(receivename))){
-		   var msg="<font color=red><b>¡Á</b></font>";
+		   var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("smobile").innerHTML = msg;
 		   return false;
 		 }else {
-		  var msg="<font color=green><b>¡Ì</b></font>";
+		  var msg="<font color=green><b>âˆš</b></font>";
 	       document.getElementById("smobile").innerHTML = msg;
 	     return true;
 	   }
 	}
 	
-	<%--  ÅĞ¶ÏÊÕ¼şÈËÓÊ±à --%>
+	<%--  åˆ¤æ–­æ”¶ä»¶äººé‚®ç¼– --%>
 	function checkReceivePostCode() {
 	   var receivename = document.getElementById("rp").childNodes[0].value;
 	   if(receivename=="") {
-	    var msg="<font color=red><b>¡Á</b></font>";
+	    var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("rpostcode").innerHTML = msg;
 	    return false;
 	   } else if(!(/^\d+$/.test(receivename))){
-		  var msg="<font color=red><b>¡Á</b></font>";
+		  var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("rpostcode").innerHTML = msg;
 		   return false;
 		 }
 		else if(receivename.length > 20){
-		   var msg="<font color=red><b>¡Á</b></font>";
+		   var msg="<font color=red><b>Ã—</b></font>";
 	       document.getElementById("rpostcode").innerHTML = msg;
 		   return false;
 	   }
 		else {
-		   var msg="<font color=green><b>¡Ì</b></font>";
+		   var msg="<font color=green><b>âˆš</b></font>";
 	       document.getElementById("rpostcode").innerHTML = msg;
 	       return true;
 	   }
 	}
 	
-	<%--  ÅĞ¶Ï¼Ä¼şÈËÓÊ±à --%>
+	<%--  åˆ¤æ–­å¯„ä»¶äººé‚®ç¼– --%>
 	function checkSendPostCode() {
 	   var receivename = document.getElementById("sp").childNodes[0].value;
 	   if(receivename=="") {
-	    var msg="<font color=red><b>¡Á</b></font>";
+	    var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("spostcode").innerHTML = msg;
 	    return false;
 	   } else if(!(/^\d+$/.test(receivename))){
-		  var msg="<font color=red><b>¡Á</b></font>";
+		  var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("spostcode").innerHTML = msg;
 		   return false;
 		 }
 	  else if(receivename.length > 20){
-	    var msg="<font color=red><b>¡Á</b></font>";
+	    var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("spostcode").innerHTML = msg;
 		   return false;
 	  }
 	   else {
-	    var msg="<font color=green><b>¡Ì</b></font>";
+	    var msg="<font color=green><b>âˆš</b></font>";
 	       document.getElementById("spostcode").innerHTML = msg;
 	     return true;
 	   }
 	}
 	
-	<%--  ÅĞ¶ÏÎïÆ·ÖØÁ¿ --%>
+	<%--  åˆ¤æ–­ç‰©å“é‡é‡ --%>
 	function checkWeight() {
 	   var receivename = document.getElementById("we").childNodes[0].value;
 	   if(receivename=="") {
-	    var msg="<font color=red><b>¡Á</b></font>";
+	    var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("w").innerHTML = msg;
 	    return false;
 	   } else if(!(/^\d+(\.\d+)?$/.test(receivename))){
-	    var msg="<font color=red><b>¡Á</b></font>";
+	    var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("w").innerHTML = msg;
 		    return false;
 		 }
 		 else if(receivename<=0 || receivename>9999){
-		  var msg="<font color=red><b>¡Á</b></font>";
+		  var msg="<font color=red><b>Ã—</b></font>";
 	      document.getElementById("w").innerHTML = msg;
 		    return false;
 		 } 
 		  else {
-		  var msg="<font color=green><b>¡Ì</b></font>";
+		  var msg="<font color=green><b>âˆš</b></font>";
 	       document.getElementById("w").innerHTML = msg;
 	     return true;
 	   }
 	}
 	
-	<%--  ÅĞ¶ÏÎïÆ·Ìå»ı --%>
+	<%--  åˆ¤æ–­ç‰©å“ä½“ç§¯ --%>
 	function checkVolume(){
 	   var receivename = document.getElementById("vo").childNodes[0].value;
 	   if(receivename=="") {
-	    var msg="<font color=red><b>¡Á</b></font>";
+	    var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("v").innerHTML = msg;
 	    return false;
 	   } else if(!(/^\d+(\.\d+)?$/.test(receivename))){
-	   var msg="<font color=red><b>¡Á</b></font>";
+	   var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("v").innerHTML = msg;
 		    return false;
 		 }
      else if(receivename<=0 || receivename>9999){
-      var msg="<font color=red><b>¡Á</b></font>";
+      var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("v").innerHTML = msg;
 		    return false;
      }
       else {
-		  var msg="<font color=green><b>¡Ì</b></font>";
+		  var msg="<font color=green><b>âˆš</b></font>";
 	       document.getElementById("v").innerHTML = msg;
 	     return true;
 	   }
 	}
 	
-	   <%--  ÅĞ¶ÏÎïÆ·±¸×¢ --%>
+	   <%--  åˆ¤æ–­ç‰©å“å¤‡æ³¨ --%>
 		function checkRemark(){
 	   var receivename = document.getElementById("re").childNodes[0].value;
 	   if(receivename=="") {
-	    var msg="<font color=red><b>¡Á</b></font>";
+	    var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("r").innerHTML = msg;
 	    return false;
 	   }
 	   else if(receivename.length >200){
-	    var msg="<font color=red><b>¡Á</b></font>";
+	    var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("r").innerHTML = msg;
 	    return false;
 	   }
 	   else {
-	    var msg="<font color=green><b>¡Ì</b></font>";
+	    var msg="<font color=green><b>âˆš</b></font>";
 	       document.getElementById("r").innerHTML = msg;
 	     return true;
 	   }
 	}
-	<%--  ÅĞ¶ÏÎïÆ·¹À¼Û --%>
+	<%--  åˆ¤æ–­ç‰©å“ä¼°ä»· --%>
 	function checkGoodsPrice() {
 	   var receivename = document.getElementById("gp").childNodes[0].value;
 	   if(receivename=="") {
 	     return true;
 	   }else if(!(/^\d+(\.\d+)?$/.test(receivename))){
-	   var msg="<font color=red><b>¡Á</b></font>";
+	   var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("g").innerHTML = msg;
 		    return false;
 		 } 
 		 else if(receivename<=0 || receivename>9999){
-		 var msg="<font color=red><b>¡Á</b></font>";
+		 var msg="<font color=red><b>Ã—</b></font>";
 	    document.getElementById("g").innerHTML = msg;
 		    return false;
 		 }
 		 else {
-		  var msg="<font color=green><b>¡Ì</b></font>";
+		  var msg="<font color=green><b>âˆš</b></font>";
 	       document.getElementById("g").innerHTML = msg;
 		   return true;
 		 }
@@ -337,7 +337,7 @@ String path = request.getContextPath();
 	<c:if test="${UserSession.power.powerid==3}">
 		<center>
 			<h1> 
-				ÌîĞ´ĞÂ¶©µ¥
+				å¡«å†™æ–°è®¢å•
 			</h1>
 
 			<html:form action="/check/order?methodName=addOrder"
@@ -345,17 +345,17 @@ String path = request.getContextPath();
 				<table border="1" class="t1" width="760" height="400">
 					<tr>
 						<td colspan="2" align="center">
-							ÊÕ¼şÈËÏêÏ¸ĞÅÏ¢
+							æ”¶ä»¶äººè¯¦ç»†ä¿¡æ¯
 							<br>
 						</td>
 						<td colspan="2" align="center">
-							¼Ä¼şÈËÏêÏ¸ĞÅÏ¢
+							å¯„ä»¶äººè¯¦ç»†ä¿¡æ¯
 							<br>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							ĞÕÃû
+							å§“å
 							<br>
 						</td>
 						<td id="rn">
@@ -365,7 +365,7 @@ String path = request.getContextPath();
 							<br>
 						</td>
 						<td>
-							ĞÕÃû
+							å§“å
 							<br>
 						</td>
 						<td id="sn">
@@ -377,7 +377,7 @@ String path = request.getContextPath();
 					</tr>
 					<tr>
 						<td>
-							µØÖ·
+							åœ°å€
 							<br>
 						</td>
 						<td id="ra">
@@ -388,7 +388,7 @@ String path = request.getContextPath();
 							<br>
 						</td>
 						<td>
-							µØÖ·
+							åœ°å€
 							<br>
 						</td>
 						<td id="sa">
@@ -401,29 +401,29 @@ String path = request.getContextPath();
 					</tr>
 					<tr>
 						<td>
-							¹Ì¶¨µç»°
+							å›ºå®šç”µè¯
 							<br>
 						</td>
 						<td id="rt">
 							<html:text property="receiveTel" onblur="checkReceiveTel()" />
-							<html:errors property="receiveTel" />£¨Ñ¡Ìî£©
+							<html:errors property="receiveTel" />ï¼ˆé€‰å¡«ï¼‰
 							<span id="rtel"></span>
 							<br>
 						</td>
 						<td>
-							¹Ì¶¨µç»°
+							å›ºå®šç”µè¯
 							<br>
 						</td>
 						<td id="st">
 							<html:text property="sendTel" onblur="checkSendTel()" />
-							<html:errors property="sendTel" />£¨Ñ¡Ìî£©
+							<html:errors property="sendTel" />ï¼ˆé€‰å¡«ï¼‰
 							<span id="stel"></span>
 							<br>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							µç»°£¨ÊÖ»ú£©
+							ç”µè¯ï¼ˆæ‰‹æœºï¼‰
 							<br>
 						</td>
 						<td id="rm">
@@ -433,7 +433,7 @@ String path = request.getContextPath();
 							<br>
 						</td>
 						<td>
-							µç»°£¨ÊÖ»ú£©
+							ç”µè¯ï¼ˆæ‰‹æœºï¼‰
 							<br>
 						</td>
 						<td id="sm">
@@ -445,7 +445,7 @@ String path = request.getContextPath();
 					</tr>
 					<tr>
 						<td>
-							ÓÊ±à
+							é‚®ç¼–
 							<br>
 						</td>
 						<td id="rp">
@@ -456,7 +456,7 @@ String path = request.getContextPath();
 							<br>
 						</td>
 						<td>
-							ÓÊ±à
+							é‚®ç¼–
 							<br>
 						</td>
 						<td id="sp">
@@ -468,18 +468,18 @@ String path = request.getContextPath();
 					</tr>
 					<tr>
 						<td colspan="2" align="center">
-							»õÎïĞÅÏ¢
+							è´§ç‰©ä¿¡æ¯
 							<br>
 						</td>
 						<td colspan="2" align="center">
-							Ö§¸¶ĞÅÏ¢
+							æ”¯ä»˜ä¿¡æ¯
 							<br>
 						</td>
 					</tr>
 
 					<tr>
 						<td>
-							ÖØÁ¿£¨kg£©
+							é‡é‡ï¼ˆkgï¼‰
 							<br>
 						</td>
 						<td id="we">
@@ -490,7 +490,7 @@ String path = request.getContextPath();
 						</td>
 
 						<td>
-							ÎïÆ·¹À¼Û£¨£¤Ôª£©
+							ç‰©å“ä¼°ä»·ï¼ˆï¿¥å…ƒï¼‰
 							<br>
 						</td>
 						<td id="gp">
@@ -502,7 +502,7 @@ String path = request.getContextPath();
 					</tr>
 					<tr>
 						<td>
-							Ìå»ı£¨m3£©
+							ä½“ç§¯ï¼ˆm3ï¼‰
 							<br>
 						</td>
 						<td id="vo">
@@ -515,13 +515,13 @@ String path = request.getContextPath();
 					</tr>
 					<tr>
 						<td>
-							±¸×¢(×¢Ã÷»õÎïÃ÷Ï¸)
+							å¤‡æ³¨(æ³¨æ˜è´§ç‰©æ˜ç»†)
 							<br>
 						</td>
 						<td colspan="3" id="re">
 							<html:textarea property="remark" cols="65" rows="3"
 								onblur="checkRemark()" />
-							<html:errors property="remark" />£¨Ñ¡Ìî|200£©
+							<html:errors property="remark" />ï¼ˆé€‰å¡«|200ï¼‰
 							<span id="r"></span>
 							<br>
 							<br>
@@ -533,9 +533,9 @@ String path = request.getContextPath();
 					&nbsp;
 					</td>
 						<td colspan="2">
-							<html:submit>Ìá½»</html:submit>
+							<html:submit>æäº¤</html:submit>
 		               &nbsp;&nbsp;&nbsp;&nbsp;
-							<html:reset>ÖØÖÃ</html:reset>
+							<html:reset>é‡ç½®</html:reset>
 						</td>
 					</tr>
 				</table>
@@ -550,7 +550,7 @@ String path = request.getContextPath();
 			<br>
 			<br>
 			<h1>
-				ÄúÎŞÈ¨·ÃÎÊ´ËÒ³Ãæ£¡£¡£¡
+				æ‚¨æ— æƒè®¿é—®æ­¤é¡µé¢ï¼ï¼ï¼
 			</h1>
 		</c:if>
 	</body>

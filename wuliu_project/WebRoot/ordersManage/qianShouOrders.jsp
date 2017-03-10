@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
 	String path = request.getContextPath();
@@ -10,7 +10,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>GLOBAL物流管理系统后台管理---签收订单</title>
+		<title>GLOBAL鐗╂祦绠＄悊绯荤粺鍚庡彴绠＄悊---绛炬敹璁㈠崟</title>
 		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 		<meta http-equiv="description" content="this is my page">
 		<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
@@ -25,7 +25,7 @@
 		var i; 
 	    for (i=0;i<theform.select_orders.length;i++){
 	           if (theform.select_orders.options[i].text == s){
-	              	document.getElementById("sp").innerHTML = "该订单已经通过扫码！！";
+	              	document.getElementById("sp").innerHTML = "璇ヨ鍗曞凡缁忛�氳繃鎵爜锛侊紒";
 					return;
 	           }
 	    }
@@ -60,7 +60,7 @@
 				    }
 				    theform.submit();
 				} else{
-					document.getElementById("sp").innerHTML = "没有签收的订单！";
+					document.getElementById("sp").innerHTML = "娌℃湁绛炬敹鐨勮鍗曪紒";
 					return;
 				}
 			}
@@ -79,7 +79,7 @@
 			function checkOrderNo(){
 				var orderNo = document.getElementById("vid").value;
 				if(orderNo == ""){
-					var msg = "订单号不能为空，请输入！";
+					var msg = "璁㈠崟鍙蜂笉鑳戒负绌猴紝璇疯緭鍏ワ紒";
 					document.getElementById("sp").innerHTML = msg;
 					return;
 				}
@@ -114,7 +114,7 @@
 	<c:if test="${UserSession.power.powerid==3}">
 		<center>
 			<h1>
-				订单签收
+				璁㈠崟绛炬敹
 			</h1>
 			<table border="0" class="t1" width="250" higth="50">
 				<tr>
@@ -130,7 +130,7 @@
 				<table border="0" class="t1">
 					<tr>
 						<td>
-							条形码：
+							鏉″舰鐮侊細
 						</td>
 						<td>
 
@@ -138,7 +138,7 @@
 
 						</td>
 						<td>
-							<input type="button" value="添加" onclick="checkOrderNo()" />
+							<input type="button" value="娣诲姞" onclick="checkOrderNo()" />
 						</td>
 					</tr>
 
@@ -154,14 +154,14 @@
 
 						<td>
 							<input name="btn_select_dltany" type="button" title="delete any"
-								onclick="fun_select_dltany()" value="删除" />
+								onclick="fun_select_dltany()" value="鍒犻櫎" />
 						</td>
 					</tr>
 
 					<tr>
 						<td colspan="3" align="center">
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<input type="button" value="签收订单" onclick="checkAll()">
+							<input type="button" value="绛炬敹璁㈠崟" onclick="checkAll()">
 						</td>
 
 					</tr>
@@ -178,7 +178,7 @@
 			<br>
 			<br>
 			<h1>
-				您无权访问此页面！！！
+				鎮ㄦ棤鏉冭闂椤甸潰锛侊紒锛�
 			</h1>
 		</c:if>
 	</body>

@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
 	String path = request.getContextPath();
@@ -12,7 +12,7 @@
 	<head>
 		<base href="<%=basePath%>">
 
-		<title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---ĞŞ¸ÄÅäËÍµãĞÅÏ¢</title>
+		<title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---ä¿®æ”¹é…é€ç‚¹ä¿¡æ¯</title>
 
 		<meta http-equiv="pragma" content="no-cache">
 		<meta http-equiv="cache-control" content="no-cache">
@@ -28,16 +28,16 @@
 		function checkTel(){
 		  var tel = document.forms[0].tel.value;
 		  if(tel == ""){
-		    var msgTel ="<font color=red><b>¡Á</b></font>";
+		    var msgTel ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checktel").innerHTML=msgTel;
 		     return false;
 		 } else if(!(/^((\d{3}-\d{8})|(\d{4}-\d{7})|(\d{11}))$/.test(tel))){
-		   var msgTel ="<font color=red><b>¡Á</b></font>";
+		   var msgTel ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("checktel").innerHTML=msgTel;
 		   return false;
 		 }
 		 else{
-		    var msgTel ="<font color=green><b>¡Ì</b></font>";
+		    var msgTel ="<font color=green><b>âˆš</b></font>";
 		    document.getElementById("checktel").innerHTML=msgTel;
 		    return true;
 		 }
@@ -46,22 +46,22 @@
 		function checkSS(){
 		  var ss = document.forms[0].startScope.value;
 		  if(ss == ""){
-		    var msgSS ="<font color=red><b>¡Á</b></font>";
+		    var msgSS ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checkstartScope").innerHTML=msgSS;
 		     return false;
 		 }
 		  else if(!(/^\d+(\.\d+)?$/.test(ss))){
-		   var msgSS ="<font color=red><b>¡Á</b></font>";
+		   var msgSS ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checkstartScope").innerHTML=msgSS;
 		    return false;
 		 }
 		 else if(ss<=0 || ss>9999){
-		    var msgSS ="<font color=red><b>¡Á</b></font>";
+		    var msgSS ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checkstartScope").innerHTML=msgSS;
 		    return false;
 		 }
 		 else{
-		    var msgSS ="<font color=green><b>¡Ì</b></font>";
+		    var msgSS ="<font color=green><b>âˆš</b></font>";
 		    document.getElementById("checkstartScope").innerHTML=msgSS;
 		    return true;
 		 }
@@ -70,22 +70,22 @@
        function checkstartScope(){
 		  var sp1 = document.forms[0].startPrice.value;
 		  if(sp1 == ""){
-		     var msgSp1 ="<font color=red><b>¡Á</b></font>";
+		     var msgSp1 ="<font color=red><b>Ã—</b></font>";
 		     document.getElementById("checkstartPrice").innerHTML=msgSp1;
 		     return false;
 		 }
 		  else if(!(/^\d+(\.\d+)?$/.test(sp1))){
-		    var msgSp1 ="<font color=red><b>¡Á</b></font>";
+		    var msgSp1 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checkstartPrice").innerHTML=msgSp1;
 		    return false;
 		 }
 		 else if(sp1<=0 || sp1>9999){
-		    var msgSp1 ="<font color=red><b>¡Á</b></font>";
+		    var msgSp1 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checkstartPrice").innerHTML=msgSp1;
 		    return false;
 		  }
 		 else{
-		    var msgSp1 ="<font color=green><b>¡Ì</b></font>";
+		    var msgSp1 ="<font color=green><b>âˆš</b></font>";
 		    document.getElementById("checkstartPrice").innerHTML=msgSp1;
 		    return true;
 		 }
@@ -94,22 +94,22 @@
 		 function checksecondPrice(){
 		  var sp2 = document.forms[0].secondPrice.value;
 		  if(sp2 == ""){
-		     var msgSp2 ="<font color=red><b>¡Á</b></font>";
+		     var msgSp2 ="<font color=red><b>Ã—</b></font>";
 		     document.getElementById("checksecondPrice").innerHTML=msgSp2;
 		     return false;
 		 }
 		  else if(!(/^\d+(\.\d+)?$/.test(sp2))){
-		    var msgSp2 ="<font color=red><b>¡Á</b></font>";
+		    var msgSp2 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checksecondPrice").innerHTML=msgSp2;
 		    return false;
 		 }
 		 else if(sp2<=0 || sp2>9999){
-		   var msgSp2 ="<font color=red><b>¡Á</b></font>";
+		   var msgSp2 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checksecondPrice").innerHTML=msgSp2;
 		    return false;
 		  }
 		 else{
-		     var msgSp1 ="<font color=green><b>¡Ì</b></font>";
+		     var msgSp1 ="<font color=green><b>âˆš</b></font>";
 		     document.getElementById("checksecondPrice").innerHTML=msgSp1;
 		     return true;
 		 }
@@ -118,22 +118,22 @@
 		 function checkstartvolumescope(){
 		  var sp2 = document.forms[0].startvolumescope.value;
 		  if(sp2 == ""){
-		     var msgSp2 ="<font color=red><b>¡Á</b></font>";
+		     var msgSp2 ="<font color=red><b>Ã—</b></font>";
 		     document.getElementById("checkstartvolumescope").innerHTML=msgSp2;
 		     return false;
 		 }
 		  else if(!(/^\d+(\.\d+)?$/.test(sp2))){
-		    var msgSp2 ="<font color=red><b>¡Á</b></font>";
+		    var msgSp2 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checkstartvolumescope").innerHTML=msgSp2;
 		    return false;
 		 }
 		 else if(sp2<=0 || sp2>9999){
-		   var msgSp2 ="<font color=red><b>¡Á</b></font>";
+		   var msgSp2 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checkstartvolumescope").innerHTML=msgSp2;
 		    return false;
 		  }
 		 else{
-		     var msgSp1 ="<font color=green><b>¡Ì</b></font>";
+		     var msgSp1 ="<font color=green><b>âˆš</b></font>";
 		     document.getElementById("checkstartvolumescope").innerHTML=msgSp1;
 		     return true;
 		 }
@@ -142,22 +142,22 @@
 		 function checkstartvolumeprice(){
 		  var sp2 = document.forms[0].startvolumescope.value;
 		  if(sp2 == ""){
-		     var msgSp2 ="<font color=red><b>¡Á</b></font>";
+		     var msgSp2 ="<font color=red><b>Ã—</b></font>";
 		     document.getElementById("checkstartvolumeprice").innerHTML=msgSp2;
 		     return false;
 		 }
 		  else if(!(/^\d+(\.\d+)?$/.test(sp2))){
-		    var msgSp2 ="<font color=red><b>¡Á</b></font>";
+		    var msgSp2 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checkstartvolumeprice").innerHTML=msgSp2;
 		    return false;
 		 }
 		 else if(sp2<=0 || sp2>9999){
-		   var msgSp2 ="<font color=red><b>¡Á</b></font>";
+		   var msgSp2 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checkstartvolumeprice").innerHTML=msgSp2;
 		    return false;
 		  }
 		 else{
-		     var msgSp1 ="<font color=green><b>¡Ì</b></font>";
+		     var msgSp1 ="<font color=green><b>âˆš</b></font>";
 		     document.getElementById("checkstartvolumeprice").innerHTML=msgSp1;
 		     return true;
 		 }
@@ -166,22 +166,22 @@
 		function checksecondvolumeprice(){
 		  var sp2 = document.forms[0].secondvolumeprice.value;
 		  if(sp2 == ""){
-		     var msgSp2 ="<font color=red><b>¡Á</b></font>";
+		     var msgSp2 ="<font color=red><b>Ã—</b></font>";
 		     document.getElementById("checksecondvolumeprice").innerHTML=msgSp2;
 		     return false;
 		 }
 		  else if(!(/^\d+(\.\d+)?$/.test(sp2))){
-		    var msgSp2 ="<font color=red><b>¡Á</b></font>";
+		    var msgSp2 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checksecondvolumeprice").innerHTML=msgSp2;
 		    return false;
 		 }
 		 else if(sp2<=0 || sp2>9999){
-		   var msgSp2 ="<font color=red><b>¡Á</b></font>";
+		   var msgSp2 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checksecondvolumeprice").innerHTML=msgSp2;
 		    return false;
 		  }
 		 else{
-		     var msgSp1 ="<font color=green><b>¡Ì</b></font>";
+		     var msgSp1 ="<font color=green><b>âˆš</b></font>";
 		     document.getElementById("checksecondvolumeprice").innerHTML=msgSp1;
 		     return true;
 		 }
@@ -209,14 +209,14 @@
 	<body>
 	<c:if test="${UserSession.power.powerid==1}">
 		<center>
-		<h1>ĞŞ¸ÄÅäËÍµãĞÅÏ¢</h1>
+		<h1>ä¿®æ”¹é…é€ç‚¹ä¿¡æ¯</h1>
 			<form
 				action="<%=path%>/check/deliverySpot.do?methodName=updatePeiSongDian&id=${Deliveryspot.deliveryspotid }"
 				method="post" onsubmit="return ckeckForm()">
 				<table border="1" class="t1" width="400">
 					<tr>
 						<td>
-							Õ¾µãÃû³Æ£º
+							ç«™ç‚¹åç§°ï¼š
 						</td>
 						<td>
 							<input type="text" name="name" value="${Deliveryspot.name }" readonly="true" />
@@ -224,7 +224,7 @@
 					</tr>
 					<tr>
 						<td>
-							TEL£º
+							TELï¼š
 						</td>
 						<td>
 							<input type="text" name="tel" value="${Deliveryspot.tel }" onblur="checkTel()"/>
@@ -233,7 +233,7 @@
 					</tr>
 					<tr>
 						<td>
-							Õ¾µãµØÖ·£º
+							ç«™ç‚¹åœ°å€ï¼š
 						</td>
 						<td>
 							<input type="text"
@@ -243,68 +243,68 @@
 					</tr>
 					<tr>
 						<td>
-							Ê×¹«½ï·¶Î§£º
+							é¦–å…¬æ–¤èŒƒå›´ï¼š
 						</td>
 						<td>
 							<input type="text" name="startScope"
 								value="${Deliveryspot.startscope }"  onblur="checkSS()"/>
-							¹«½ï
+							å…¬æ–¤
 							<span id="checkstartScope"></span>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							Ê×¹«½ï¼Û¸ñ£º
+							é¦–å…¬æ–¤ä»·æ ¼ï¼š
 						</td>
 						<td>
 							<input type="text" name="startPrice"
-								value="${Deliveryspot.startprice }" onblur="checkstartScope()"/>Ôª
+								value="${Deliveryspot.startprice }" onblur="checkstartScope()"/>å…ƒ
 							
 							<span id="checkstartPrice"></span>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							´Î¹«½ï¼Û¸ñ£º
+							æ¬¡å…¬æ–¤ä»·æ ¼ï¼š
 						</td>
 						<td>
 							<input type="text" name="secondPrice"
 								value="${Deliveryspot.secondprice }" onblur="checksecondPrice()"/>
-							Ôª/¹«½ï
+							å…ƒ/å…¬æ–¤
 							<span id="checksecondPrice"></span>
 						</td>
 					</tr>
 					
 					<tr>
 						<td>
-							Ê×Ìå»ı·¶Î§£º
+							é¦–ä½“ç§¯èŒƒå›´ï¼š
 						</td>
 						<td>
 							<input type="text" name="startvolumescope"
 								value="${Deliveryspot.startvolumescope }"  onblur="checkstartvolumescope()"/>
-							Á¢·½Ã×
+							ç«‹æ–¹ç±³
 							<span id="checkstartvolumescope"></span>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							Ê×Ìå»ı¼Û¸ñ£º
+							é¦–ä½“ç§¯ä»·æ ¼ï¼š
 						</td>
 						<td>
 							<input type="text" name="startvolumeprice"
-								value="${Deliveryspot.startvolumeprice }" onblur="checkstartvolumeprice()"/>Ôª
+								value="${Deliveryspot.startvolumeprice }" onblur="checkstartvolumeprice()"/>å…ƒ
 							
 							<span id="checkstartvolumeprice"></span>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							´ÎÌå»ı¼Û¸ñ£º
+							æ¬¡ä½“ç§¯ä»·æ ¼ï¼š
 						</td>
 						<td>
 							<input type="text" name="secondvolumeprice"
 								value="${Deliveryspot.secondvolumeprice }" onblur="checksecondvolumeprice()"/>
-							Ôª/Á¢·½Ã×
+							å…ƒ/ç«‹æ–¹ç±³
 							<span id="checksecondvolumeprice"></span>
 						</td>
 					</tr>
@@ -313,9 +313,9 @@
 					&nbsp;
 					</td>
 						<td>
-							<input type="submit" value="ĞŞ¸Ä" />
+							<input type="submit" value="ä¿®æ”¹" />
 							&nbsp;&nbsp;&nbsp;&nbsp;
-							<input type="reset" value="ÖØÖÃ" />
+							<input type="reset" value="é‡ç½®" />
 						</td>
 					</tr>
 				</table>
@@ -331,7 +331,7 @@
 			<br>
 			<br>
 			<h1>
-				ÄúÎŞÈ¨·ÃÎÊ´ËÒ³Ãæ£¡£¡£¡
+				æ‚¨æ— æƒè®¿é—®æ­¤é¡µé¢ï¼ï¼ï¼
 			</h1>
 		</c:if>
 	</body>

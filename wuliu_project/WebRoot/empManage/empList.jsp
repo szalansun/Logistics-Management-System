@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-bean"
 	prefix="bean"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-html"
@@ -16,7 +16,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---Ô±¹¤ÏêÏ¸ĞÅÏ¢</title>
+		<title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---å‘˜å·¥è¯¦ç»†ä¿¡æ¯</title>
 		<base href="<%=basePath%>">
 
 		<link rel="stylesheet" type="text/css"
@@ -36,13 +36,13 @@
 		<table class="t1" width="550" border="0">
 			<tr>
 				<td>
-					Ô±¹¤±àºÅ£º
+					å‘˜å·¥ç¼–å·ï¼š
 				</td>
 				<td>
 					${employeeList.empno }
 				</td>
 				<td>
-					ËùÊôÅäËÍµã£º
+					æ‰€å±é…é€ç‚¹ï¼š
 				</td>
 				<td>
 					${employeeList.deliveryspot.name }
@@ -50,20 +50,20 @@
 			</tr>
 			<tr>
 				<td>
-					ĞÕÃû£º
+					å§“åï¼š
 				</td>
 				<td>
 					${employeeList.name }
 				</td>
 				<td>
-					ĞÔ±ğ£º
+					æ€§åˆ«ï¼š
 				</td>
 				<td>
 					<c:if test="${employeeList.gender == '1' }">
-						ÄĞ
+						ç”·
 						</c:if>
 					<c:if test="${employeeList.gender == '0' }">
-						Å®
+						å¥³
 						</c:if>
 				</td>
 			</tr>
@@ -72,13 +72,13 @@
 			</tr>
 			<tr>
 				<td>
-					Ö°Î»£º
+					èŒä½ï¼š
 				</td>
 				<td>
 					<font color="red">${employeeList.position.name }</font>
 				</td>
 				<td>
-					Ğ½Ë®£º
+					è–ªæ°´ï¼š
 				</td>
 				<td>
 					${employeeList.salary }
@@ -86,13 +86,13 @@
 			</tr>
 			<tr>
 				<td>
-					ÈëÖ°ÈÕÆÚ£º
+					å…¥èŒæ—¥æœŸï¼š
 				</td>
 				<td>
 					${employeeList.startwordtime }
 				</td>
 				<td>
-					³öÉúÈÕÆÚ£º
+					å‡ºç”Ÿæ—¥æœŸï¼š
 				</td>
 				<td>
 					${employeeList.birthday }
@@ -100,13 +100,13 @@
 			</tr>
 			<tr>
 				<td>
-					Éí·İÖ¤ºÅ£º
+					èº«ä»½è¯å·ï¼š
 				</td>
 				<td>
 					${employeeList.cardid }
 				</td>
 				<td>
-					µç»°ºÅÂë£º
+					ç”µè¯å·ç ï¼š
 				</td>
 				<td>
 					${employeeList.tel }
@@ -114,13 +114,13 @@
 			</tr>
 			<tr>
 				<td>
-					µØÖ·£º
+					åœ°å€ï¼š
 				</td>
 				<td>
 					${employeeList.address }
 				</td>
 				<td>
-					µç×ÓÓÊÏä£º
+					ç”µå­é‚®ç®±ï¼š
 				</td>
 				<td>
 					${employeeList.email }

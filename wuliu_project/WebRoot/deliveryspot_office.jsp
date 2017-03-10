@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
 	String path = request.getContextPath();
@@ -12,7 +12,7 @@
 	<head>
 		<base href="<%=basePath%>">
 
-		<title>GLOBAL��������ϵͳ��̨����---${UserSession.deliveryspot.name}---���͵�</title>
+		<title>GLOBAL物流管理系统后台管理---${UserSession.deliveryspot.name}---配送点</title>
 
 		<meta http-equiv="pragma" content="no-cache">
 		<meta http-equiv="cache-control" content="no-cache">
@@ -25,7 +25,7 @@
 
 		<link rel="stylesheet" type="text/css" href="<%=path %>/style/wuliu_back.css" />
 		<script language="javascript" src="<%=path %>/js/wuliu_office.js"></script>
-        <script language="javascript"> defaultStatus = "��ӭ����GLOBAL����---${UserSession.deliveryspot.name}���͵㣡";  </script>
+        <script language="javascript"> defaultStatus = "欢迎来到GLOBAL物流---${UserSession.deliveryspot.name}配送点！";  </script>
         
 	</head>
 	<body>
@@ -35,88 +35,88 @@
 				<div id="globallink">
 					<ul>
 						<li>
-							<a href="index.jsp">�칫��ҳ</a>
+							<a href="index.jsp">办公首页</a>
 						</li>
 						<li>
-							<a href="<%=path %>/company.do?methodName=initAllDeliverySpot">��˾��ҳ</a>
+							<a href="<%=path %>/company.do?methodName=initAllDeliverySpot">公司首页</a>
 						</li>
 						<li>
-							<a href="<%=path %>/login.do?methodName=loginOut">�˳�</a>
+							<a href="<%=path %>/login.do?methodName=loginOut">退出</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div id="left">
 			<div id="menu">
-					<a onClick="test(2)">Ա������</a>
+					<a onClick="test(2)">员工管理</a>
 				</div>
 				<div id="menu_down2" class="menu_down" style="display:block">
 					<ul>
 					  <li>
-							<a href="<%=path %>/check/employee.do?method=listDeliverySpot" target="main">��Ա����ְ</a>
+							<a href="<%=path %>/check/employee.do?method=listDeliverySpot" target="main">新员工入职</a>
 						</li>
 						<li>
-							<a href="<%=path %>/check/selectEmployee.do?method=queryByEmpNO&dsID=${UserSession.deliveryspot.deliveryspotid}" target="main">�鿴Ա����Ϣ</a>
+							<a href="<%=path %>/check/selectEmployee.do?method=queryByEmpNO&dsID=${UserSession.deliveryspot.deliveryspotid}" target="main">查看员工信息</a>
 						</li>
 					</ul>
 				</div>
 				<div id="menu">
-					<a onClick="test(1)">�û�����</a>
+					<a onClick="test(1)">用户管理</a>
 				</div>
 				<div id="menu_down1" class="menu_down" style="display:block">
 					<ul>
 						<li>
-							<a href="<%=path %>/userManage/addUser.jsp" target="main">�����û�</a>
+							<a href="<%=path %>/userManage/addUser.jsp" target="main">添加用户</a>
 						</li>
 
 						<li>
-							<a href="<%=path %>/check/user.do?methodName=list&dsid=${UserSession.deliveryspot.deliveryspotid}" target="main">�鿴�û�</a>
+							<a href="<%=path %>/check/user.do?methodName=list&dsid=${UserSession.deliveryspot.deliveryspotid}" target="main">查看用户</a>
 						</li>
 					</ul>
 				</div>
 				
 				<div id="menu">
-					<a onClick="test(3)">��������</a>
+					<a onClick="test(3)">车辆管理</a>
 				</div>
 				<div id="menu_down3" class="menu_down" style="display:block">
 					<ul>
 						<li>
-							<a href="<%=path %>/carManage/searchCar.jsp" target="main">�鿴����</a>
+							<a href="<%=path %>/carManage/searchCar.jsp" target="main">查看车辆</a>
 						</li>
 						<li>
-							<a href="<%=path %>/check/car.do?methodName=listAllCarNO" target="main">����״̬ά��</a>
+							<a href="<%=path %>/check/car.do?methodName=listAllCarNO" target="main">车辆状态维护</a>
 						</li>
 					</ul>
 				</div>
 				<div id="menu">
-					<a onClick="test(5)">��·�鿴</a>
+					<a onClick="test(5)">线路查看</a>
 				</div>
 				<div id="menu_down5" class="menu_down" style="display:block">
 
 					<ul>
 						<li>
-							<a href="<%=path%>/check/line.do?methodName=listAllLine" target="main">�鿴��·</a>
+							<a href="<%=path%>/check/line.do?methodName=listAllLine" target="main">查看线路</a>
 						</li>
 					</ul>
 				</div>
 				<div id="menu">
-					<a onClick="test(6)">���͵�鿴</a>
+					<a onClick="test(6)">配送点查看</a>
 				</div>
 
 				<div id="menu_down6" class="menu_down" style="display:block">
 					<ul>
 						<li>
-							<a href="<%=path %>/check/deliverySpot.do?methodName=viewPeiSongDian&id=${UserSession.deliveryspot.deliveryspotid }" target="main">�鿴���͵�</a>
+							<a href="<%=path %>/check/deliverySpot.do?methodName=viewPeiSongDian&id=${UserSession.deliveryspot.deliveryspotid }" target="main">查看配送点</a>
 						</li>
 					</ul>
 				</div>
 				<div id="menu">
-					<a onClick="test(7)">��������</a>
+					<a onClick="test(7)">报表管理</a>
 				</div>
 				<div id="menu_down7" class="menu_down" style="display:block">
 					<ul>
 						<li>
-							<a href="baoBiaoManage/viewBaoBiao.jsp" target="main">���ɱ���</a>
+							<a href="baoBiaoManage/viewBaoBiao.jsp" target="main">生成报表</a>
 						</li>
 					</ul>
 				</div>
@@ -129,9 +129,9 @@
 			<div id="foot">
 				<center>
 					<pre>
-               ��Ȩ����GLOBAL������˾ �������:��ICP��05039742��
-              ҵ����ѯ�绰��0351-2720833 2720836 13805390912 ����ල�绰��13791568668 ���棺0351-2720899
-             �ܹ�˾��ַ��ɽ��ʡ̫ԭ���������186�ţ�̫ԭ������ѧ����100�ף�
+               版权所有GLOBAL物流公司 备案序号:晋ICP备05039742号
+              业务资询电话：0351-2720833 2720836 13805390912 服务监督电话：13791568668 传真：0351-2720899
+             总公司地址：山西省太原市万柏林区186号（太原理工大学向北走100米）
 </pre>
 				</center>
 			</div>
@@ -146,7 +146,7 @@
 			<br>
 			<br>
 			<h1>
-				����Ȩ���ʴ�ҳ�棡����
+				您无权访问此页面！！！
 			</h1>
 		</c:if>
 	</body>

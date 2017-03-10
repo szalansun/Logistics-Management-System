@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
 String path = request.getContextPath();
@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---½»½Óµ¥</title>
+		<title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---äº¤æ¥å•</title>
 		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 		<meta http-equiv="description" content="this is my page">
 		<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
@@ -19,13 +19,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<c:if test="${UserSession.power.powerid==3}">
 		<center>
 			<h1>
-				½»½Óµ¥ĞÅÏ¢
+				äº¤æ¥å•ä¿¡æ¯
 			</h1>
 			<form name="f1" id="f1" action="" method="post">
 				<table border="1" class="t1">
 					<tr>
 						<td>
-							½»½Óµ¥ºÅ
+							äº¤æ¥å•å·
 						</td>
 						<td>
 								<a href="<%=path%>/check/order.do?methodName=getReceiptDetaile&ReceiptID=${Receipt.receiptid}&receiptno=${Receipt.receiptno}">${Receipt.receiptno}</a>
@@ -33,7 +33,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
 						<td>
-							³µÁ¾±àºÅ
+							è½¦è¾†ç¼–å·
 						</td>
 						<td>
 							${Receipt.carno }
@@ -42,14 +42,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</tr>
 					<tr>
 						<td>
-							·¢»õÊ±¼ä
+							å‘è´§æ—¶é—´
 						</td>
 						<td>
 							${Receipt.createtime }
 						</td>
 
 						<td>
-							½»½ÓÅäËÍµã
+							äº¤æ¥é…é€ç‚¹
 						</td>
 						<td>
 							${Receipt.deliveryspot.name }
@@ -57,7 +57,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</tr>
 					<tr>
 						<td>
-							½ÓÊÜÈËĞÕÃû
+							æ¥å—äººå§“å
 						</td>
 						<td colspan="3">
 							${Receipt.employee.name }
@@ -67,7 +67,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</tr>
 					<tr>
 						<td>
-							±¸×¢
+							å¤‡æ³¨
 						</td>
 						<td colspan="3" align="center">
 							${Receipt.remark }
@@ -87,7 +87,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<br>
 			<br>
 			<h1>
-				ÄúÎŞÈ¨·ÃÎÊ´ËÒ³Ãæ£¡£¡£¡
+				æ‚¨æ— æƒè®¿é—®æ­¤é¡µé¢ï¼ï¼ï¼
 			</h1>
 		</c:if>
 	</body>

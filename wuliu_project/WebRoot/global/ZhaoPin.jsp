@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="gbk"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-bean"
 	prefix="bean"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-html"
@@ -7,7 +7,7 @@
  <%String path = request.getContextPath(); %>
 <html>
 	<head>
-		<title>GLOBALÎïÁ÷---ÕÐÆ¸ÐÅÏ¢</title>
+		<title>GLOBALç‰©æµ---æ‹›è˜ä¿¡æ¯</title>
 		<link rel="stylesheet" type="text/css" href="<%=path %>/style/wuliu.css" />
 		<style type="text/css">
 			<!--
@@ -23,7 +23,7 @@
 			}
 		</script>
 		<SCRIPT type=text/javascript src="<%=path %>/js/company.js"></SCRIPT>
-		<script language="javascript"> defaultStatus = "»¶Ó­À´µ½GLOBALÎïÁ÷---ÕÐÆ¸£¡";</script>
+		<script language="javascript"> defaultStatus = "æ¬¢è¿Žæ¥åˆ°GLOBALç‰©æµ---æ‹›è˜ï¼";</script>
 </head>
 	<body onload="load();">
 		<div id="container">
@@ -37,19 +37,19 @@
 					<li></li>
 					<li></li>
 					<li>
-						<a href="<%=path %>/wuliu.jsp">Ê×Ò³</a>
+						<a href="<%=path %>/wuliu.jsp">é¦–é¡µ</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/About.jsp">¹ØÓÚÎÒÃÇ</a>
+						<a href="<%=path %>/global/About.jsp">å…³äºŽæˆ‘ä»¬</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/News.jsp">¹«Ë¾ÐÂÎÅ</a>
+						<a href="<%=path %>/global/News.jsp">å…¬å¸æ–°é—»</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/UserServer.jsp">¿Í»§·þÎñ</a>
+						<a href="<%=path %>/global/UserServer.jsp">å®¢æˆ·æœåŠ¡</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/ZhaoPin.jsp">ÕÐÆ¸ÐÅÏ¢</a>
+						<a href="<%=path %>/global/ZhaoPin.jsp">æ‹›è˜ä¿¡æ¯</a>
 					</li>
 				</ul>
 			</div>
@@ -63,7 +63,7 @@
 						<input type="text" name="orderNO" class=search-normal 
                                 onblur="toggleColorSearch(this); blurSearch();" 
                                   onfocus="toggleColorSearch(this); focusSearch();" 
-                                   value="ÇëÊäÈëÄúÒª²éÑ¯µÄ¶©µ¥ºÅ"/>
+                                   value="è¯·è¾“å…¥æ‚¨è¦æŸ¥è¯¢çš„è®¢å•å·"/>
 						<br />
 					 <img src="<%=path %>/global_images/search.jpg" border="0"  onclick="searchOrderState()"/>
 						
@@ -79,11 +79,11 @@
 						&nbsp;
 						<br />
 						&nbsp;
-						<span class="STYLE1">¿Í·þTEL</span>£º
+						<span class="STYLE1">å®¢æœTEL</span>ï¼š
 						<span class="STYLE4">0351-14125365</span>
 						<br />
 						&nbsp;
-						<span class="STYLE1">¹«Ë¾ÓÊÏä</span>£º
+						<span class="STYLE1">å…¬å¸é‚®ç®±</span>ï¼š
 						<span class="STYLE4">global@gmail.com </span>
 					</div>
 				</div>
@@ -91,63 +91,63 @@
 			<div id="main">
 				 <table class="t1" border="1" cellpadding="0" cellspacing="0">
 				  <tr>
-				   <td bgcolor="#B3C4FD">1£º¸ÚÎ»Ãû³Æ£º¿Í·þ</td> 
-				   <td bgcolor="#B3C4FD">ÊýÁ¿£º2Ãû</td>
-				   <td bgcolor="#B3C4FD">ËùÊô²¿ÃÅ£ºÅäËÍµãµã¹ÜÀí²¿</td>
+				   <td bgcolor="#B3C4FD">1ï¼šå²—ä½åç§°ï¼šå®¢æœ</td> 
+				   <td bgcolor="#B3C4FD">æ•°é‡ï¼š2å</td>
+				   <td bgcolor="#B3C4FD">æ‰€å±žéƒ¨é—¨ï¼šé…é€ç‚¹ç‚¹ç®¡ç†éƒ¨</td>
 				  </tr>
 				  <tr>
 				   <td colspan="3">
-                      ¡ùÒªÇó¾ß±¸µÄ¾­Ñé»òÑµÁ·ÐèÇó: <br>
-					ÄêÁä20-30ËêÖ®¼ä<br>
-					Ñ§ÀúÖÐ×¨¼°ÒÔÉÏ£¬¹¤×ÊÃæÒé<br>
+                      â€»è¦æ±‚å…·å¤‡çš„ç»éªŒæˆ–è®­ç»ƒéœ€æ±‚: <br>
+					å¹´é¾„20-30å²ä¹‹é—´<br>
+					å­¦åŽ†ä¸­ä¸“åŠä»¥ä¸Šï¼Œå·¥èµ„é¢è®®<br>
                   </td>
                   </tr>
                   <tr>
                      <td colspan="3">
-                     ¡ùÖ°Î»ÃèÊö£º<br>
-					1.ÉùÒôÌðÃÀ£¬ÆÕÍ¨»°±ê×¼£¬¸öÈËÐÎÏóÆøÖÊ¼Ñ<br>
-					2.ÄÜ¶ÀÁ¢´¦Àí¿Í»§µç»°Í¶ËßÊÂ¼þ¼°ÆäËûÈÕ³£ÊÂÎñ<br>
-					3.ÄÜ³Ô¿àÄÍÀÍ£¬¾ßÓÐÎïÁ÷ÐÐÒµ¿Í·þ¾­ÑéµÄÓÅÏÈ¿¼ÂÇ<br>
+                     â€»èŒä½æè¿°ï¼š<br>
+					1.å£°éŸ³ç”œç¾Žï¼Œæ™®é€šè¯æ ‡å‡†ï¼Œä¸ªäººå½¢è±¡æ°”è´¨ä½³<br>
+					2.èƒ½ç‹¬ç«‹å¤„ç†å®¢æˆ·ç”µè¯æŠ•è¯‰äº‹ä»¶åŠå…¶ä»–æ—¥å¸¸äº‹åŠ¡<br>
+					3.èƒ½åƒè‹¦è€åŠ³ï¼Œå…·æœ‰ç‰©æµè¡Œä¸šå®¢æœç»éªŒçš„ä¼˜å…ˆè€ƒè™‘<br>
                   </td>
 				  </tr>
 				   <tr>
                      <td colspan="3" align="right">
-	                  Ê±¼ä£º[ 2008-10-17 ]                  </td>
+	                  æ—¶é—´ï¼š[ 2008-10-17 ]                  </td>
 				  </tr>
 				 </table>
 <br>
 				 	 <table class="t1"  border="1" cellpadding="0" cellspacing="0">
 				  <tr>
-				   <td bgcolor="#B3C4FD">2£º¸ÚÎ»Ãû³Æ£º·ÖÇøÍ¶ËßÖÐÐÄ¾­Àí</td> 
-				   <td bgcolor="#B3C4FD">ÊýÁ¿£º2Ãû</td>
-				   <td bgcolor="#B3C4FD">ËùÊô²¿ÃÅ£ºÅäËÍµãµã¹ÜÀí²¿</td>
+				   <td bgcolor="#B3C4FD">2ï¼šå²—ä½åç§°ï¼šåˆ†åŒºæŠ•è¯‰ä¸­å¿ƒç»ç†</td> 
+				   <td bgcolor="#B3C4FD">æ•°é‡ï¼š2å</td>
+				   <td bgcolor="#B3C4FD">æ‰€å±žéƒ¨é—¨ï¼šé…é€ç‚¹ç‚¹ç®¡ç†éƒ¨</td>
 				  </tr>
 				  <tr>
 				   <td colspan="3">
-                      ¡ùÒªÇó¾ß±¸µÄ¾­Ñé»òÑµÁ·ÐèÇó: <br>
-					ÄêÁä26-35ËêÖ®¼ä<br>
-					Ñ§Àú´ó×¨¼°ÒÔÉÏ£¬¹¤×ÊÃæÒé<br>
+                      â€»è¦æ±‚å…·å¤‡çš„ç»éªŒæˆ–è®­ç»ƒéœ€æ±‚: <br>
+					å¹´é¾„26-35å²ä¹‹é—´<br>
+					å­¦åŽ†å¤§ä¸“åŠä»¥ä¸Šï¼Œå·¥èµ„é¢è®®<br>
                   </td>
                   </tr>
                   <tr>
                      <td colspan="3">
-	                   ¡ùÖ°Î»ÃèÊö£º<br>
-					1.ÊìÏ¤ÎïÁ÷ÐÐÒµ¿Í·þÏà¹ØÁ÷³Ì£¬ÄÜ¶ÀÁ¢´¦ÀíÏà¹ØÍ¶ËßÎÊÌâ<br>
-					2.¾ßÓÐ3ÄêÒÔÉÏÎïÁ÷ÐÐÒµ¹¤×÷¾­Ñé<br>
-					3.ÄÜ³Ô¿àÄÍÀÍ£¬³£×¤ÍâµØ£¨»ªÖÐ¡¢»ª±±£©<br>
+	                   â€»èŒä½æè¿°ï¼š<br>
+					1.ç†Ÿæ‚‰ç‰©æµè¡Œä¸šå®¢æœç›¸å…³æµç¨‹ï¼Œèƒ½ç‹¬ç«‹å¤„ç†ç›¸å…³æŠ•è¯‰é—®é¢˜<br>
+					2.å…·æœ‰3å¹´ä»¥ä¸Šç‰©æµè¡Œä¸šå·¥ä½œç»éªŒ<br>
+					3.èƒ½åƒè‹¦è€åŠ³ï¼Œå¸¸é©»å¤–åœ°ï¼ˆåŽä¸­ã€åŽåŒ—ï¼‰<br>
                   </td>
 				  </tr>
 				   <tr>
                      <td colspan="3" align="right">
-	                  Ê±¼ä£º[ 2008-11-23 ]                  </td>
+	                  æ—¶é—´ï¼š[ 2008-11-23 ]                  </td>
 				  </tr>
 				 </table>
        <table class="t1">
 				 <tr>
 				 <td>
-				      ÒÔÉÏÈËÔ±»§¼®²»ÏÞ£¬ÓÐÒâÕß¿É½«¸öÈË¼òÀú¡¢ÕÕÆ¬¡¢Ñ§ÀúÖ¤Êé¸´Ó¡¼þ¡¢Éí·ÝÖ¤¸´Ó¡¼þ£¬¼ÄÖÁ£º<br>
-				 É½Î÷Ê¡Ì«Ô­ÊÐÍò°ØÁÖÇø186ºÅ£¨Ì«Ô­Àí¹¤´óÑ§Ïò±±×ß100Ã×£©,ÈËÁ¦×ÊÔ´²¿ AmakerÊÕ £¬ ÓÊ±à£º030024¡£<br>
-                       µç×ÓÓÊ¼þÖÁglobal@gmail.com¡¡ÇëÔÚÐÅÄÚ×¢Ã÷Ó¦Æ¸Ö°Î»¡£<br>
+				      ä»¥ä¸Šäººå‘˜æˆ·ç±ä¸é™ï¼Œæœ‰æ„è€…å¯å°†ä¸ªäººç®€åŽ†ã€ç…§ç‰‡ã€å­¦åŽ†è¯ä¹¦å¤å°ä»¶ã€èº«ä»½è¯å¤å°ä»¶ï¼Œå¯„è‡³ï¼š<br>
+				 å±±è¥¿çœå¤ªåŽŸå¸‚ä¸‡æŸæž—åŒº186å·ï¼ˆå¤ªåŽŸç†å·¥å¤§å­¦å‘åŒ—èµ°100ç±³ï¼‰,äººåŠ›èµ„æºéƒ¨ Amakeræ”¶ ï¼Œ é‚®ç¼–ï¼š030024ã€‚<br>
+                       ç”µå­é‚®ä»¶è‡³global@gmail.comã€€è¯·åœ¨ä¿¡å†…æ³¨æ˜Žåº”è˜èŒä½ã€‚<br>
 				 </td>
 				 </tr>
 				 </table>
@@ -178,31 +178,31 @@
 					<br />
 					<marquee direction="up" behavior="scroll" loop="-1"
 						scrollamount="3" height="220" width="138">
-						<a href="#">ÉÏº£ÊÐ²¿·Ö¿ìµÝÆóÒµ´ú±íÑ§Ï°</a>
+						<a href="#">ä¸Šæµ·å¸‚éƒ¨åˆ†å¿«é€’ä¼ä¸šä»£è¡¨å­¦ä¹ </a>
 						<br/>
 						&nbsp;<br/>
-						<a href="#">ÉÏº£ÓÊÕþÒµÓ­ÊÀ²©600ÌìÐÐ¶¯¶¯Ô±´ó»áÕÙ¿ª</a>
+						<a href="#">ä¸Šæµ·é‚®æ”¿ä¸šè¿Žä¸–åš600å¤©è¡ŒåŠ¨åŠ¨å‘˜å¤§ä¼šå¬å¼€</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">¿ìµÝÒµµÈ¼¶ÆÀ¶¨ÖÆ¶È½«</a>
+						<a href="#">å¿«é€’ä¸šç­‰çº§è¯„å®šåˆ¶åº¦å°†</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">ÉÏº£ÊÐ²¿·Ö¿ìµÝÆóÒµ´ú±íÑ§Ï°</a>
+						<a href="#">ä¸Šæµ·å¸‚éƒ¨åˆ†å¿«é€’ä¼ä¸šä»£è¡¨å­¦ä¹ </a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">ÉÏº£ÓÊÕþÒµÓ­ÊÀ²©600ÌìÐÐ¶¯¶¯Ô±´ó»áÕÙ¿ª</a>
+						<a href="#">ä¸Šæµ·é‚®æ”¿ä¸šè¿Žä¸–åš600å¤©è¡ŒåŠ¨åŠ¨å‘˜å¤§ä¼šå¬å¼€</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">¿ìµÝÒµµÈ¼¶ÆÀ¶¨ÖÆ¶È½«</a>
+						<a href="#">å¿«é€’ä¸šç­‰çº§è¯„å®šåˆ¶åº¦å°†</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">ÉÏº£ÊÐ²¿·Ö¿ìµÝÆóÒµ´ú±íÑ§Ï°</a>
+						<a href="#">ä¸Šæµ·å¸‚éƒ¨åˆ†å¿«é€’ä¼ä¸šä»£è¡¨å­¦ä¹ </a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">ÉÏº£ÓÊÕþÒµÓ­ÊÀ²©600ÌìÐÐ¶¯¶¯Ô±´ó»áÕÙ¿ª</a>
+						<a href="#">ä¸Šæµ·é‚®æ”¿ä¸šè¿Žä¸–åš600å¤©è¡ŒåŠ¨åŠ¨å‘˜å¤§ä¼šå¬å¼€</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">¿ìµÝÒµµÈ¼¶ÆÀ¶¨ÖÆ¶È½«</a>
+						<a href="#">å¿«é€’ä¸šç­‰çº§è¯„å®šåˆ¶åº¦å°†</a>
 						<br />
 					</marquee>
 				</div>
@@ -218,7 +218,7 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index<5}">
-				        <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }Íøµã</a></li>
+				        <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }ç½‘ç‚¹</a></li>
 				      </c:if>
 				    </c:forEach>
 						</ul>
@@ -227,7 +227,7 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index>=5 && s.index<10}">
-				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }Íøµã</a></li>
+				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }ç½‘ç‚¹</a></li>
 				      </c:if>
 				    </c:forEach>
 						</ul>
@@ -236,7 +236,7 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index>=10 && s.index<15}">
-				        <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }Íøµã</a></li>
+				        <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }ç½‘ç‚¹</a></li>
 				      </c:if>
 				    </c:forEach>
 						</ul>
@@ -245,7 +245,7 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index>=15 && s.index<20}">
-				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }Íøµã</a></li>
+				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }ç½‘ç‚¹</a></li>
 				      </c:if>
 				    </c:forEach>
 						</ul>
@@ -254,10 +254,10 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index>=20 && s.index<24}">
-				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }Íøµã</a></li>
+				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }ç½‘ç‚¹</a></li>
 				      </c:if>
 				    </c:forEach>
-				     <li><a href="<%=path %>/global/searchWebSit.jsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¸ü¶à>></a></li>
+				     <li><a href="<%=path %>/global/searchWebSit.jsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;æ›´å¤š>></a></li>
 						</ul>
 					</div>
 				</div>

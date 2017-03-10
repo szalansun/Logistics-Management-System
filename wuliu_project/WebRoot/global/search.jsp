@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="gbk"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-bean"
 	prefix="bean"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-html"
@@ -7,7 +7,7 @@
  <%String path = request.getContextPath(); %>
 <html>
 	<head>
-		<title>GLOBALÎïÁ÷--¶©µ¥²éÑ¯---${orderNO }</title>
+		<title>GLOBALç‰©æµ--è®¢å•æŸ¥è¯¢---${orderNO }</title>
 		<link rel="stylesheet" type="text/css" href="<%=path %>/style/wuliu.css" />
 		<style type="text/css">
 			<!--
@@ -23,7 +23,7 @@
 			}
 		</script>
 		<SCRIPT type=text/javascript src="<%=path %>/js/company.js"></SCRIPT>
-		<script language="javascript"> defaultStatus = "»¶Ó­À´µ½GLOBALÎïÁ÷---${orderNO }¶©µ¥£¡";</script>
+		<script language="javascript"> defaultStatus = "æ¬¢è¿Žæ¥åˆ°GLOBALç‰©æµ---${orderNO }è®¢å•ï¼";</script>
 </head>
 	<body onload="load();">
 		<div id="container">
@@ -37,19 +37,19 @@
 					<li></li>
 					<li></li>
 					<li>
-						<a href="<%=path %>/wuliu.jsp">Ê×Ò³</a>
+						<a href="<%=path %>/wuliu.jsp">é¦–é¡µ</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/About.jsp">¹ØÓÚÎÒÃÇ</a>
+						<a href="<%=path %>/global/About.jsp">å…³äºŽæˆ‘ä»¬</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/News.jsp">¹«Ë¾ÐÂÎÅ</a>
+						<a href="<%=path %>/global/News.jsp">å…¬å¸æ–°é—»</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/UserServer.jsp">¿Í»§·þÎñ</a>
+						<a href="<%=path %>/global/UserServer.jsp">å®¢æˆ·æœåŠ¡</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/ZhaoPin.jsp">ÕÐÆ¸ÐÅÏ¢</a>
+						<a href="<%=path %>/global/ZhaoPin.jsp">æ‹›è˜ä¿¡æ¯</a>
 					</li>
 				</ul>
 			</div>
@@ -63,7 +63,7 @@
 						<input type="text" name="orderNO" class=search-normal 
                                 onblur="toggleColorSearch(this); blurSearch();" 
                                   onfocus="toggleColorSearch(this); focusSearch();" 
-                                   value="ÇëÊäÈëÄúÒª²éÑ¯µÄ¶©µ¥ºÅ"/>
+                                   value="è¯·è¾“å…¥æ‚¨è¦æŸ¥è¯¢çš„è®¢å•å·"/>
 						<br />
 					 <img src="<%=path %>/global_images/search.jpg" border="0"  onclick="searchOrderState()"/>
 						
@@ -79,11 +79,11 @@
 						&nbsp;
 						<br />
 						&nbsp;
-						<span class="STYLE1">¿Í·þTEL</span>£º
+						<span class="STYLE1">å®¢æœTEL</span>ï¼š
 						<span class="STYLE4">0351-14125365</span>
 						<br />
 						&nbsp;
-						<span class="STYLE1">¹«Ë¾ÓÊÏä</span>£º
+						<span class="STYLE1">å…¬å¸é‚®ç®±</span>ï¼š
 						<span class="STYLE4">global@gmail.com </span>
 					</div>
 				</div>
@@ -93,7 +93,7 @@
          	<c:if test="${ErrorMsg == null}">
 					<form name="f1" id="f1" action="" method="post">
 						<h2>
-							${orderNO }¶©µ¥:
+							${orderNO }è®¢å•:
 						</h2>
 						<div id="tb">
 							<table border="0" class="t" width="380">
@@ -102,8 +102,8 @@
 									<tr>
 
 											<td>
-											${os.createtime }---µ½´ï---&nbsp;¡¾
-											<a href="<%=path %>/company.do?methodName=queryDeliverySpotByDeliverySpotID&deliverySpotID=${os.deliveryspotid }">${os.deliveryspotName }</a>¡¿
+											${os.createtime }---åˆ°è¾¾---&nbsp;ã€
+											<a href="<%=path %>/company.do?methodName=queryDeliverySpotByDeliverySpotID&deliverySpotID=${os.deliveryspotid }">${os.deliveryspotName }</a>ã€‘
 											</td>
 									</tr>
 									<tr>
@@ -115,9 +115,9 @@
 									<c:if test="${os.flag == 'zhuangChe'}">
 								    <tr>
 											<td>
-											${os.createtime }---´Ó---&nbsp;¡¾
-											<a href="<%=path %>/company.do?methodName=queryDeliverySpotByDeliverySpotID&deliverySpotID=${os.deliveryspotid }">${os.deliveryspotName }</a>¡¿
-											·¢»õ
+											${os.createtime }---ä»Ž---&nbsp;ã€
+											<a href="<%=path %>/company.do?methodName=queryDeliverySpotByDeliverySpotID&deliverySpotID=${os.deliveryspotid }">${os.deliveryspotName }</a>ã€‘
+											å‘è´§
 											</td>
 									</tr>
 									<tr>
@@ -129,13 +129,13 @@
 									<c:if test="${os.flag == null}">
 								    <tr>
 											<td>
-											${os.createtime }---ÔÚ---&nbsp;¡¾
-											<a href="<%=path %>/company.do?methodName=queryDeliverySpotByDeliverySpotID&deliverySpotID=${os.deliveryspotid }">${os.deliveryspotName }</a>¡¿
+											${os.createtime }---åœ¨---&nbsp;ã€
+											<a href="<%=path %>/company.do?methodName=queryDeliverySpotByDeliverySpotID&deliverySpotID=${os.deliveryspotid }">${os.deliveryspotName }</a>ã€‘
 											<c:if test="${order.orderstate.orderstateid == 3}">
-											Í¶µÝÖÐ
+											æŠ•é€’ä¸­
 											</c:if>
 											<c:if test="${order.orderstate.orderstateid == 4}">
-											Íê³ÉÍ¶µÝ
+											å®ŒæˆæŠ•é€’
 											</c:if>
 											
 											</td>
@@ -187,31 +187,31 @@
 					<br />
 					<marquee direction="up" behavior="scroll" loop="-1"
 						scrollamount="3" height="220" width="138">
-						<a href="#">ÉÏº£ÊÐ²¿·Ö¿ìµÝÆóÒµ´ú±íÑ§Ï°</a>
+						<a href="#">ä¸Šæµ·å¸‚éƒ¨åˆ†å¿«é€’ä¼ä¸šä»£è¡¨å­¦ä¹ </a>
 						<br/>
 						&nbsp;<br/>
-						<a href="#">ÉÏº£ÓÊÕþÒµÓ­ÊÀ²©600ÌìÐÐ¶¯¶¯Ô±´ó»áÕÙ¿ª</a>
+						<a href="#">ä¸Šæµ·é‚®æ”¿ä¸šè¿Žä¸–åš600å¤©è¡ŒåŠ¨åŠ¨å‘˜å¤§ä¼šå¬å¼€</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">¿ìµÝÒµµÈ¼¶ÆÀ¶¨ÖÆ¶È½«</a>
+						<a href="#">å¿«é€’ä¸šç­‰çº§è¯„å®šåˆ¶åº¦å°†</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">ÉÏº£ÊÐ²¿·Ö¿ìµÝÆóÒµ´ú±íÑ§Ï°</a>
+						<a href="#">ä¸Šæµ·å¸‚éƒ¨åˆ†å¿«é€’ä¼ä¸šä»£è¡¨å­¦ä¹ </a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">ÉÏº£ÓÊÕþÒµÓ­ÊÀ²©600ÌìÐÐ¶¯¶¯Ô±´ó»áÕÙ¿ª</a>
+						<a href="#">ä¸Šæµ·é‚®æ”¿ä¸šè¿Žä¸–åš600å¤©è¡ŒåŠ¨åŠ¨å‘˜å¤§ä¼šå¬å¼€</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">¿ìµÝÒµµÈ¼¶ÆÀ¶¨ÖÆ¶È½«</a>
+						<a href="#">å¿«é€’ä¸šç­‰çº§è¯„å®šåˆ¶åº¦å°†</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">ÉÏº£ÊÐ²¿·Ö¿ìµÝÆóÒµ´ú±íÑ§Ï°</a>
+						<a href="#">ä¸Šæµ·å¸‚éƒ¨åˆ†å¿«é€’ä¼ä¸šä»£è¡¨å­¦ä¹ </a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">ÉÏº£ÓÊÕþÒµÓ­ÊÀ²©600ÌìÐÐ¶¯¶¯Ô±´ó»áÕÙ¿ª</a>
+						<a href="#">ä¸Šæµ·é‚®æ”¿ä¸šè¿Žä¸–åš600å¤©è¡ŒåŠ¨åŠ¨å‘˜å¤§ä¼šå¬å¼€</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">¿ìµÝÒµµÈ¼¶ÆÀ¶¨ÖÆ¶È½«</a>
+						<a href="#">å¿«é€’ä¸šç­‰çº§è¯„å®šåˆ¶åº¦å°†</a>
 						<br />
 					</marquee>
 				</div>
@@ -226,7 +226,7 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index<5}">
-				        <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }Íøµã</a></li>
+				        <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }ç½‘ç‚¹</a></li>
 				      </c:if>
 				    </c:forEach>
 						</ul>
@@ -235,7 +235,7 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index>=5 && s.index<10}">
-				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }Íøµã</a></li>
+				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }ç½‘ç‚¹</a></li>
 				      </c:if>
 				    </c:forEach>
 						</ul>
@@ -244,7 +244,7 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index>=10 && s.index<15}">
-				        <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }Íøµã</a></li>
+				        <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }ç½‘ç‚¹</a></li>
 				      </c:if>
 				    </c:forEach>
 						</ul>
@@ -253,7 +253,7 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index>=15 && s.index<20}">
-				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }Íøµã</a></li>
+				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }ç½‘ç‚¹</a></li>
 				      </c:if>
 				    </c:forEach>
 						</ul>
@@ -262,10 +262,10 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index>=20 && s.index<24}">
-				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }Íøµã</a></li>
+				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }ç½‘ç‚¹</a></li>
 				      </c:if>
 				    </c:forEach>
-				     <li><a href="<%=path %>/global/searchWebSit.jsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¸ü¶à>></a></li>
+				     <li><a href="<%=path %>/global/searchWebSit.jsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;æ›´å¤š>></a></li>
 						</ul>
 					</div>
 				</div>

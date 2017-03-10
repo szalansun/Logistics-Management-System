@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://jsptags.com/tags/navigation/pager" prefix="pg"%>
 <%
@@ -13,7 +13,7 @@
 	<head>
 		<base href="<%=basePath%>">
 
-		<title>GLOBAL��������ϵͳ��̨����---Ͷ�ݵ���ϸ��Ϣ</title>
+		<title>GLOBAL物流管理系统后台管理---投递单详细信息</title>
 
 		<meta http-equiv="pragma" content="no-cache">
 		<meta http-equiv="cache-control" content="no-cache">
@@ -31,29 +31,29 @@
 	<br>
 	<br>
 	<br>
-	Ͷ�ݵ��ţ�${receiptno }
+	投递单号：${receiptno }
 		<table cellpadding="0" cellspacing="0" class="t2" align="center">
 			<tr>
 				<th>
-					�������
+					订单编号
 				</th>
 				<th>
-					���͵�
+					配送点
 				</th>
 				<th>
-					�ռ���
+					收件地
 				</th>
 				<th>
-					�ļ���
+					寄件地
 				</th>
 				<th>
-					�ռ�������
+					收件人姓名
 				</th>
 				<th>
-					�ļ�������
+					寄件人姓名
 				</th>
 				<th>
-					����״̬
+					订单状态
 				</th>
 			</tr>
 			
@@ -89,11 +89,11 @@
 				</pg:item>
 			</c:forEach>
 						<div id="p">
-		                    <font color="red" size="3">${count}����¼</font>
+		                    <font color="red" size="3">${count}条记录</font>
 		                 	<pg:index>
 		
-						      <pg:first><a href="<%=path%><%=pageUrl %>">��ҳ</a></pg:first>
-						      <pg:prev><a href="<%=path%><%=pageUrl %>">��һҳ</a></pg:prev>
+						      <pg:first><a href="<%=path%><%=pageUrl %>">首页</a></pg:first>
+						      <pg:prev><a href="<%=path%><%=pageUrl %>">上一页</a></pg:prev>
 						      <pg:pages>
 						      <% 
 						     if (pageNumber.intValue() < 10) { 
@@ -106,8 +106,8 @@
 						      }
 						      %>
 						      </pg:pages>
-						      <pg:next><a href="<%=path%><%=pageUrl %>">��һҳ</a></pg:next>
-						      <pg:last><a href="<%=path%><%=pageUrl %>">ĩҳ</a></pg:last>
+						      <pg:next><a href="<%=path%><%=pageUrl %>">下一页</a></pg:next>
+						      <pg:last><a href="<%=path%><%=pageUrl %>">末页</a></pg:last>
 					 	 </pg:index>
 						</div>
 					</pg:pager>

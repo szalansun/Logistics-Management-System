@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="gbk"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-bean"
 	prefix="bean"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-html"
@@ -9,7 +9,7 @@ String path = request.getContextPath();
 %>
 <html>
 	<head>
-		<title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---ĞŞ¸Ä³µÁ¾ĞÅÏ¢</title>
+		<title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---ä¿®æ”¹è½¦è¾†ä¿¡æ¯</title>
 		<link rel="stylesheet" type="text/css"
 			href="<%=path%>/style/wuliu_back.css" />
 		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
@@ -17,11 +17,11 @@ String path = request.getContextPath();
 	   function checkCarSize(){
 	      var carSize = document.getElementById("size").childNodes[0].value;
 	      if(carSize!=""&&(carSize>0&&carSize<=9999999)){
-	         var msgs = "<font color=green><b>¡Ì</b></font>";
+	         var msgs = "<font color=green><b>âˆš</b></font>";
 	         document.getElementById("s").innerHTML=msgs;
 	         return true;
 	      }else{
-	        var msgs= "<font color=red><b>¡Á</b></font>";
+	        var msgs= "<font color=red><b>Ã—</b></font>";
 	        document.getElementById("s").innerHTML=msgs;
 	        return false;
 	      }
@@ -29,11 +29,11 @@ String path = request.getContextPath();
 	   function checkTonnage(){
 	      var weight = document.getElementById("weight").childNodes[0].value;
 	      if(weight!=""&&(weight>0&&weight<=9999999)){
-	         var msgs = "<font color=green><b>¡Ì</b></font>";
+	         var msgs = "<font color=green><b>âˆš</b></font>";
 	        document.getElementById("w").innerHTML=msgs;
 	         return true;
 	      }else{
-	        var msgs= "<font color=red><b>¡Á</b></font>";
+	        var msgs= "<font color=red><b>Ã—</b></font>";
 	        document.getElementById("w").innerHTML=msgs;
 	        return false;
 	      }
@@ -43,11 +43,11 @@ String path = request.getContextPath();
 	   function checkRemark(){
 	    var remark = document.forms[0].remark.value;
 	    if(remark != "" && remark.length >200){
-	         var msgs= "<font color=red><b>¡Á</b></font>";
+	         var msgs= "<font color=red><b>Ã—</b></font>";
 	         document.getElementById("r").innerHTML=msgs;
 	         return false;
 	      }else{
-	         var msgs= "<font color=green><b>¡Ì</b></font>";
+	         var msgs= "<font color=green><b>âˆš</b></font>";
 	         document.getElementById("r").innerHTML=msgs;
 	        return true;
 	      }
@@ -70,14 +70,14 @@ String path = request.getContextPath();
 	<c:if test="${UserSession.power.powerid==1}">
 		<center>
 			<h1>
-				ĞŞ¸Ä³µÁ¾
+				ä¿®æ”¹è½¦è¾†
 			</h1>
 			
 			<html:form action="/check/car?methodName=updateCarMessage">
 				<table border="1" class="t1" width="450">
 					<tr>
 						<td>
-							³µÅÆºÅ£º
+							è½¦ç‰Œå·ï¼š
 						</td>
 						<td id="carno">
 							<html:text property="carNO" readonly="true"/>
@@ -86,7 +86,7 @@ String path = request.getContextPath();
 					</tr>
 					<tr>
 						<td>
-							ÓªÔËÖ¤ºÅ£º
+							è¥è¿è¯å·ï¼š
 						</td>
 						<td id="workno">
 							<html:text property="workNO" readonly="true" />
@@ -95,41 +95,41 @@ String path = request.getContextPath();
 					</tr>
 					<tr>
 						<td>
-							³µĞÍ£º
+							è½¦å‹ï¼š
 						</td>
 						<td>
 							<select name="carTypeID">
 							   <c:if test="${carForm.carTypeID == 1 }">
 								<option value="1" selected="selected">
-									´óĞÍ
+									å¤§å‹
 								</option>
 								<option value="2">
-									ÖĞĞÍ
+									ä¸­å‹
 								</option>
 								<option value="3">
-									Ğ¡ĞÍ
+									å°å‹
 								</option>
 							 </c:if>
 							  <c:if test="${carForm.carTypeID == 2 }">
 								<option value="1" selected="selected">
-									´óĞÍ
+									å¤§å‹
 								</option>
 								<option value="2" selected="selected">
-									ÖĞĞÍ
+									ä¸­å‹
 								</option>
 								<option value="3">
-									Ğ¡ĞÍ
+									å°å‹
 								</option>
 							 </c:if>
 							  <c:if test="${carForm.carTypeID == 3 }">
 								<option value="1" selected="selected">
-									´óĞÍ
+									å¤§å‹
 								</option>
 								<option value="2">
-									ÖĞĞÍ
+									ä¸­å‹
 								</option>
 								<option value="3" selected="selected">
-									Ğ¡ĞÍ
+									å°å‹
 								</option>
 							 </c:if>
 							</select>
@@ -137,7 +137,7 @@ String path = request.getContextPath();
 					</tr>
 					<tr>
 						<td>
-							Èİ»ı(m3)£º
+							å®¹ç§¯(m3)ï¼š
 						</td>
 						<td id="size">
 							<html:text property="carSize" onblur="checkCarSize()" />
@@ -147,17 +147,17 @@ String path = request.getContextPath();
 					</tr>
 					<tr>
 						<td>
-							¶ÖÎ»£º
+							å¨ä½ï¼š
 						</td>
 						<td id="weight">
 							<html:text property="tonnage" onblur="checkTonnage()" />
-							<html:errors property="tonnage" />(¶Ö)
+							<html:errors property="tonnage" />(å¨)
 							<span id="w"></span> 
 						</td>
 					</tr>
 					<tr>
 						<td>
-							Ë¾»ú£º
+							å¸æœºï¼š
 						</td>
 						<td>
 							<select name="empID">
@@ -179,11 +179,11 @@ String path = request.getContextPath();
 					</tr>
 					<tr>
 						<td>
-							±¸×¢£º
+							å¤‡æ³¨ï¼š
 						</td>
 						<td>
 							<html:textarea property="remark"  onblur="checkRemark()"  cols="30" rows="4"/>
-							<html:errors property="remark" />(Ñ¡Ìî|200)<span id="r"></span>
+							<html:errors property="remark" />(é€‰å¡«|200)<span id="r"></span>
 						</td>
 					</tr>
 					<tr>
@@ -191,9 +191,9 @@ String path = request.getContextPath();
 					&nbsp;
 					</td>
 						<td>
-							<input type="button" value="ĞŞ¸Ä" onclick="check()" />
+							<input type="button" value="ä¿®æ”¹" onclick="check()" />
 							&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="reset" value="ÖØÖÃ">
+                            <input type="reset" value="é‡ç½®">
 						</td>
 					</tr>
 				</table>
@@ -208,7 +208,7 @@ String path = request.getContextPath();
 			<br>
 			<br>
 			<h1>
-				ÄúÎŞÈ¨·ÃÎÊ´ËÒ³Ãæ£¡£¡£¡
+				æ‚¨æ— æƒè®¿é—®æ­¤é¡µé¢ï¼ï¼ï¼
 			</h1>
 		</c:if>
 	</body>

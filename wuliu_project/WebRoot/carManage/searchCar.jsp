@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://jsptags.com/tags/navigation/pager" prefix="pg"%>
 <%
@@ -12,7 +12,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
-		<title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---²é¿´³µÁ¾</title>
+		<title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---æŸ¥çœ‹è½¦è¾†</title>
 		<link rel="stylesheet" type="text/css"
 			href="<%=path%>/style/wuliu_back.css" />
 		<!--<scrpit language="javascript" src="../js/searchCar_delete.js"></scrpit>
@@ -20,24 +20,24 @@
 		<script>
      function selectAll() {
 	            var f=document.forms[1];
-	            if(f.d.value == "È«Ñ¡")
+	            if(f.d.value == "å…¨é€‰")
 	            {
 	            for( i=0 ; i<f.elements.length ; i++) {
 		          if (f.elements[i].name=="carIDs") {
 		          f.elements[i].checked=true;
 		         }
 	            }
-	            f.d.value="·´Ñ¡";
+	            f.d.value="åé€‰";
 	          }
 	          
-	          else if(f.d.value == "·´Ñ¡")
+	          else if(f.d.value == "åé€‰")
 	            {
 	            for( i=0 ; i<f.elements.length ; i++) {
 		          if (f.elements[i].name=="carIDs") {
 		          f.elements[i].checked=false;
 		         }
 	            }
-	            f.d.value="È«Ñ¡";
+	            f.d.value="å…¨é€‰";
 	          }
            }
            
@@ -54,7 +54,7 @@
 		         }
                }
               if(r){
-                 if(confirm("È·¶¨ÒªÉ¾³ı¼ÇÂ¼Âğ£¿")){
+                 if(confirm("ç¡®å®šè¦åˆ é™¤è®°å½•å—ï¼Ÿ")){
                     f.action="<%=path%>/check/car.do?methodName=dels";
                     f.submit();
                  }
@@ -63,7 +63,7 @@
                  }
               }
               else{
-               alert("ÇëÑ¡ÔñÒªÉ¾³ıµÄ¼ÇÂ¼£¡");
+               alert("è¯·é€‰æ‹©è¦åˆ é™¤çš„è®°å½•ï¼");
                 return ;
               }
           }      
@@ -75,7 +75,7 @@
 	    f.action="<%=path%>/check/car.do?methodName=searchByCarNO&carno="+carno;
 	    f.submit();
 	    }else{
-	        var msgs= "<font color=red><b>¡Á</b></font>";
+	        var msgs= "<font color=red><b>Ã—</b></font>";
 	        document.getElementById("1").innerHTML=msgs;
 	      return;
 	    }
@@ -88,7 +88,7 @@
 	    f.action="<%=path%>/check/car.do?methodName=searchByWorkNO&workno="+workno;
 	    f.submit();
 	    }else{
-	        var msgs= "<font color=red><b>¡Á</b></font>";
+	        var msgs= "<font color=red><b>Ã—</b></font>";
 	        document.getElementById("2").innerHTML=msgs;
 	        return;
 	    }
@@ -110,59 +110,59 @@
 
 	<body>
 		<h1>
-			³µÁ¾²éÑ¯
+			è½¦è¾†æŸ¥è¯¢
 		</h1>
 		<center>
 			<form action="<%=path%>/check/car.do?methodName=searchCar" method="post">
 				<table class="t1">
 					<tr>
 						<td>
-							°´³µÅÆºÅ²éÑ¯:
+							æŒ‰è½¦ç‰Œå·æŸ¥è¯¢:
 						</td>
 						<td>
 							<input type="text" name="carNO" />
 						</td>
 						<td>
-							<input type="button" value="²éÑ¯" onclick="searchByCarNO()" />
+							<input type="button" value="æŸ¥è¯¢" onclick="searchByCarNO()" />
 							<span id="1"></span>
 						</td>
 					</tr>
 
 					<tr>
 						<td>
-							°´ÔËÓªÖ¤ºÅ²éÑ¯:
+							æŒ‰è¿è¥è¯å·æŸ¥è¯¢:
 						</td>
 						<td>
 							<input type="text" name="workNO" />
 						</td>
 						<td>
-							<input type="button" value="²éÑ¯" onclick="searchByWorkNO()" />
+							<input type="button" value="æŸ¥è¯¢" onclick="searchByWorkNO()" />
 							<span id="2"></span>
 						</td>
 					</tr>
 
 					<tr>
 						<td>
-							°´×´Ì¬²éÑ¯:
+							æŒ‰çŠ¶æ€æŸ¥è¯¢:
 						</td>
 						<td>
 							<select name="state">
 								<option value="1">
-									ĞÂ¹º
+									æ–°è´­
 								</option>
 								<option value="2">
-									Í¾ÖĞ
+									é€”ä¸­
 								</option>
 								<option value="3">
-									Î¬ĞŞ
+									ç»´ä¿®
 								</option>
 								<option value="4">
-									¿ÕÏĞ
+									ç©ºé—²
 								</option>
 							</select>
 						</td>
 						<td>
-							<input type="button" value="²éÑ¯" onclick="searchByState()" />
+							<input type="button" value="æŸ¥è¯¢" onclick="searchByState()" />
 						</td>
 					</tr>
 				</table>
@@ -174,32 +174,32 @@
 					<table cellpadding="0" cellspacing="0" class="t2" align="center">
 						<tr>
 							<th>
-								³µÅÆºÅ
+								è½¦ç‰Œå·
 							</th>
 							<th>
-								ÓªÔËÖ¤ºÅ
+								è¥è¿è¯å·
 							</th>
 							<th>
-								³µĞÍ
+								è½¦å‹
 							</th>
 							<th>
-								ÔËÓªÏßÂ·
+								è¿è¥çº¿è·¯
 							</th>
 							<th>
-								·¢³µÊ±¼ä
+								å‘è½¦æ—¶é—´
 							</th>
 							<th>
-								¹ºÂòÈÕÆÚ
+								è´­ä¹°æ—¥æœŸ
 							</th>
 							<th>
-								³µÁ¾×´Ì¬
+								è½¦è¾†çŠ¶æ€
 							</th>
 							<c:if test="${UserSession.power.powerid == 1}">
 								<th>
-									ĞŞ¸Ä
+									ä¿®æ”¹
 								</th>
 								<th>
-									É¾³ı
+									åˆ é™¤
 								</th>
 							</c:if>
 						</tr>
@@ -240,7 +240,7 @@
 
 												<td>
 													<a
-														href="<%=path%>/check/car.do?methodName=update&carid=${car.carid }">ĞŞ¸Ä</a>
+														href="<%=path%>/check/car.do?methodName=update&carid=${car.carid }">ä¿®æ”¹</a>
 												</td>
 												<td>
 													<input type="checkbox" name="carIDs" value="${car.carid }" />
@@ -251,14 +251,14 @@
 									</pg:item>
 								</c:forEach>
 								<div id="p">
-									<font color="red" size="3">${count}Ìõ¼ÇÂ¼</font>
+									<font color="red" size="3">${count}æ¡è®°å½•</font>
 									<pg:index>
 
 										<pg:first>
-											<a href="<%=path%><%=pageUrl%>">Ê×Ò³</a>
+											<a href="<%=path%><%=pageUrl%>">é¦–é¡µ</a>
 										</pg:first>
 										<pg:prev>
-											<a href="<%=path%><%=pageUrl%>">ÉÏÒ»Ò³</a>
+											<a href="<%=path%><%=pageUrl%>">ä¸Šä¸€é¡µ</a>
 										</pg:prev>
 										<pg:pages>
 											<%
@@ -276,10 +276,10 @@
 											%>
 										</pg:pages>
 										<pg:next>
-											<a href="<%=path%><%=pageUrl%>">ÏÂÒ»Ò³</a>
+											<a href="<%=path%><%=pageUrl%>">ä¸‹ä¸€é¡µ</a>
 										</pg:next>
 										<pg:last>
-											<a href="<%=path%><%=pageUrl%>">Ä©Ò³</a>
+											<a href="<%=path%><%=pageUrl%>">æœ«é¡µ</a>
 										</pg:last>
 
 									</pg:index>
@@ -290,11 +290,11 @@
 							<c:if test="${UserSession.power.powerid == 1}">
 								<tr>
 									<td colspan="4" align="center">
-										<input type="button" name="d" value="È«Ñ¡"
+										<input type="button" name="d" value="å…¨é€‰"
 											onclick="selectAll();" />
 									</td>
 									<td colspan="4" align="center">
-										<input type="button" value="É¾³ı" onclick="del()" />
+										<input type="button" value="åˆ é™¤" onclick="del()" />
 									</td>
 								</tr>
 							</c:if>

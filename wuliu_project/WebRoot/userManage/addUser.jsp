@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="gbk"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-bean"
 	prefix="bean"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-html"
@@ -10,7 +10,7 @@
  %>
 <html>
 	<head>
-		<title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---Ìí¼ÓĞÂÓÃ»§</title>
+		<title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---æ·»åŠ æ–°ç”¨æˆ·</title>
 		<link rel="stylesheet" type="text/css" href="<%=path %>/style/wuliu_back.css" />
 		<script language="javascript" src="<%=path %>/js/baobiao.js"></script>
 		<script language="javascript" src="<%=path %>/js/calendar.js"></script>
@@ -23,12 +23,12 @@
 		}
 		function callback(list){
 		  dwr.util.removeAllOptions("dsid");
-		  dwr.util.addOptions("dsid",["---ÇëÑ¡Ôñ---"]);
+		  dwr.util.addOptions("dsid",["---è¯·é€‰æ‹©---"]);
 		  dwr.util.addOptions("dsid",list,"deliveryspotid","name");
 		}
 	   function getEmp(){
        var id = document.getElementById("dsid").value;
-               if(id == "---ÇëÑ¡Ôñ---")
+               if(id == "---è¯·é€‰æ‹©---")
               {
                  id = "0";
               }
@@ -43,7 +43,7 @@
 		function getEmp2(){
        var id = document.getElementById("ds").value;
        
-        if(id == "---ÇëÑ¡Ôñ---")
+        if(id == "---è¯·é€‰æ‹©---")
               {
                  id = "0";
               }
@@ -90,7 +90,7 @@
 			 	{
 			 		var msg = xmlhttp.responseText;
 			 		document.getElementById("name").innerHTML=msg;	
-			       if(msg == "<font color=red>ÓÃ»§Ãû´æÔÚ£¡</font>")
+			       if(msg == "<font color=red>ç”¨æˆ·åå­˜åœ¨ï¼</font>")
 			 		{
 			 		return false;
 			 	   }
@@ -105,17 +105,17 @@
 	   function ckeckPsw(){
        var psw = document.forms[0].passowrd.value;
         if(psw==""){
-           var msgTel ="<font color=red><b>¡Á</b></font>";
+           var msgTel ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("pw").innerHTML=msgTel;
           return false;
        }
         else if(!(/^\S{3,19}$/.test(psw))){
-	          var msgTel ="<font color=red><b>¡Á</b></font>";
+	          var msgTel ="<font color=red><b>Ã—</b></font>";
 		      document.getElementById("pw").innerHTML=msgTel;
               return false;
 	         }
         else{
-		    var msgTel ="<font color=green><b>¡Ì</b></font>";
+		    var msgTel ="<font color=green><b>âˆš</b></font>";
 		     document.getElementById("pw").innerHTML=msgTel;
 		    return true;
 		 } 
@@ -124,7 +124,7 @@
 		function checkEmpNO(){
 		  var empNO = document.getElementById("empNO").value;
 		  if(empNO == ""){
-		    var msgc ="<font color=red><b>¡Á</b></font>";
+		    var msgc ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("e").innerHTML=msgc;
 		    return false;
 		 }
@@ -136,12 +136,12 @@
         function checkName(){
 		  var username = document.forms[0].username.value;
 		  if(username == ""){
-		   var msgn ="<font color=red><b>¡Á</b></font>";
+		   var msgn ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("name").innerHTML=msgn;	
 		    return false;
 		 }
 		  else if(!(/^\S{3,19}$/.test(username))){
-		   var msgn ="<font color=red><b>¡Á</b></font>";
+		   var msgn ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("name").innerHTML=msgn;	
 		   return false;
 		   }
@@ -171,58 +171,58 @@
 		<c:if test="${UserSession.power.powerid != 3}">
 		<center>
 			<h1>
-				Ìí¼ÓÓÃ»§
+				æ·»åŠ ç”¨æˆ·
 			</h1>
 			<c:if test="${UserSession.power.powerid == 1}">
-			×¢£ºÔÚÎªÅäËÍµã¹ÜÀíÔ±·ÖÅäÓÃ»§ÕÊ»§Ö®Ç°£¬ÇëÏÈÌí¼Ó¸ÃÔ±¹¤£¡
+			æ³¨ï¼šåœ¨ä¸ºé…é€ç‚¹ç®¡ç†å‘˜åˆ†é…ç”¨æˆ·å¸æˆ·ä¹‹å‰ï¼Œè¯·å…ˆæ·»åŠ è¯¥å‘˜å·¥ï¼
 			</c:if>
 			<c:if test="${UserSession.power.powerid == 2}">
-			×¢£ºÔÚÎªÅäËÍµã²Ù×÷Ô±·ÖÅäÓÃ»§ÕÊ»§Ö®Ç°£¬ÇëÏÈÌí¼Ó¸ÃÔ±¹¤£¡
+			æ³¨ï¼šåœ¨ä¸ºé…é€ç‚¹æ“ä½œå‘˜åˆ†é…ç”¨æˆ·å¸æˆ·ä¹‹å‰ï¼Œè¯·å…ˆæ·»åŠ è¯¥å‘˜å·¥ï¼
 			</c:if>
 			<html:form action="/check/user?methodName=save" onsubmit="return submitForm()">
 
 				<table class="t1" border="1" width="500">
 					<tr>
 						<td>
-							ÓÃ»§µÇÂ¼Ãû£º
+							ç”¨æˆ·ç™»å½•åï¼š
 						</td>
 						<td>
 							<html:text property="username" onblur="checkUserName()" size="23"/>
 							<html:errors property="username" />
-							£¨3~19·Ç¿Õ¸ñ×Ö·û£©
+							ï¼ˆ3~19éç©ºæ ¼å­—ç¬¦ï¼‰
 							<span id="name"></span>${msg }
 						</td>
 					</tr>
 					<tr>
 						<td>
-							ÃÜÂë£º
+							å¯†ç ï¼š
 						</td>
 						<td>
 							<html:password property="passowrd"  onblur="ckeckPsw()"  size="25"/>
 							<html:errors property="passowrd" />
-							£¨3~19·Ç¿Õ¸ñ×Ö·û£©
+							ï¼ˆ3~19éç©ºæ ¼å­—ç¬¦ï¼‰
 							<span id="pw"></span>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							È¨ÏŞ£º
+							æƒé™ï¼š
 					   </td>
 					 <td>
 					
 					   <c:if test="${UserSession.power.powerid==1}">
-					      <html:hidden property="powerID" value="2"></html:hidden>ÅäËÍµã¹ÜÀíÔ±
+					      <html:hidden property="powerID" value="2"></html:hidden>é…é€ç‚¹ç®¡ç†å‘˜
 						  <html:errors property="powerID" />
 					   </c:if>
 					   <c:if test="${UserSession.power.powerid==2}">
-					   	  <html:hidden property="powerID" value="3"></html:hidden>ÅäËÍµã²Ù×÷Ô±
+					   	  <html:hidden property="powerID" value="3"></html:hidden>é…é€ç‚¹æ“ä½œå‘˜
 						  <html:errors property="powerID" />
 					   </c:if>
 					   </td>
 					</tr>
 					<tr>
 						<td>
-							ËùÔÚÅäËÍµã£º
+							æ‰€åœ¨é…é€ç‚¹ï¼š
 							
 						</td>
 						<td>
@@ -232,7 +232,7 @@
 						</c:if>
 						<c:if test="${UserSession.power.powerid==2}">
 						  <select name="ds" id="ds"  onchange="getEmp2();">
-						    <option value="---ÇëÑ¡Ôñ---">---ÇëÑ¡Ôñ---</option>
+						    <option value="---è¯·é€‰æ‹©---">---è¯·é€‰æ‹©---</option>
 						    <option value="${UserSession.deliveryspot.deliveryspotid}">${UserSession.deliveryspot.name}</option>
 							</select><span id="d"></span>
 						</c:if>
@@ -241,7 +241,7 @@
 					<tr>
 						
 						<td>
-							Ô±¹¤±àºÅ
+							å‘˜å·¥ç¼–å·
                         </td>
 						<td>
                             <select name="empNO" id="empNO">
@@ -253,9 +253,9 @@
 					&nbsp;
 					</td>
 						<td >
-							<html:submit>±£´æ</html:submit>
+							<html:submit>ä¿å­˜</html:submit>
 							&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="reset" value="ÖØÖÃ">
+                            <input type="reset" value="é‡ç½®">
 						</td>
 					</tr>
 				</table>
@@ -270,7 +270,7 @@
 			<br>
 			<br>
 			<h1>
-				ÄúÎŞÈ¨·ÃÎÊ´ËÒ³Ãæ£¡£¡£¡
+				æ‚¨æ— æƒè®¿é—®æ­¤é¡µé¢ï¼ï¼ï¼
 			</h1>
 		</c:if>
 	</body>

@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="gbk"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-bean"
 	prefix="bean"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-html"
@@ -10,7 +10,7 @@ String path = request.getContextPath();
 %>
 <html>
 	<head>
-		<title>GLOBAL����---�۸��ѯ</title>
+		<title>GLOBAL物流---价格查询</title>
 		<link rel="stylesheet" type="text/css"
 			href="<%=path%>/style/wuliu.css" />
 		<style type="text/css">
@@ -27,7 +27,7 @@ String path = request.getContextPath();
 			}
 		</script>
 		<SCRIPT type=text/javascript src="<%=path %>/js/company.js"></SCRIPT>
-		<script language="javascript"> defaultStatus = "��ӭ����GLOBAL����---�۸��ѯ��";</script>
+		<script language="javascript"> defaultStatus = "欢迎来到GLOBAL物流---价格查询！";</script>
 	</head>
 	<body onload="load();">
 		<div id="container">
@@ -41,19 +41,19 @@ String path = request.getContextPath();
 					<li></li>
 					<li></li>
 					<li>
-						<a href="<%=path %>/wuliu.jsp">��ҳ</a>
+						<a href="<%=path %>/wuliu.jsp">首页</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/About.jsp">��������</a>
+						<a href="<%=path %>/global/About.jsp">关于我们</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/News.jsp">��˾����</a>
+						<a href="<%=path %>/global/News.jsp">公司新闻</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/UserServer.jsp">�ͻ�����</a>
+						<a href="<%=path %>/global/UserServer.jsp">客户服务</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/ZhaoPin.jsp">��Ƹ��Ϣ</a>
+						<a href="<%=path %>/global/ZhaoPin.jsp">招聘信息</a>
 					</li>
 				</ul>
 			</div>
@@ -67,7 +67,7 @@ String path = request.getContextPath();
 						<input type="text" name="orderNO" class=search-normal 
                                 onblur="toggleColorSearch(this); blurSearch();" 
                                   onfocus="toggleColorSearch(this); focusSearch();" 
-                                   value="��������Ҫ��ѯ�Ķ�����"/>
+                                   value="请输入您要查询的订单号"/>
 						<br />
 					 <img src="<%=path %>/global_images/search.jpg" border="0"  onclick="searchOrderState()"/>
 						
@@ -83,11 +83,11 @@ String path = request.getContextPath();
 						&nbsp;
 						<br />
 						&nbsp;
-						<span class="STYLE1">�ͷ�TEL</span>��
+						<span class="STYLE1">客服TEL</span>：
 						<span class="STYLE4">0351-14125365</span>
 						<br />
 						&nbsp;
-						<span class="STYLE1">��˾����</span>��
+						<span class="STYLE1">公司邮箱</span>：
 						<span class="STYLE4">global@gmail.com </span>
 					</div>
 				</div>
@@ -97,19 +97,19 @@ String path = request.getContextPath();
 					<table border="0" class="t" width="442">
 						<tr>
 							<th>
-								����
+								网点
 							</th>
 							<th>
-								��ַ
+								地址
 							</th>
 							<th>
-								�׹��ﷶΧ
+								首公斤范围
 							</th>
 							<th>
-								�׹���۸�
+								首公斤价格
 							</th>
 							<th>
-								�ι���۸�
+								次公斤价格
 							</th>
 						</tr>
 						<pg:pager items="${count}" isOffset="true"
@@ -133,25 +133,25 @@ String path = request.getContextPath();
 											${pL.province.name }---${pL.city.name }
 										</td>
 										<td>
-											&lt;=${pL.startscope }����
+											&lt;=${pL.startscope }公斤
 										<td>
-											${pL.startprice }��
+											${pL.startprice }￥
 										</td>
 										<td>
-											${pL.secondprice }��/����
+											${pL.secondprice }￥/公斤
 										</td>
 									</tr>
 								</pg:item>
 							</c:forEach>
 							<div id="p">
-								<font color="red">${count}����¼</font>
+								<font color="red">${count}条记录</font>
 								<pg:index>
 
 									<pg:first>
-										<a href="<%=path%><%=pageUrl%>">��ҳ</a>
+										<a href="<%=path%><%=pageUrl%>">首页</a>
 									</pg:first>
 									<pg:prev>
-										<a href="<%=path%><%=pageUrl%>">��һҳ</a>
+										<a href="<%=path%><%=pageUrl%>">上一页</a>
 									</pg:prev>
 									<pg:pages>
 										<%
@@ -169,10 +169,10 @@ String path = request.getContextPath();
 										%>
 									</pg:pages>
 									<pg:next>
-										<a href="<%=path%><%=pageUrl%>">��һҳ</a>
+										<a href="<%=path%><%=pageUrl%>">下一页</a>
 									</pg:next>
 									<pg:last>
-										<a href="<%=path%><%=pageUrl%>">ĩҳ</a>
+										<a href="<%=path%><%=pageUrl%>">末页</a>
 									</pg:last>
 
 								</pg:index>
@@ -207,31 +207,31 @@ String path = request.getContextPath();
 					<br />
 					<marquee direction="up" behavior="scroll" loop="-1"
 						scrollamount="3" height="220" width="138">
-						<a href="#">�Ϻ��в��ֿ����ҵ����ѧϰ</a>
+						<a href="#">上海市部分快递企业代表学习</a>
 						<br/>
 						&nbsp;<br/>
-						<a href="#">�Ϻ�����ҵӭ����600���ж���Ա����ٿ�</a>
+						<a href="#">上海邮政业迎世博600天行动动员大会召开</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">���ҵ�ȼ������ƶȽ�</a>
+						<a href="#">快递业等级评定制度将</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">�Ϻ��в��ֿ����ҵ����ѧϰ</a>
+						<a href="#">上海市部分快递企业代表学习</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">�Ϻ�����ҵӭ����600���ж���Ա����ٿ�</a>
+						<a href="#">上海邮政业迎世博600天行动动员大会召开</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">���ҵ�ȼ������ƶȽ�</a>
+						<a href="#">快递业等级评定制度将</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">�Ϻ��в��ֿ����ҵ����ѧϰ</a>
+						<a href="#">上海市部分快递企业代表学习</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">�Ϻ�����ҵӭ����600���ж���Ա����ٿ�</a>
+						<a href="#">上海邮政业迎世博600天行动动员大会召开</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">���ҵ�ȼ������ƶȽ�</a>
+						<a href="#">快递业等级评定制度将</a>
 						<br />
 					</marquee>
 				</div>
@@ -250,7 +250,7 @@ String path = request.getContextPath();
 									<li>
 										<a
 											href="<%=path%>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name
-											}����</a>
+											}网点</a>
 									</li>
 								</c:if>
 							</c:forEach>
@@ -263,7 +263,7 @@ String path = request.getContextPath();
 									<li>
 										<a
 											href="<%=path%>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name
-											}����</a>
+											}网点</a>
 									</li>
 								</c:if>
 							</c:forEach>
@@ -276,7 +276,7 @@ String path = request.getContextPath();
 									<li>
 										<a
 											href="<%=path%>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name
-											}����</a>
+											}网点</a>
 									</li>
 								</c:if>
 							</c:forEach>
@@ -289,7 +289,7 @@ String path = request.getContextPath();
 									<li>
 										<a
 											href="<%=path%>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name
-											}����</a>
+											}网点</a>
 									</li>
 								</c:if>
 							</c:forEach>
@@ -302,11 +302,11 @@ String path = request.getContextPath();
 									<li>
 										<a
 											href="<%=path%>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name
-											}����</a>
+											}网点</a>
 									</li>
 								</c:if>
 							</c:forEach>
-							 <li><a href="<%=path %>/global/searchWebSit.jsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;����>></a></li>
+							 <li><a href="<%=path %>/global/searchWebSit.jsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更多>></a></li>
 						</ul>
 					</div>
 				</div>

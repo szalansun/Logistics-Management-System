@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="gbk"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-bean"
 	prefix="bean"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-html"
@@ -7,7 +7,7 @@
  <%String path = request.getContextPath(); %>
 <html>
 	<head>
-		<title>GLOBAL����--��˾��ҳ</title>
+		<title>GLOBAL物流--公司首页</title>
 		<link rel="stylesheet" type="text/css" href="<%=path %>/style/wuliu.css" />
 		<style type="text/css">
 			<!--
@@ -23,7 +23,7 @@
 			}
 		</script>
 			<SCRIPT type=text/javascript src="<%=path %>/js/company.js"></SCRIPT>
-			<script language="javascript"> defaultStatus = "��ӭ����GLOBAL����---��˾��ҳ��";</script>
+			<script language="javascript"> defaultStatus = "欢迎来到GLOBAL物流---公司首页！";</script>
 </head>
 	<body onload="load();">
 		<div id="container">
@@ -37,19 +37,19 @@
 					<li></li>
 					<li></li>
 					<li>
-						<a href="<%=path %>/wuliu.jsp">��ҳ</a>
+						<a href="<%=path %>/wuliu.jsp">首页</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/About.jsp">��������</a>
+						<a href="<%=path %>/global/About.jsp">关于我们</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/News.jsp">��˾����</a>
+						<a href="<%=path %>/global/News.jsp">公司新闻</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/UserServer.jsp">�ͻ�����</a>
+						<a href="<%=path %>/global/UserServer.jsp">客户服务</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/ZhaoPin.jsp">��Ƹ��Ϣ</a>
+						<a href="<%=path %>/global/ZhaoPin.jsp">招聘信息</a>
 					</li>
 				</ul>
 			</div>
@@ -63,7 +63,7 @@
 						<input type="text" name="orderNO" class=search-normal 
                                 onblur="toggleColorSearch(this); blurSearch();" 
                                   onfocus="toggleColorSearch(this); focusSearch();" 
-                                   value="��������Ҫ��ѯ�Ķ�����"/>
+                                   value="请输入您要查询的订单号"/>
 						<br />
 					 <img src="<%=path %>/global_images/search.jpg" border="0"  onclick="searchOrderState()"/>
 						
@@ -79,11 +79,11 @@
 						&nbsp;
 						<br />
 						&nbsp;
-						<span class="STYLE1">�ͷ�TEL</span>��
+						<span class="STYLE1">客服TEL</span>：
 						<span class="STYLE4">0351-14125365</span>
 						<br />
 						&nbsp;
-						<span class="STYLE1">��˾����</span>��
+						<span class="STYLE1">公司邮箱</span>：
 						<span class="STYLE4">global@gmail.com </span>
 					</div>
 				</div>
@@ -98,29 +98,29 @@
 				<div id="dongtai">
 					<ul>
 						<li>
-							<a href="#">ץ��ʱ�� ����᳹ �淶�г� ��ѧ��չ<img
+							<a href="#">抓紧时间 认真贯彻 规范市场 科学发展<img
 									src="<%=path %>/global_images/new.gif" border="0" />
 							</a>
 						</li>
 						<li>
-							<a href="#">ʡ�ܾ����ֳ������Ա��λGLOBAL����˾���м�鹤��<img
+							<a href="#">省管局辛局长深入会员单位GLOBAL物流司调研检查工作<img
 									src="<%=path %>/global_images/new.gif" border="0" />
 							</a>
 						</li>
 						<li>
-							<a href="#">��˾�ں����ٿ�2008��GLOBAL����������繤������</a>
+							<a href="#">公司在杭州召开2008年GLOBAL物流快递网络工作会议</a>
 						</li>
 						<li>
-							<a href="#">��GLOBAL�˼򱨡���39��ȫ��</a>
+							<a href="#">《GLOBAL人简报》第39期全文</a>
 						</li>
 						<li>
-							<a href="#">GLOBAL������˾��ʦ֣������</a>
+							<a href="#">GLOBAL物流公司律师郑重声明</a>
 						</li>
 						<li>
-							<a href="#">�����������г����˾��ȫ�ල���������������ҹ�˾��</a>
+							<a href="#">国家邮政局市场监管司安全监督处处长王永利来我公司检</a>
 						</li>
 						<li>
-							<a href="#">��GLOBAL�˼򱨡���38��ȫ��</a>
+							<a href="#">《GLOBAL人简报》第38期全文</a>
 						</li>
 					</ul>
 				</div>
@@ -133,29 +133,29 @@
 				<div id="news">
 					<ul>
 						<li>
-							<a href="#">�Ϻ��в��ֿ����ҵ����ѧϰ�������������޶��ݰ���<img
+							<a href="#">上海市部分快递企业代表学习《邮政法》（修订草案）<img
 									src="<%=path %>/global_images/new.gif" border="0" />
 							</a>
 						</li>
 						<li>
-							<a href="#">����&ldquo;����ͨ&rdquo;��ӭ����������̻�<img
+							<a href="#">两岸&ldquo;大三通&rdquo;将迎来快递无限商机<img
 									src="<%=path %>/global_images/new.gif" border="0" />
 							</a>
 						</li>
 						<li>
-							<a href="#">�Ϻ�����ҵӭ����600���ж���Ա����ٿ�</a>
+							<a href="#">上海邮政业迎世博600天行动动员大会召开</a>
 						</li>
 						<li>
-							<a href="#">������������������ݷ��񡷱�׼��깤��</a>
+							<a href="#">国家邮政局启动《快递服务》标准达标工作</a>
 						</li>
 						<li>
-							<a href="#">���ҵ�ȼ������ƶȽ���̨</a>
+							<a href="#">快递业等级评定制度将出台</a>
 						</li>
 						<li>
-							<a href="#">�ϰ����ҹ���Ҫ���������г���ģ��162��Ԫ</a>
+							<a href="#">上半年我国主要城市网购市场规模达162亿元</a>
 						</li>
 						<li>
-							<a href="#">����ʥ���Ϻ�����Բ������ �����ֳ�����ļ������</a>
+							<a href="#">奥运圣火上海传递圆满结束 结束现场进行募捐赈灾</a>
 						</li>
 					</ul>
 				</div>
@@ -187,31 +187,31 @@
 					<br />
 					<marquee direction="up" behavior="scroll" loop="-1"
 						scrollamount="3" height="220" width="138">
-						<a href="#">�Ϻ��в��ֿ����ҵ����ѧϰ</a>
+						<a href="#">上海市部分快递企业代表学习</a>
 						<br/>
 						&nbsp;<br/>
-						<a href="#">�Ϻ�����ҵӭ����600���ж���Ա����ٿ�</a>
+						<a href="#">上海邮政业迎世博600天行动动员大会召开</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">���ҵ�ȼ������ƶȽ�</a>
+						<a href="#">快递业等级评定制度将</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">�Ϻ��в��ֿ����ҵ����ѧϰ</a>
+						<a href="#">上海市部分快递企业代表学习</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">�Ϻ�����ҵӭ����600���ж���Ա����ٿ�</a>
+						<a href="#">上海邮政业迎世博600天行动动员大会召开</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">���ҵ�ȼ������ƶȽ�</a>
+						<a href="#">快递业等级评定制度将</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">�Ϻ��в��ֿ����ҵ����ѧϰ</a>
+						<a href="#">上海市部分快递企业代表学习</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">�Ϻ�����ҵӭ����600���ж���Ա����ٿ�</a>
+						<a href="#">上海邮政业迎世博600天行动动员大会召开</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">���ҵ�ȼ������ƶȽ�</a>
+						<a href="#">快递业等级评定制度将</a>
 						<br />
 					</marquee>
 				</div>
@@ -226,7 +226,7 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index<5}">
-				        <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }����</a></li>
+				        <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }网点</a></li>
 				      </c:if>
 				    </c:forEach>
 						</ul>
@@ -235,7 +235,7 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index>=5 && s.index<10}">
-				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }����</a></li>
+				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }网点</a></li>
 				      </c:if>
 				    </c:forEach>
 						</ul>
@@ -244,7 +244,7 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index>=10 && s.index<15}">
-				        <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }����</a></li>
+				        <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }网点</a></li>
 				      </c:if>
 				    </c:forEach>
 						</ul>
@@ -253,7 +253,7 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index>=15 && s.index<20}">
-				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }����</a></li>
+				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }网点</a></li>
 				      </c:if>
 				    </c:forEach>
 						</ul>
@@ -262,10 +262,10 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index>=20 && s.index<24}">
-				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }����</a></li>
+				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }网点</a></li>
 				      </c:if>
 				    </c:forEach>
-				       <li><a href="<%=path %>/global/searchWebSit.jsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;����>></a></li>
+				       <li><a href="<%=path %>/global/searchWebSit.jsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更多>></a></li>
 						</ul>
 					</div>
 				</div>

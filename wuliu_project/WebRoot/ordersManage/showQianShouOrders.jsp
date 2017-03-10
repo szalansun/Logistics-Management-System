@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
 	String path = request.getContextPath();
@@ -12,7 +12,7 @@
 	<head>
 		<base href="<%=basePath%>">
 
-		<title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---Ç©ÊÕµÄ¶©µ¥</title>
+		<title>GLOBALç‰©æµç®¡ç†ç³»ç»ŸåŽå°ç®¡ç†---ç­¾æ”¶çš„è®¢å•</title>
 
 		<meta http-equiv="pragma" content="no-cache">
 		<meta http-equiv="cache-control" content="no-cache">
@@ -32,28 +32,28 @@
 		<table border="1" class="t1">
 			<tr>
 				<td>
-					¶©µ¥±àºÅ
+					è®¢å•ç¼–å·
 				</td>
 				<td>
-					ÊÕ¼þµØ
+					æ”¶ä»¶åœ°
 				</td>
 				<td>
-					¼Ä¼þµØ
+					å¯„ä»¶åœ°
 				</td>
 				<td>
-					ÊÕ¼þÈËÐÕÃû
+					æ”¶ä»¶äººå§“å
 				</td>
 				<td>
-					¼Ä¼þÈËÐÕÃû
+					å¯„ä»¶äººå§“å
 				</td>
 				<td>
-					ÅäËÍµã
+					é…é€ç‚¹
 				</td>
 				<td>
-					¶©µ¥×´Ì¬
+					è®¢å•çŠ¶æ€
 				</td>
 				<td>
-					´´½¨Ê±¼ä
+					åˆ›å»ºæ—¶é—´
 				</td>
 			</tr>
 
@@ -98,7 +98,7 @@
 			<br>
 			<br>
 			<h1>
-				ÄúÎÞÈ¨·ÃÎÊ´ËÒ³Ãæ£¡£¡£¡
+				æ‚¨æ— æƒè®¿é—®æ­¤é¡µé¢ï¼ï¼ï¼
 			</h1>
 		</c:if>
 	</body>

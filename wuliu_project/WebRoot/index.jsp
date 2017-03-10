@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="gbk"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-bean"
 	prefix="bean"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-html"
@@ -6,9 +6,9 @@
  <%String path = request.getContextPath(); %>
 <html>
 	<head>
-		<title>GLOBAL��������ϵͳ��̨����---��ҳ</title>
+		<title>GLOBAL物流管理系统后台管理---首页</title>
 		<link rel="stylesheet" type="text/css" href="<%=path %>/style/wuliu_back.css" />
-		<script language="javascript"> defaultStatus = "��ӭ����GLOBAL��������ϵͳ��̨������";</script>
+		<script language="javascript"> defaultStatus = "欢迎来到GLOBAL物流管理系统后台管理！";</script>
 	</head>
 	<body>
 	<center>
@@ -35,10 +35,10 @@
 							&nbsp;&nbsp;&nbsp;&nbsp;
 						</li>
 						<li>
-							<a href="index.jsp">�칫��ҳ</a>
+							<a href="index.jsp">办公首页</a>
 						</li>
 						<li>
-							<a href="<%=path %>/company.do?methodName=initAllDeliverySpot">��˾��ҳ</a>
+							<a href="<%=path %>/company.do?methodName=initAllDeliverySpot">公司首页</a>
 						</li>
 					</ul>
 				</div>
@@ -51,7 +51,7 @@
 						</tr>
 							<tr>
 								<td>
-									�û�����
+									用户名：
 								</td>
 								<td>
 									<html:text property="username" size="14" />
@@ -59,7 +59,7 @@
 							</tr>
 							<tr>
 								<td>
-									���룺
+									密码：
 								</td>
 								<td>
 									<html:password property="password" size="14" />
@@ -67,19 +67,19 @@
 							</tr>
 							<tr>
 								<td>
-									Ȩ�ޣ�
+									权限：
 								</td>
 								<td>
 									<select name="powerID" id="powerID">
-										<option value="3">���͵����Ա</option>
-										<option value="2">���͵����Ա</option>
-										<option value="1">��������Ա</option>
+										<option value="3">配送点操作员</option>
+										<option value="2">配送点管理员</option>
+										<option value="1">超级管理员</option>
 									</select>
 								</td>
 							</tr>
 							<tr>
 								<td colspan="2" align="center">
-									<input type="submit" value="��¼" />
+									<input type="submit" value="登录" />
 								</td>
 							</tr>
 						</table>
@@ -88,9 +88,9 @@
 				<div id="foot2">
 					<center>
 						<pre>
-               ��Ȩ����GLOBAL������˾ �������:��ICP��05039742��
-              ҵ����ѯ�绰��0351-2720833 2720836 13805390912 ����ල�绰��13791568668 ���棺0351-2720899
-             �ܹ�˾��ַ��ɽ��ʡ̫ԭ���������186�ţ�̫ԭ������ѧ����100�ף�
+               版权所有GLOBAL物流公司 备案序号:晋ICP备05039742号
+              业务资询电话：0351-2720833 2720836 13805390912 服务监督电话：13791568668 传真：0351-2720899
+             总公司地址：山西省太原市万柏林区186号（太原理工大学向北走100米）
 </pre>
 					</center>
 				</div>

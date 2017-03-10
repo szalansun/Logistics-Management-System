@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://jsptags.com/tags/navigation/pager" prefix="pg"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-bean"
 	prefix="bean"%>
@@ -15,7 +15,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-   <title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---ÎªÏßÂ·Åä³µ</title>
+   <title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---ä¸ºçº¿è·¯é…è½¦</title>
    <link rel="stylesheet" type="text/css" href="<%=path %>/style/wuliu_back.css" />
     
 	<meta http-equiv="pragma" content="no-cache">
@@ -48,13 +48,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <c:if test="${UserSession.power.powerid==1}">
    <center>
 			<h1>
-				ÏßÂ·Åä³µ
+				çº¿è·¯é…è½¦
 			</h1>
 			<form action="<%=path %>/check/line.do?methodName=matchingLine" method="post">
 				<table border="1" class="t1">
 					<tr>
 						<td>
-							Â·ÏßÑ¡Ôñ
+							è·¯çº¿é€‰æ‹©
 						</td>
 						<td>
 							<select name="lineID" id="lineID">	
@@ -64,7 +64,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</tr>
 					<tr>
 						<td>
-							³µÁ¾Ñ¡Ôñ
+							è½¦è¾†é€‰æ‹©
 						</td>
 						<td>
 						<select name="carID" id="cID">
@@ -77,7 +77,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</tr>
 					<tr>
 						<td>
-							·¢³µÊ±¼ä
+							å‘è½¦æ—¶é—´
 						</td>
 						<td>
 							<select name="leaveTime" id="time">
@@ -96,14 +96,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</tr>
 					<tr>
 						<td colspan="2" align="center">
-						  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="È·¶¨"/>						</td>
+						  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="ç¡®å®š"/>						</td>
 				  </tr>
 				</table>
 			</form>
 			<hr/>
 			<table cellpadding="0" cellspacing="0" class="t2" align="center">
 			<tr>
-			<th>&nbsp;</th><th>³µÅÆºÅ</th><th>·¢³µÊ±¼ä</th><th>ËùÊôÏßÂ·Ãû³Æ</th>
+			<th>&nbsp;</th><th>è½¦ç‰Œå·</th><th>å‘è½¦æ—¶é—´</th><th>æ‰€å±çº¿è·¯åç§°</th>
 			</tr>
 			 <tbody>
 				 <pg:pager items="${count}" isOffset="true"
@@ -120,11 +120,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</pg:item>
                </c:forEach>
                			<div id="p">
-                    <font color="red" size="3">${count}Ìõ¼ÇÂ¼</font>
+                    <font color="red" size="3">${count}æ¡è®°å½•</font>
                  <pg:index>
 
-				      <pg:first><a href="<%=path%><%=pageUrl %>">Ê×Ò³</a></pg:first>
-				      <pg:prev><a href="<%=path%><%=pageUrl %>">ÉÏÒ»Ò³</a></pg:prev>
+				      <pg:first><a href="<%=path%><%=pageUrl %>">é¦–é¡µ</a></pg:first>
+				      <pg:prev><a href="<%=path%><%=pageUrl %>">ä¸Šä¸€é¡µ</a></pg:prev>
 				      <pg:pages>
 				      <% 
 				     if (pageNumber.intValue() < 8) { 
@@ -137,8 +137,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				      }
 				      %>
 				      </pg:pages>
-				      <pg:next><a href="<%=path%><%=pageUrl %>">ÏÂÒ»Ò³</a></pg:next>
-				      <pg:last><a href="<%=path%><%=pageUrl %>">Ä©Ò³</a></pg:last>
+				      <pg:next><a href="<%=path%><%=pageUrl %>">ä¸‹ä¸€é¡µ</a></pg:next>
+				      <pg:last><a href="<%=path%><%=pageUrl %>">æœ«é¡µ</a></pg:last>
 
 			  </pg:index>
 				</div>
@@ -167,7 +167,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<br>
 			<br>
 			<h1>
-				ÄúÎŞÈ¨·ÃÎÊ´ËÒ³Ãæ£¡£¡£¡
+				æ‚¨æ— æƒè®¿é—®æ­¤é¡µé¢ï¼ï¼ï¼
 			</h1>
 		</c:if>
   </body>

@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="gbk"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-bean"
 	prefix="bean"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-html"
@@ -7,7 +7,7 @@
  <%String path = request.getContextPath(); %>
 <html>
 	<head>
-		<title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---Ìí¼ÓÅäËÍµãĞÅÏ¢</title>
+		<title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---æ·»åŠ é…é€ç‚¹ä¿¡æ¯</title>
 
 		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 		<meta http-equiv="description" content="this is my page">
@@ -24,14 +24,14 @@
 		
 			function callback(list){
 				dwr.util.removeAllOptions("r");
-				dwr.util.addOptions("r",["---ÇëÑ¡Ôñ---"]);
+				dwr.util.addOptions("r",["---è¯·é€‰æ‹©---"]);
 				dwr.util.addOptions("r",list,"provinceid","name");
 			}
 			
 			function change(){
 			
 				var id = document.getElementById("r").value;
-				if(id == "---ÇëÑ¡Ôñ---")
+				if(id == "---è¯·é€‰æ‹©---")
                  {  
                     id = "0";
                   }
@@ -85,12 +85,12 @@
 	  function checkN(){
 		  var name = document.getElementById("n").childNodes[0].value;
 		  if(name == ""){
-		    var msgn ="<font color=red><b>¡Á</b></font>";
+		    var msgn ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("dsname").innerHTML=msgn;
 		     return false;
 		 }
 		 else if(!(/^\S{1,19}$/.test(name))){
-		    var msgn ="<font color=red><b>¡Á</b></font>";
+		    var msgn ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("dsname").innerHTML=msgn;
 		     return false;
 		 }
@@ -101,16 +101,16 @@
 		function checkTel(){
 		  var tel = document.getElementById("t").childNodes[0].value;
 		  if(tel == ""){
-		    var msgTel ="<font color=red><b>¡Á</b></font>";
+		    var msgTel ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checktel").innerHTML=msgTel;
 		     return false;
 		 } else if(!(/^((\d{3}-\d{8})|(\d{4}-\d{7})|(\d{11}))$/.test(tel))){
-		   var msgTel ="<font color=red><b>¡Á</b></font>";
+		   var msgTel ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("checktel").innerHTML=msgTel;
 		   return false;
 		 }
 		 else{
-		    var msgTel ="<font color=green><b>¡Ì</b></font>";
+		    var msgTel ="<font color=green><b>âˆš</b></font>";
 		    document.getElementById("checktel").innerHTML=msgTel;
 		    return true;
 		 }
@@ -119,22 +119,22 @@
 		function checkSS(){
 		  var ss = document.getElementById("s").childNodes[0].value;
 		  if(ss == ""){
-		    var msgSS ="<font color=red><b>¡Á</b></font>";
+		    var msgSS ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checkstartScope").innerHTML=msgSS;
 		     return false;
 		 }
 		  else if(!(/^\d+(\.\d+)?$/.test(ss))){
-		   var msgSS ="<font color=red><b>¡Á</b></font>";
+		   var msgSS ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checkstartScope").innerHTML=msgSS;
 		    return false;
 		 }
 		 else if(ss<=0 || ss>9999){
-		      var msgSS ="<font color=red><b>¡Á</b></font>";
+		      var msgSS ="<font color=red><b>Ã—</b></font>";
 		      document.getElementById("checkstartScope").innerHTML=msgSS;
 		      return false;
 		   }
 		 else{
-		    var msgSS ="<font color=green><b>¡Ì</b></font>";
+		    var msgSS ="<font color=green><b>âˆš</b></font>";
 		    document.getElementById("checkstartScope").innerHTML=msgSS;
 		    return true;
 		 }
@@ -143,22 +143,22 @@
        function checkstartScope(){
 		  var sp1 = document.getElementById("sp1").childNodes[0].value;
 		  if(sp1 == ""){
-		     var msgSp1 ="<font color=red><b>¡Á</b></font>";
+		     var msgSp1 ="<font color=red><b>Ã—</b></font>";
 		     document.getElementById("checkstartPrice").innerHTML=msgSp1;
 		     return false;
 		 }
 		  else if(!(/^\d+(\.\d+)?$/.test(sp1))){
-		    var msgSp1 ="<font color=red><b>¡Á</b></font>";
+		    var msgSp1 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checkstartPrice").innerHTML=msgSp1;
 		    return false;
 		 }
 		 else if(sp1<=0 || sp1>9999){
-		  var msgSp1 ="<font color=red><b>¡Á</b></font>";
+		  var msgSp1 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checkstartPrice").innerHTML=msgSp1;
 		    return false;
 		  }
 		 else{
-		    var msgSp1 ="<font color=green><b>¡Ì</b></font>";
+		    var msgSp1 ="<font color=green><b>âˆš</b></font>";
 		    document.getElementById("checkstartPrice").innerHTML=msgSp1;
 		    return true;
 		 }
@@ -167,22 +167,22 @@
 		 function checksecondPrice(){
 		  var sp2 = document.getElementById("sp2").childNodes[0].value;
 		  if(sp2 == ""){
-		     var msgSp2 ="<font color=red><b>¡Á</b></font>";
+		     var msgSp2 ="<font color=red><b>Ã—</b></font>";
 		     document.getElementById("checksecondPrice").innerHTML=msgSp2;
 		     return false;
 		 }
 		  else if(!(/^\d+(\.\d+)?$/.test(sp2))){
-		    var msgSp2 ="<font color=red><b>¡Á</b></font>";
+		    var msgSp2 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checksecondPrice").innerHTML=msgSp2;
 		    return false;
 		 }
 		  else if(sp2<=0 || sp2>9999){
-		  var msgSp2 ="<font color=red><b>¡Á</b></font>";
+		  var msgSp2 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checksecondPrice").innerHTML=msgSp2;
 		    return false;
 		  }
 		 else{
-		     var msgSp1 ="<font color=green><b>¡Ì</b></font>";
+		     var msgSp1 ="<font color=green><b>âˆš</b></font>";
 		     document.getElementById("checksecondPrice").innerHTML=msgSp1;
 		     return true;
 		 }
@@ -191,22 +191,22 @@
 		function checkstartvolumescope(){
 		  var sp1 = document.getElementById("sp3").childNodes[0].value;
 		  if(sp1 == ""){
-		     var msgSp1 ="<font color=red><b>¡Á</b></font>";
+		     var msgSp1 ="<font color=red><b>Ã—</b></font>";
 		     document.getElementById("checkstartvolumescope").innerHTML=msgSp1;
 		     return false;
 		 }
 		  else if(!(/^\d+(\.\d+)?$/.test(sp1))){
-		    var msgSp1 ="<font color=red><b>¡Á</b></font>";
+		    var msgSp1 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checkstartvolumescope").innerHTML=msgSp1;
 		    return false;
 		 }
 		 else if(sp1<=0 || sp1>9999){
-		  var msgSp1 ="<font color=red><b>¡Á</b></font>";
+		  var msgSp1 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checkstartvolumescope").innerHTML=msgSp1;
 		    return false;
 		  }
 		 else{
-		    var msgSp1 ="<font color=green><b>¡Ì</b></font>";
+		    var msgSp1 ="<font color=green><b>âˆš</b></font>";
 		    document.getElementById("checkstartvolumescope").innerHTML=msgSp1;
 		    return true;
 		 }
@@ -215,22 +215,22 @@
 		function checkstartvolumeprice(){
 		  var sp1 = document.getElementById("sp4").childNodes[0].value;
 		  if(sp1 == ""){
-		     var msgSp1 ="<font color=red><b>¡Á</b></font>";
+		     var msgSp1 ="<font color=red><b>Ã—</b></font>";
 		     document.getElementById("checkstartvolumeprice").innerHTML=msgSp1;
 		     return false;
 		 }
 		  else if(!(/^\d+(\.\d+)?$/.test(sp1))){
-		    var msgSp1 ="<font color=red><b>¡Á</b></font>";
+		    var msgSp1 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checkstartvolumeprice").innerHTML=msgSp1;
 		    return false;
 		 }
 		 else if(sp1<=0 || sp1>9999){
-		  var msgSp1 ="<font color=red><b>¡Á</b></font>";
+		  var msgSp1 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checkstartvolumeprice").innerHTML=msgSp1;
 		    return false;
 		  }
 		 else{
-		    var msgSp1 ="<font color=green><b>¡Ì</b></font>";
+		    var msgSp1 ="<font color=green><b>âˆš</b></font>";
 		    document.getElementById("checkstartvolumeprice").innerHTML=msgSp1;
 		    return true;
 		 }
@@ -239,22 +239,22 @@
 		function checksecondvolumeprice(){
 		  var sp1 = document.getElementById("sp5").childNodes[0].value;
 		  if(sp1 == ""){
-		     var msgSp1 ="<font color=red><b>¡Á</b></font>";
+		     var msgSp1 ="<font color=red><b>Ã—</b></font>";
 		     document.getElementById("checksecondvolumeprice").innerHTML=msgSp1;
 		     return false;
 		 }
 		  else if(!(/^\d+(\.\d+)?$/.test(sp1))){
-		    var msgSp1 ="<font color=red><b>¡Á</b></font>";
+		    var msgSp1 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checksecondvolumeprice").innerHTML=msgSp1;
 		    return false;
 		 }
 		 else if(sp1<=0 || sp1>9999){
-		  var msgSp1 ="<font color=red><b>¡Á</b></font>";
+		  var msgSp1 ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checksecondvolumeprice").innerHTML=msgSp1;
 		    return false;
 		  }
 		 else{
-		    var msgSp1 ="<font color=green><b>¡Ì</b></font>";
+		    var msgSp1 ="<font color=green><b>âˆš</b></font>";
 		    document.getElementById("checksecondvolumeprice").innerHTML=msgSp1;
 		    return true;
 		 }
@@ -264,7 +264,7 @@
 		 function checkC(){
 		  var c = document.getElementById("c").value;
 		  if(c == ""){
-		    var msgc ="<font color=red><b>¡Á</b></font>";
+		    var msgc ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("city").innerHTML=msgc;
 		    return false;
 		 }
@@ -301,24 +301,24 @@
 	<c:if test="${UserSession.power.powerid==1}">
 		<center>
 			<h1>
-				ĞÂÔöÅäËÍµã
+				æ–°å¢é…é€ç‚¹
 			</h1>
 			<html:form action="/check/deliverySpot?methodName=save" onsubmit="return ckeckForm()">
 				<table border="1" class="t1" width="500">
 					<tr>
 						<td>
-							Õ¾µãÃû³Æ£º
+							ç«™ç‚¹åç§°ï¼š
 						</td>
 						<td id="n">
 							<html:text property="name" onblur="checkName()"/>
-							<html:errors property="name" />£¨1~19·Ç¿Õ¸ñ×Ö·û£©
+							<html:errors property="name" />ï¼ˆ1~19éç©ºæ ¼å­—ç¬¦ï¼‰
 							<span id="dsname"></span>${msg }
 						</td>	
 						
 					</tr>
 					<tr>
 						<td>
-							Õ¾µãµØÖ·£º
+							ç«™ç‚¹åœ°å€ï¼š
 						</td>
 						<td>
 							<select name="r" id="r" onChange="change()">
@@ -330,22 +330,22 @@
 
 					<tr>
 						<td>
-							ÁªÏµµç»°£º
+							è”ç³»ç”µè¯ï¼š
 						</td>
 						<td id="t">
 							<html:text property="tel"  onblur="checkTel()"/>
-							<html:errors property="tel" />£¨ÊÖ»ú|¹Ì»°£©
+							<html:errors property="tel" />ï¼ˆæ‰‹æœº|å›ºè¯ï¼‰
 							<span id="checktel"></span>
 						</td>
 					</tr>
 
 					<tr>
 						<td>
-							Ê×¹«½ï·¶Î§£¨Kg£©
+							é¦–å…¬æ–¤èŒƒå›´ï¼ˆKgï¼‰
 						</td>
 						<td id="s">
 							<html:text property="startScope" onblur="checkSS()"/>
-							<html:errors property="startScope" />£¨0~9999£©	
+							<html:errors property="startScope" />ï¼ˆ0~9999ï¼‰	
 							<span id="checkstartScope"></span>
 						</td>
 					</tr>
@@ -353,32 +353,32 @@
 
 					<tr>
 						<td>
-							Ê×¹«½ï¼Û¸ñ£¨£¤£©
+							é¦–å…¬æ–¤ä»·æ ¼ï¼ˆï¿¥ï¼‰
 						</td>
 						<td id="sp1">
 							<html:text property="startPrice" onblur="checkstartScope()"/>
-							<html:errors property="startPrice" />£¨0~9999£©	
+							<html:errors property="startPrice" />ï¼ˆ0~9999ï¼‰	
 							<span id="checkstartPrice"></span>
 						</td>
 					</tr>
 
 					<tr>
 						<td >
-							´Î¹«½ï¼Û¸ñÏµÊı£¨£¤£©
+							æ¬¡å…¬æ–¤ä»·æ ¼ç³»æ•°ï¼ˆï¿¥ï¼‰
 						</td>
 						<td id="sp2"><html:text property="secondPrice" onblur="checksecondPrice()"/>
-							<html:errors property="secondPrice" />	£¨0~9999£©	
+							<html:errors property="secondPrice" />	ï¼ˆ0~9999ï¼‰	
 							<span id="checksecondPrice"></span>
 						</td>
 					</tr>
 					
 					<tr>
 						<td>
-							Ê×Ìå»ı·¶Î§£¨Á¢·½Ã×£©
+							é¦–ä½“ç§¯èŒƒå›´ï¼ˆç«‹æ–¹ç±³ï¼‰
 						</td>
 						<td id="sp3">
 							<html:text property="startvolumescope" onblur="checkstartvolumescope()"/>
-							<html:errors property="startvolumescope" />£¨0~9999£©	
+							<html:errors property="startvolumescope" />ï¼ˆ0~9999ï¼‰	
 							<span id="checkstartvolumescope"></span>
 						</td>
 					</tr>
@@ -386,21 +386,21 @@
 
 					<tr>
 						<td>
-							Ê×Ìå»ı¼Û¸ñ£¨£¤£©
+							é¦–ä½“ç§¯ä»·æ ¼ï¼ˆï¿¥ï¼‰
 						</td>
 						<td id="sp4">
 							<html:text property="startvolumeprice" onblur="checkstartvolumeprice()"/>
-							<html:errors property="startvolumeprice" />£¨0~9999£©	
+							<html:errors property="startvolumeprice" />ï¼ˆ0~9999ï¼‰	
 							<span id="checkstartvolumeprice"></span>
 						</td>
 					</tr>
 
 					<tr>
 						<td >
-							´ÎÌå»ı¼Û¸ñÏµÊı£¨£¤£©
+							æ¬¡ä½“ç§¯ä»·æ ¼ç³»æ•°ï¼ˆï¿¥ï¼‰
 						</td>
 						<td id="sp5"><html:text property="secondvolumeprice" onblur="checksecondvolumeprice()"/>
-							<html:errors property="secondvolumeprice" />	£¨0~9999£©	
+							<html:errors property="secondvolumeprice" />	ï¼ˆ0~9999ï¼‰	
 							<span id="checksecondvolumeprice"></span>
 						</td>
 					</tr>
@@ -408,8 +408,8 @@
 					<tr>
 						<td>&nbsp;</td>
 				  <td>
-				    <html:submit>Ìá½»</html:submit>	&nbsp;&nbsp;&nbsp;&nbsp;
-							<html:reset>ÖØÖÃ</html:reset>
+				    <html:submit>æäº¤</html:submit>	&nbsp;&nbsp;&nbsp;&nbsp;
+							<html:reset>é‡ç½®</html:reset>
 						</td>
 					</tr>
 				</table>
@@ -424,7 +424,7 @@
 			<br>
 			<br>
 			<h1>
-				ÄúÎŞÈ¨·ÃÎÊ´ËÒ³Ãæ£¡£¡£¡
+				æ‚¨æ— æƒè®¿é—®æ­¤é¡µé¢ï¼ï¼ï¼
 			</h1>
 		</c:if>
 		

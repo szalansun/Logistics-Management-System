@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="gbk"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-bean"
 	prefix="bean"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-html"
@@ -7,7 +7,7 @@
  <%String path = request.getContextPath(); %>
 <html>
 	<head>
-		<title>GLOBALÎïÁ÷--Õ¾µãÏêÏ¸---${deliveryspot.name }</title>
+		<title>GLOBALç‰©æµ--ç«™ç‚¹è¯¦ç»†---${deliveryspot.name }</title>
 		<link rel="stylesheet" type="text/css" href="<%=path %>/style/wuliu.css" />
 		<style type="text/css">
 			<!--
@@ -23,7 +23,7 @@
 			}
 		</script>
 		<SCRIPT type=text/javascript src="<%=path %>/js/company.js"></SCRIPT>
-		<script language="javascript"> defaultStatus = "»¶Ó­À´µ½GLOBALÎïÁ÷---${deliveryspot.name }ÏêÏ¸£¡";</script>
+		<script language="javascript"> defaultStatus = "æ¬¢è¿æ¥åˆ°GLOBALç‰©æµ---${deliveryspot.name }è¯¦ç»†ï¼";</script>
 </head>
 	<body onload="load();">
 		<div id="container">
@@ -37,19 +37,19 @@
 					<li></li>
 					<li></li>
 					<li>
-						<a href="<%=path %>/wuliu.jsp">Ê×Ò³</a>
+						<a href="<%=path %>/wuliu.jsp">é¦–é¡µ</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/About.jsp">¹ØÓÚÎÒÃÇ</a>
+						<a href="<%=path %>/global/About.jsp">å…³äºæˆ‘ä»¬</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/News.jsp">¹«Ë¾ĞÂÎÅ</a>
+						<a href="<%=path %>/global/News.jsp">å…¬å¸æ–°é—»</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/UserServer.jsp">¿Í»§·şÎñ</a>
+						<a href="<%=path %>/global/UserServer.jsp">å®¢æˆ·æœåŠ¡</a>
 					</li>
 					<li>
-						<a href="<%=path %>/global/ZhaoPin.jsp">ÕĞÆ¸ĞÅÏ¢</a>
+						<a href="<%=path %>/global/ZhaoPin.jsp">æ‹›è˜ä¿¡æ¯</a>
 					</li>
 				</ul>
 			</div>
@@ -63,7 +63,7 @@
 						<input type="text" name="orderNO" class=search-normal 
                                 onblur="toggleColorSearch(this); blurSearch();" 
                                   onfocus="toggleColorSearch(this); focusSearch();" 
-                                   value="ÇëÊäÈëÄúÒª²éÑ¯µÄ¶©µ¥ºÅ"/>
+                                   value="è¯·è¾“å…¥æ‚¨è¦æŸ¥è¯¢çš„è®¢å•å·"/>
 						<br />
 					 <img src="<%=path %>/global_images/search.jpg" border="0"  onclick="searchOrderState()"/>
 						
@@ -79,11 +79,11 @@
 						&nbsp;
 						<br />
 						&nbsp;
-						<span class="STYLE1">¿Í·şTEL</span>£º
+						<span class="STYLE1">å®¢æœTEL</span>ï¼š
 						<span class="STYLE4">0351-14125365</span>
 						<br />
 						&nbsp;
-						<span class="STYLE1">¹«Ë¾ÓÊÏä</span>£º
+						<span class="STYLE1">å…¬å¸é‚®ç®±</span>ï¼š
 						<span class="STYLE4">global@gmail.com </span>
 					</div>
 				</div>
@@ -92,25 +92,25 @@
 				<div id="tb2">
 					<table border="0" class="t" width="442">
 					    <tr>
-					      <td>Õ¾µãÃû³Æ£º ${deliveryspot.name } </td>
-					      <td align="right">TEL£º ${deliveryspot.tel } </td>
+					      <td>ç«™ç‚¹åç§°ï¼š ${deliveryspot.name } </td>
+					      <td align="right">TELï¼š ${deliveryspot.tel } </td>
 					    </tr>
 					    <tr>
 					      <td   colspan="2"><hr></td>
 					    </tr>
 					    <tr>
-					      <td colspan="2">Õ¾µãµØÖ·£º ${deliveryspot.province.name }--${deliveryspot.city.name } </td>
+					      <td colspan="2">ç«™ç‚¹åœ°å€ï¼š ${deliveryspot.province.name }--${deliveryspot.city.name } </td>
 					    </tr>
 					     <tr>
 					      <td colspan="2"><hr></td>
 					    </tr>
 					    <tr>
-					      <td>Ê×¹«½ï·¶Î§£º${deliveryspot.startscope }&nbsp;¹«½ï </td>
-					      <td >Ê×¹«½ï¼Û¸ñ£º£¤${deliveryspot.startprice }&nbsp;Ôª </td>
+					      <td>é¦–å…¬æ–¤èŒƒå›´ï¼š${deliveryspot.startscope }&nbsp;å…¬æ–¤ </td>
+					      <td >é¦–å…¬æ–¤ä»·æ ¼ï¼šï¿¥${deliveryspot.startprice }&nbsp;å…ƒ </td>
 					    </tr>
 					    <tr>
 					      <td></td>
-					      <td>´Î¹«½ï¼Û¸ñ£º£¤${deliveryspot.secondprice }&nbsp;Ôª/¹«½ï </td>
+					      <td>æ¬¡å…¬æ–¤ä»·æ ¼ï¼šï¿¥${deliveryspot.secondprice }&nbsp;å…ƒ/å…¬æ–¤ </td>
 					    </tr>
 					    
 							<tr>
@@ -118,12 +118,12 @@
 						    </tr>
 						    
 						    <tr>
-						      <td>Ê×Ìå»ı·¶Î§£º${deliveryspot.startvolumescope }&nbsp;Á¢·½Ã× </td>
-						      <td >Ê×Ìå»ı¼Û¸ñ£º£¤${deliveryspot.startvolumeprice }&nbsp;Ôª</td>
+						      <td>é¦–ä½“ç§¯èŒƒå›´ï¼š${deliveryspot.startvolumescope }&nbsp;ç«‹æ–¹ç±³ </td>
+						      <td >é¦–ä½“ç§¯ä»·æ ¼ï¼šï¿¥${deliveryspot.startvolumeprice }&nbsp;å…ƒ</td>
 						    </tr>
 						    <tr>
 						      <td></td>
-						      <td>´ÎÌå»ı¼Û¸ñ£º£¤${deliveryspot.secondvolumeprice }&nbsp;Ôª/Á¢·½Ã× </td>
+						      <td>æ¬¡ä½“ç§¯ä»·æ ¼ï¼šï¿¥${deliveryspot.secondvolumeprice }&nbsp;å…ƒ/ç«‹æ–¹ç±³ </td>
 						    </tr>
 						</table>
 				</div>
@@ -154,31 +154,31 @@
 					<br />
 					<marquee direction="up" behavior="scroll" loop="-1"
 						scrollamount="3" height="220" width="138">
-						<a href="#">ÉÏº£ÊĞ²¿·Ö¿ìµİÆóÒµ´ú±íÑ§Ï°</a>
+						<a href="#">ä¸Šæµ·å¸‚éƒ¨åˆ†å¿«é€’ä¼ä¸šä»£è¡¨å­¦ä¹ </a>
 						<br/>
 						&nbsp;<br/>
-						<a href="#">ÉÏº£ÓÊÕşÒµÓ­ÊÀ²©600ÌìĞĞ¶¯¶¯Ô±´ó»áÕÙ¿ª</a>
+						<a href="#">ä¸Šæµ·é‚®æ”¿ä¸šè¿ä¸–åš600å¤©è¡ŒåŠ¨åŠ¨å‘˜å¤§ä¼šå¬å¼€</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">¿ìµİÒµµÈ¼¶ÆÀ¶¨ÖÆ¶È½«</a>
+						<a href="#">å¿«é€’ä¸šç­‰çº§è¯„å®šåˆ¶åº¦å°†</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">ÉÏº£ÊĞ²¿·Ö¿ìµİÆóÒµ´ú±íÑ§Ï°</a>
+						<a href="#">ä¸Šæµ·å¸‚éƒ¨åˆ†å¿«é€’ä¼ä¸šä»£è¡¨å­¦ä¹ </a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">ÉÏº£ÓÊÕşÒµÓ­ÊÀ²©600ÌìĞĞ¶¯¶¯Ô±´ó»áÕÙ¿ª</a>
+						<a href="#">ä¸Šæµ·é‚®æ”¿ä¸šè¿ä¸–åš600å¤©è¡ŒåŠ¨åŠ¨å‘˜å¤§ä¼šå¬å¼€</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">¿ìµİÒµµÈ¼¶ÆÀ¶¨ÖÆ¶È½«</a>
+						<a href="#">å¿«é€’ä¸šç­‰çº§è¯„å®šåˆ¶åº¦å°†</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">ÉÏº£ÊĞ²¿·Ö¿ìµİÆóÒµ´ú±íÑ§Ï°</a>
+						<a href="#">ä¸Šæµ·å¸‚éƒ¨åˆ†å¿«é€’ä¼ä¸šä»£è¡¨å­¦ä¹ </a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">ÉÏº£ÓÊÕşÒµÓ­ÊÀ²©600ÌìĞĞ¶¯¶¯Ô±´ó»áÕÙ¿ª</a>
+						<a href="#">ä¸Šæµ·é‚®æ”¿ä¸šè¿ä¸–åš600å¤©è¡ŒåŠ¨åŠ¨å‘˜å¤§ä¼šå¬å¼€</a>
 						<br />
 						&nbsp;<br/>
-						<a href="#">¿ìµİÒµµÈ¼¶ÆÀ¶¨ÖÆ¶È½«</a>
+						<a href="#">å¿«é€’ä¸šç­‰çº§è¯„å®šåˆ¶åº¦å°†</a>
 						<br />
 					</marquee>
 				</div>
@@ -194,7 +194,7 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index<5}">
-				        <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }Íøµã</a></li>
+				        <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }ç½‘ç‚¹</a></li>
 				      </c:if>
 				    </c:forEach>
 						</ul>
@@ -203,7 +203,7 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index>=5 && s.index<10}">
-				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }Íøµã</a></li>
+				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }ç½‘ç‚¹</a></li>
 				      </c:if>
 				    </c:forEach>
 						</ul>
@@ -212,7 +212,7 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index>=10 && s.index<15}">
-				        <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }Íøµã</a></li>
+				        <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }ç½‘ç‚¹</a></li>
 				      </c:if>
 				    </c:forEach>
 						</ul>
@@ -221,7 +221,7 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index>=15 && s.index<20}">
-				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }Íøµã</a></li>
+				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }ç½‘ç‚¹</a></li>
 				      </c:if>
 				    </c:forEach>
 						</ul>
@@ -230,10 +230,10 @@
 						<ul>
 				    <c:forEach var="p" items="${provinceList}" varStatus="s">
 				      <c:if test ="${s.index>=20 && s.index<24}">
-				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }Íøµã</a></li>
+				         <li><a href="<%=path %>/company.do?methodName=queryAllDeliverySpotByProvinceIDFromDeliverySpot&provinceID=${p.province.provinceid }">${p.province.name }ç½‘ç‚¹</a></li>
 				      </c:if>
 				    </c:forEach>
-				     <li><a href="<%=path %>/global/searchWebSit.jsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¸ü¶à>></a></li>
+				     <li><a href="<%=path %>/global/searchWebSit.jsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;æ›´å¤š>></a></li>
 						</ul>
 					</div>
 				</div>

@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
 String path = request.getContextPath();
@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---ĞŞ¸ÄÓÃ»§µÄĞÅÏ¢</title>
+    <title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---ä¿®æ”¹ç”¨æˆ·çš„ä¿¡æ¯</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -24,17 +24,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         function ckeckPsw(){
         var psw = document.f1.password.value;
         if(psw==""){
-           var msgTel ="<font color=red><b>¡Á</b></font>";
+           var msgTel ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("pw").innerHTML=msgTel;
           return false;
        } 
        else if(!(/^\S{3,19}$/.test(psw))){
-        var msgTel ="<font color=red><b>¡Á</b></font>";
+        var msgTel ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("pw").innerHTML=msgTel;
           return false;
        }
         else{
-		    var msgTel ="<font color=green><b>¡Ì</b></font>";
+		    var msgTel ="<font color=green><b>âˆš</b></font>";
 		     document.getElementById("pw").innerHTML=msgTel;
 		    return true;
 		 }
@@ -56,26 +56,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
   <c:if test="${UserSession.power.powerid == 1}">
   <center>
-  <h1>ĞŞ¸ÄÓÃ»§ĞÅÏ¢</h1>
+  <h1>ä¿®æ”¹ç”¨æˆ·ä¿¡æ¯</h1>
     <form name="f1" id="f1" action="<%=path %>/check/user.do?methodName=update&userid=${userlist.userid}" method="post" onsubmit="return submitForm()">
    <table  class="t1" border="1" width="350">
   <tr>
-          <td>ÓÃ»§Ãû£º</td>
+          <td>ç”¨æˆ·åï¼š</td>
           <td><input type="text" name="username" id="login" value="${userlist.username }" readonly="true" ></td>
         </tr>
         <tr>
-          <td>ÃÜÂë£º</td>
+          <td>å¯†ç ï¼š</td>
           <td><input type="text" name="password" id="password" value="${userlist.passowrd }"  onblur="ckeckPsw()"><span id="pw"></span></td>
         </tr>
         <tr>
-          <td>È¨ÏŞ£º</td>
+          <td>æƒé™ï¼š</td>
           <td>
            <input type="text" value="${userlist.power.name }" readonly="true"/> <input type="hidden" name="powerID" value="${userlist.power.powerid }"/>
             </td> 
         </tr>
          <tr><td>&nbsp;</td><td>
-           <input type="submit" value="ĞŞ¸Ä">&nbsp;&nbsp;&nbsp;&nbsp;
-          <input type="reset" value="ÖØÖÃ"></td>
+           <input type="submit" value="ä¿®æ”¹">&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="reset" value="é‡ç½®"></td>
         </tr>
       </table>
     </form>
@@ -89,7 +89,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<br>
 			<br>
 			<h1>
-				ÄúÎŞÈ¨·ÃÎÊ´ËÒ³Ãæ£¡£¡£¡
+				æ‚¨æ— æƒè®¿é—®æ­¤é¡µé¢ï¼ï¼ï¼
 			</h1>
 		</c:if>
   </body>

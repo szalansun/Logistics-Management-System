@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-bean" prefix="bean"%> 
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-html" prefix="html"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
@@ -14,7 +14,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---²é¿´Ô±¹¤</title>
+    <title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---æŸ¥çœ‹å‘˜å·¥</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -35,13 +35,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			function callback(list){
 			
 				dwr.util.removeAllOptions("dsID");
-				 dwr.util.addOptions("dsID",["---ÇëÑ¡Ôñ---"]);
+				 dwr.util.addOptions("dsID",["---è¯·é€‰æ‹©---"]);
 				dwr.util.addOptions("dsID",list,"deliveryspotid","name");
 				
 			}
 	    function search(){
 		  var f = document.forms[0];
-		  if(f.dsID.value != "---ÇëÑ¡Ôñ---"){
+		  if(f.dsID.value != "---è¯·é€‰æ‹©---"){
 		  f.action = "<%=path %>/check/selectEmployee.do?method=queryByEmpNO";
 		  f.submit();
 		  }
@@ -65,7 +65,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <c:if test="${UserSession.power.powerid==2}">
 	 ${UserSession.deliveryspot.name}
  </c:if>
-   Ô±¹¤²éÑ¯
+   å‘˜å·¥æŸ¥è¯¢
   </h1>
 	<center>
 	<c:if test="${UserSession.power.powerid==1}">
@@ -73,10 +73,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <table border="0" class="t1">
     <tr>
     <td>
-     ÅäËÍµã£º
+     é…é€ç‚¹ï¼š
      <select name="dsID" id="dsID" >
       </select>
-      <input type="button" value="²éÑ¯" onclick="search()">
+      <input type="button" value="æŸ¥è¯¢" onclick="search()">
      </tr>
      </table>
     </form>
@@ -86,31 +86,31 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<table cellpadding="0" cellspacing="0" class="t2" align="center">
 					<tr>
 						<th>
-							Ô±¹¤±àºÅ
+							å‘˜å·¥ç¼–å·
 						</th>
 						<th>
-							ĞÕÃû
+							å§“å
 						</th>
 						<th>
-							ĞÔ±ğ
+							æ€§åˆ«
 						</th>
 						<th>
-							µç»°ºÅÂë
+							ç”µè¯å·ç 
 						</th>
 						<th>
-							µØÖ·
+							åœ°å€
 						</th>
 						<th>
-						Ö°Î»	
+						èŒä½	
 						</th>
 						<th>
-						ËùÊôÅäËÍµã	
+						æ‰€å±é…é€ç‚¹	
 						</th>
 						<th>
-							ĞŞ¸Ä
+							ä¿®æ”¹
 						</th>
 						<th>
-							É¾³ı
+							åˆ é™¤
 						</th>
 					</tr>
 					<tbody>
@@ -130,10 +130,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</td>
 						<td>
 						<c:if test="${employeeList.gender == '1' }">
-						ÄĞ
+						ç”·
 						</c:if>
 							<c:if test="${employeeList.gender == '0' }">
-						Å®
+						å¥³
 						</c:if>
 						</td>
 						<td>
@@ -151,10 +151,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					  <c:if test="${UserSession.power.powerid==2}">
 						<c:if test="${employeeList.position.positionid != 1}">
 						<td>
-							<a href="<%=path %>/check/selectEmployee.do?method=updataEmp&empNO=${employeeList.empno}">ĞŞ¸Ä</a>
+							<a href="<%=path %>/check/selectEmployee.do?method=updataEmp&empNO=${employeeList.empno}">ä¿®æ”¹</a>
 							</td>
 							<td>
-							<a href="<%=path %>/check/selectEmployee.do?method=delEmployee&empID=${employeeList.empid}&dsid=${employeeList.deliveryspot.deliveryspotid}" onclick="return confirm('È·¶¨ÒªÉ¾³ı¸Ã¼ÇÂ¼Âğ?')">É¾³ı</a>
+							<a href="<%=path %>/check/selectEmployee.do?method=delEmployee&empID=${employeeList.empid}&dsid=${employeeList.deliveryspot.deliveryspotid}" onclick="return confirm('ç¡®å®šè¦åˆ é™¤è¯¥è®°å½•å—?')">åˆ é™¤</a>
 							</td>
 					    </c:if>
 					    <c:if test="${employeeList.position.positionid == 1}">
@@ -163,24 +163,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					  </c:if>
 					   <c:if test="${UserSession.power.powerid==1}">
 					   <td>
-							<a href="<%=path %>/check/selectEmployee.do?method=updataEmp&empNO=${employeeList.empno}">ĞŞ¸Ä</a>
+							<a href="<%=path %>/check/selectEmployee.do?method=updataEmp&empNO=${employeeList.empno}">ä¿®æ”¹</a>
 							</td>
 							<td>
-							<a href="<%=path %>/check/selectEmployee.do?method=delEmployee&empID=${employeeList.empid}&dsid=${employeeList.deliveryspot.deliveryspotid}" onclick="return confirm('È·¶¨ÒªÉ¾³ı¸Ã¼ÇÂ¼Âğ?')">É¾³ı</a>
+							<a href="<%=path %>/check/selectEmployee.do?method=delEmployee&empID=${employeeList.empid}&dsid=${employeeList.deliveryspot.deliveryspotid}" onclick="return confirm('ç¡®å®šè¦åˆ é™¤è¯¥è®°å½•å—?')">åˆ é™¤</a>
 							</td>
 					   </c:if>
 						</tr>
 						</pg:item>
 				</c:forEach>
 			<div id="p">
-								<font color="red" size="3">${count}Ìõ¼ÇÂ¼</font>
+								<font color="red" size="3">${count}æ¡è®°å½•</font>
 								<pg:index>
 
 									<pg:first>
-										<a href="<%=path%><%=pageUrl%>">Ê×Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">é¦–é¡µ</a>
 									</pg:first>
 									<pg:prev>
-										<a href="<%=path%><%=pageUrl%>">ÉÏÒ»Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">ä¸Šä¸€é¡µ</a>
 									</pg:prev>
 									<pg:pages>
 										<%
@@ -200,10 +200,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										%>
 									</pg:pages>
 									<pg:next>
-										<a href="<%=path%><%=pageUrl%>">ÏÂÒ»Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">ä¸‹ä¸€é¡µ</a>
 									</pg:next>
 									<pg:last>
-										<a href="<%=path%><%=pageUrl%>">Ä©Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">æœ«é¡µ</a>
 									</pg:last>
 
 								</pg:index>
@@ -234,7 +234,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<br>
 			<br>
 			<h1>
-				ÄúÎŞÈ¨·ÃÎÊ´ËÒ³Ãæ£¡£¡£¡
+				æ‚¨æ— æƒè®¿é—®æ­¤é¡µé¢ï¼ï¼ï¼
 			</h1>
 		</c:if>
 	 	

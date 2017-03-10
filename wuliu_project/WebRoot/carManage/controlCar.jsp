@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
 	String path = request.getContextPath();
@@ -13,7 +13,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 		<link rel="stylesheet" type="text/css"
 			href="<%=path%>/style/wuliu_back.css" />
-		<title>GLOBAL��������ϵͳ��̨����---��������</title>
+		<title>GLOBAL物流管理系统后台管理---车辆调度</title>
 		<script type="text/javascript">
    function sucess(){
      var f = document.forms[0];
@@ -26,14 +26,14 @@
 	<body>
 	<c:if test="${UserSession.power.powerid!=3}">
 		<h1>
-			����״̬ά��
+			车辆状态维护
 		</h1>
 		<form action="<%=path%>/check/car.do?methodName=changeState" method="post">
 			<center>
 				<table border="0" class="t1">
 					<tr>
 						<td>
-							���ƺ�:
+							车牌号:
 						</td>
 						<td>
 							<select name="carNO">
@@ -45,23 +45,23 @@
 							</select>
 						</td>
 						<td>
-							����״̬:
+							车辆状态:
 						</td>
 						<td>
 							<select name="state">
 								<option value="4">
-									����
+									空闲
 								</option>
 								<option value="2">
-									;��
+									途中
 								</option>
 								<option value="3">
-									ά��
+									维修
 								</option>
 							</select>
 						</td>
 						<td>
-							<input type="submit" value="�޸�" />
+							<input type="submit" value="修改" />
 						</td>
 					</tr>
 				</table>
@@ -76,7 +76,7 @@
 			<br>
 			<br>
 			<h1>
-				����Ȩ���ʴ�ҳ�棡����
+				您无权访问此页面！！！
 			</h1>
 		</c:if>
 	</body>

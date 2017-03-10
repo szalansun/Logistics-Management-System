@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
 	String path = request.getContextPath();
@@ -10,7 +10,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---Î´´¦Àí¶©µ¥</title>
+		<title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---æœªå¤„ç†è®¢å•</title>
 		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 		<meta http-equiv="description" content="this is my page">
 		<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
@@ -34,7 +34,7 @@
 		var i; 
 	    for (i=0;i<theform.select_orders.length;i++){
 	           if (theform.select_orders.options[i].text == s){
-	              	document.getElementById("sp").innerHTML = "¸Ã¶©µ¥ÒÑ¾­Í¨¹ıÉ¨Âë£¡£¡";
+	              	document.getElementById("sp").innerHTML = "è¯¥è®¢å•å·²ç»é€šè¿‡æ‰«ç ï¼ï¼";
 					return;
 	           }
 	    }
@@ -62,11 +62,11 @@
 	 function checkRemark(){
 	    var remark = document.forms[0].remark.value;
 	    if(remark != "" && remark.length >200){
-	         var msgs= "<font color=red><b>¡Á</b></font>";
+	         var msgs= "<font color=red><b>Ã—</b></font>";
 	         document.getElementById("r").innerHTML=msgs;
 	         return false;
 	      }else{
-	         var msgs= "<font color=green><b>¡Ì</b></font>";
+	         var msgs= "<font color=green><b>âˆš</b></font>";
 	         document.getElementById("r").innerHTML=msgs;
 	         return true;
 	      }
@@ -78,7 +78,7 @@
 				var carNo = document.getElementById("carNo").value;
 				if(theform.select_orders.length > 0){
 				    if(carNo == ""){
-				    	var msg = "³µºÅ²»ÄÜÎª¿Õ£¬ÇëÊäÈë£¡";
+				    	var msg = "è½¦å·ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥ï¼";
 						document.getElementById("sp").innerHTML = msg;
 						return;
 				    }
@@ -94,7 +94,7 @@
 						xmlHttp.send(null);
 				    }
 				} else{
-					document.getElementById("sp").innerHTML = "Ã»ÓĞ½»½ÓµÄ¶©µ¥£¡";
+					document.getElementById("sp").innerHTML = "æ²¡æœ‰äº¤æ¥çš„è®¢å•ï¼";
 					return;
 				}
 			}
@@ -124,7 +124,7 @@
 			function checkOrderNo(){
 				var orderNo = document.getElementById("vid").value;
 				if(orderNo == ""){
-					var msg = "¶©µ¥ºÅ²»ÄÜÎª¿Õ£¬ÇëÊäÈë£¡";
+					var msg = "è®¢å•å·ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥ï¼";
 					document.getElementById("sp").innerHTML = msg;
 					return;
 				}
@@ -159,7 +159,7 @@
 	<c:if test="${UserSession.power.powerid==3}">
 		<center>
 		  <h1> 
-				»õÎï½»½Ó
+				è´§ç‰©äº¤æ¥
 			</h1>
 		 <table border="0" class="t1" width="350" higth="50">
            <tr>
@@ -172,12 +172,12 @@
 				<table border="1" class="t1" width="420">
 					<tr>
 						<td valign="top">
-							ÌõĞÎÂë£º
+							æ¡å½¢ç ï¼š
 						</td>
 						<td valign="top">
 						    <input type="text" name="vid" id="vid" size="20" />
-							<input type="button" value="Ìí¼Ó" onclick="checkOrderNo()" />
-							<input name="btn_select_dltany" type="button" title="delete any" onclick="fun_select_dltany()" value="É¾³ı" />
+							<input type="button" value="æ·»åŠ " onclick="checkOrderNo()" />
+							<input name="btn_select_dltany" type="button" title="delete any" onclick="fun_select_dltany()" value="åˆ é™¤" />
 						</td>
 				  </tr>
 					  <tr>
@@ -190,7 +190,7 @@
 					</tr>
 					<tr>
 						<td>
-							½ÓÊÕÈËĞÕÃû£º
+							æ¥æ”¶äººå§“åï¼š
 							
 						</td>
 						<td>
@@ -202,10 +202,10 @@
 								</c:forEach>
 
 							</select>
-							&nbsp;&nbsp;&nbsp;½ÓÊÕÖÖÀà£º
+							&nbsp;&nbsp;&nbsp;æ¥æ”¶ç§ç±»ï¼š
 							<select name="outOrIn">
-							    <option value="zhuangChe">×°³µ</option>
-								<option value="xieChe">Ğ¶³µ</option>
+							    <option value="zhuangChe">è£…è½¦</option>
+								<option value="xieChe">å¸è½¦</option>
 							</select>
 							
 						</td>
@@ -213,7 +213,7 @@
 
 					<tr>
 						<td>
-							³µºÅ£º
+							è½¦å·ï¼š
 						</td>
 						<td>
 							<input type="text" name="carNo" id="carNo" size="20" />
@@ -222,17 +222,17 @@
 
 					<tr>
 						<td>
-							±¸×¢£º
+							å¤‡æ³¨ï¼š
 						</td>
 						<td>
 							<textarea name="remark"  onblur="checkRemark()"  cols="30" rows="4"></textarea>
-							(Ñ¡Ìî|200)<span id="r"></span>
+							(é€‰å¡«|200)<span id="r"></span>
 						</td>
 					</tr>
 					<tr>
 						<td colspan="2" align="center">
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<input type="button" value="Éú³É½»½Óµ¥" onclick="checkAll()">
+							<input type="button" value="ç”Ÿæˆäº¤æ¥å•" onclick="checkAll()">
 						</td>
 
 					</tr>
@@ -249,7 +249,7 @@
 			<br>
 			<br>
 			<h1>
-				ÄúÎŞÈ¨·ÃÎÊ´ËÒ³Ãæ£¡£¡£¡
+				æ‚¨æ— æƒè®¿é—®æ­¤é¡µé¢ï¼ï¼ï¼
 			</h1>
 		</c:if>
 	</body>

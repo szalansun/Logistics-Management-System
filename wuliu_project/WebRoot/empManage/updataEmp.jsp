@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="gbk"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-bean" prefix="bean"%> 
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-html" prefix="html"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
@@ -7,7 +7,7 @@
  %>
 <html> 
 	<head>
-	<title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---ĞŞ¸ÄÔ±¹¤</title>
+	<title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---ä¿®æ”¹å‘˜å·¥</title>
 <link rel="stylesheet" type="text/css" href="<%=path %>/style/wuliu_back.css"/>
 	
     <SCRIPT language=javascript src="<%=path %>/js/calendar.js"></SCRIPT>
@@ -16,17 +16,17 @@
       function ckeckName(){
        var name = document.forms[0].name.value;
         if(name==""){
-           var msgTel ="<font color=red><b>¡Á</b></font>";
+           var msgTel ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("n").innerHTML=msgTel;
           return false;
        }
        else if(!(/^\S{1,19}$/.test(name))){
-           var msgTel ="<font color=red><b>¡Á</b></font>";
+           var msgTel ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("n").innerHTML=msgTel;
           return false;
        }
         else{
-		    var msgTel ="<font color=green><b>¡Ì</b></font>";
+		    var msgTel ="<font color=green><b>âˆš</b></font>";
 		     document.getElementById("n").innerHTML=msgTel;
 		    return true;
 		 }
@@ -35,12 +35,12 @@
        function ckeckCardID(){
        var cardID = document.forms[0].cardID.value;
        if(!(/^\d{15}((\d{2}[\dXx])|([\dXx]))$/.test(cardID))){
-           var msgTel ="<font color=red><b>¡Á</b></font>";
+           var msgTel ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("card").innerHTML=msgTel;
           return false;
        }
         else{
-		    var msgTel ="<font color=green><b>¡Ì</b></font>";
+		    var msgTel ="<font color=green><b>âˆš</b></font>";
 		     document.getElementById("card").innerHTML=msgTel;
 		    return true;
 		 }
@@ -50,12 +50,12 @@
        function ckeckTel(){
        var tel = document.forms[0].tel.value;
        if(!(/^((\d{3}-\d{8})|(\d{4}-\d{7})|(\d{11}))$/.test(tel))){
-           var msgTel ="<font color=red><b>¡Á</b></font>";
+           var msgTel ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("te").innerHTML=msgTel;
            return false;
        }
         else{
-		    var msgTel ="<font color=green><b>¡Ì</b></font>";
+		    var msgTel ="<font color=green><b>âˆš</b></font>";
 		     document.getElementById("te").innerHTML=msgTel;
 		    return true;
 		 }
@@ -64,17 +64,17 @@
      function ckeckSalary(){
        var salary = document.forms[0].salary.value;
        if(!(/^\d+(\.\d+)?$/.test(salary))){
-           var msgTel ="<font color=red><b>¡Á</b></font>";
+           var msgTel ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("sy").innerHTML=msgTel;
           return false;
        }
         else if(salary<=0 || salary>9999999){
-          var msgTel ="<font color=red><b>¡Á</b></font>";
+          var msgTel ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("sy").innerHTML=msgTel;
           return false;
         }
         else{
-		    var msgTel ="<font color=green><b>¡Ì</b></font>";
+		    var msgTel ="<font color=green><b>âˆš</b></font>";
 		     document.getElementById("sy").innerHTML=msgTel;
 		    return true;
 		 }
@@ -83,17 +83,17 @@
       function ckeckAddress(){
       var address = document.forms[0].address.value;
        if(address == ""){
-           var msgTel ="<font color=red><b>¡Á</b></font>";
+           var msgTel ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("ad").innerHTML=msgTel;
           return false;
        }
        else if(address.length >200){
-            var msgTel ="<font color=red><b>¡Á</b></font>";
+            var msgTel ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("ad").innerHTML=msgTel;
           return false;
        }
         else{
-		    var msgTel ="<font color=green><b>¡Ì</b></font>";
+		    var msgTel ="<font color=green><b>âˆš</b></font>";
 		     document.getElementById("ad").innerHTML=msgTel;
 		    return true;
 		 }
@@ -102,12 +102,12 @@
         function ckeckEmail(){
         var email = document.forms[0].email.value;
          if(!(/^[a-zA-Z0-9_\.]+@[a-zA-Z0-9-]+[\.a-zA-Z]+$/.test(email))){
-           var msgTel ="<font color=red><b>¡Á</b></font>";
+           var msgTel ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("em").innerHTML=msgTel;
            return false;
        }
         else{
-		    var msgTel ="<font color=green><b>¡Ì</b></font>";
+		    var msgTel ="<font color=green><b>âˆš</b></font>";
 		     document.getElementById("em").innerHTML=msgTel;
 		    return true;
 		 }
@@ -136,26 +136,26 @@
   <body>
   <c:if test="${UserSession.power.powerid!=3}">
   <center>
-  ¡¡<h1>ĞŞ¸ÄÔ±¹¤ĞÅÏ¢</h1>
+  ã€€<h1>ä¿®æ”¹å‘˜å·¥ä¿¡æ¯</h1>
    <form action=""  method="post">
     <table  class="t1" border="1" width="450">
-    <tr><td> Ô±¹¤±àºÅ£º</td><td><input type="text" name="empno" value="${employeeList.empno }" readonly="true"/></td></tr>
-    <tr><td> ĞÕÃû£º</td><td><input type="text" name="name" value="${employeeList.name }" onblur="ckeckName()"/><span id="n"></span></td></tr>
-     <tr><td>ĞÔ±ğ£º</td><td>
+    <tr><td> å‘˜å·¥ç¼–å·ï¼š</td><td><input type="text" name="empno" value="${employeeList.empno }" readonly="true"/></td></tr>
+    <tr><td> å§“åï¼š</td><td><input type="text" name="name" value="${employeeList.name }" onblur="ckeckName()"/><span id="n"></span></td></tr>
+     <tr><td>æ€§åˆ«ï¼š</td><td>
      <select name="gender">
              <c:if test="${employeeList.gender == '1' }">
-               <option value="1" selected="selected">ÄĞ</option>
-               <option value="0">Å®</option>
+               <option value="1" selected="selected">ç”·</option>
+               <option value="0">å¥³</option>
              </c:if>
               <c:if test="${employeeList.gender == '0' }">
-              <option value="1" >ÄĞ</option>
-               <option value="0" selected="selected">Å®</option>
+              <option value="1" >ç”·</option>
+               <option value="0" selected="selected">å¥³</option>
              </c:if>    
      </select>
     </td>
-     <tr><td>Éí·İÖ¤ºÅ£º</td><td><input type="text" name="cardID" value="${employeeList.cardid }" onblur="ckeckCardID()"/><span id="card"></span></td></tr>
-     <tr><td>µç»°ºÅÂë£º</td><td><input type="text" name="tel" value="${employeeList.tel }" onblur="ckeckTel()"/>£¨ÊÖ»ú|¹Ì»°£©<span id="te"></span></td></tr>
-     <tr><td> Ö°Î»£º</td><td><select name="positionID">
+     <tr><td>èº«ä»½è¯å·ï¼š</td><td><input type="text" name="cardID" value="${employeeList.cardid }" onblur="ckeckCardID()"/><span id="card"></span></td></tr>
+     <tr><td>ç”µè¯å·ç ï¼š</td><td><input type="text" name="tel" value="${employeeList.tel }" onblur="ckeckTel()"/>ï¼ˆæ‰‹æœº|å›ºè¯ï¼‰<span id="te"></span></td></tr>
+     <tr><td> èŒä½ï¼š</td><td><select name="positionID">
                              <c:forEach var="pl" items="${positionList}">
                               <c:if test="${employeeList.position.positionid == pl.positionid}">
                                <option value="${pl.positionid}" selected="selected">${pl.name}</option>
@@ -166,10 +166,10 @@
                               </c:forEach>     
                   </select>
           </td></tr>
-     <tr><td>Ğ½Ë®£º</td><td><input type="text" name="salary" value="${employeeList.salary }" onblur="ckeckSalary()"/><span id="sy"></span></td></tr>
-     <tr><td>µØÖ·£º</td><td><textarea  name="address" onblur="ckeckAddress()"  cols="30" rows="4" type="_moz">${employeeList.address }</textarea>(200×ÖÖ®ÄÚ)<span id="ad"></span></td></tr>
-     <tr><td>ÓÊÏä£º</td><td><input type="text" name="email" value="${employeeList.email }" onblur="ckeckEmail()"/><span id="em"></span></td></tr>
-     <tr><td>ËùÊôÅäËÍµã£º</td><td>
+     <tr><td>è–ªæ°´ï¼š</td><td><input type="text" name="salary" value="${employeeList.salary }" onblur="ckeckSalary()"/><span id="sy"></span></td></tr>
+     <tr><td>åœ°å€ï¼š</td><td><textarea  name="address" onblur="ckeckAddress()"  cols="30" rows="4" type="_moz">${employeeList.address }</textarea>(200å­—ä¹‹å†…)<span id="ad"></span></td></tr>
+     <tr><td>é‚®ç®±ï¼š</td><td><input type="text" name="email" value="${employeeList.email }" onblur="ckeckEmail()"/><span id="em"></span></td></tr>
+     <tr><td>æ‰€å±é…é€ç‚¹ï¼š</td><td>
                     <select name="deliverySpotID">
                        <c:forEach var="dl" items="${deliverySpotList}">
                           <c:if test="${employeeList.deliveryspot.deliveryspotid == dl.deliveryspotid}">
@@ -181,8 +181,8 @@
                        </c:forEach>
                   </select></td></tr>
      <tr><td>&nbsp;</td><td>
-     <input type = "button" value="ĞŞ¸Ä" onclick="test()">&nbsp;&nbsp;&nbsp;&nbsp;
-     <input type="reset" value="ÖØÖÃ">
+     <input type = "button" value="ä¿®æ”¹" onclick="test()">&nbsp;&nbsp;&nbsp;&nbsp;
+     <input type="reset" value="é‡ç½®">
      </td>
     
      
@@ -198,7 +198,7 @@
 			<br>
 			<br>
 			<h1>
-				ÄúÎŞÈ¨·ÃÎÊ´ËÒ³Ãæ£¡£¡£¡
+				æ‚¨æ— æƒè®¿é—®æ­¤é¡µé¢ï¼ï¼ï¼
 			</h1>
 		</c:if>
     

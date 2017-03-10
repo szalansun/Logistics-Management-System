@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://jsptags.com/tags/navigation/pager" prefix="pg"%>
 <%
@@ -11,7 +11,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---²é¿´¶©µ¥</title>
+		<title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---æŸ¥çœ‹è®¢å•</title>
 		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 		<meta http-equiv="description" content="this is my page">
 		<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
@@ -45,7 +45,7 @@
 	<script type="text/javascript">
           
           
-          <%-- Í¨¹ı¶©µ¥ºÅ²éÑ¯--%>
+          <%-- é€šè¿‡è®¢å•å·æŸ¥è¯¢--%>
           function queryOrderByOrderNo() {
              var orderno = document.f1.orderno.value;
    			f1.action = "<%=path%>/check/order.do?methodName=queryOrderByOrderNO&orderno=" + orderno;
@@ -53,14 +53,14 @@
    		}
    		
    		
-   		 <%--Í¨¹ı¶©µ¥×´Ì¬²éÑ¯ --%>
+   		 <%--é€šè¿‡è®¢å•çŠ¶æ€æŸ¥è¯¢ --%>
    		function queryOrderByOrderState(){
    			var stateid = document.f1.orderstate.value;
    			f1.action = "<%=path%>/check/order.do?methodName=queryOrderByOrderStateID&stateid=" + stateid;
    			f1.submit();
           }
           
-           <%--Í¨¹ıÅäËÍµã²éÑ¯ --%>
+           <%--é€šè¿‡é…é€ç‚¹æŸ¥è¯¢ --%>
           function queryOrderByDeliverySpot(){
    			var deliveryspotid = document.f1.deliveryspot.value;
    			f1.action = "<%=path%>/check/order.do?methodName=queryOrderByDeliverySpotID&deliveryspotid=" + deliveryspotid;
@@ -69,7 +69,7 @@
           }
           
           
-          <%--ÈÕÆÚÑéÖ¤--%>
+          <%--æ—¥æœŸéªŒè¯--%>
            function compareDate()
 		{ 
 		var DateOne = document.getElementById("t1").value;
@@ -83,12 +83,12 @@
 		var TwoDay = DateTwo.substring(DateTwo.length,DateTwo.lastIndexOf ("-")+1);
 		var TwoYear = DateTwo.substring(0,DateTwo.indexOf ("-"));
 		if (DateOne == ""){
-		   var msg ="<font color=red><b>¡Á</b></font>";
+		   var msg ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("time").innerHTML=msg;
 		  return false;
 		}
 		else if(DateTwo == ""){
-		   var msg ="<font color=red><b>¡Á</b></font>";
+		   var msg ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("time").innerHTML=msg;
 		  return false;
 		}
@@ -96,7 +96,7 @@
 		if (Date.parse(OneMonth+"/"+OneDay+"/"+OneYear) >
 		Date.parse(TwoMonth+"/"+TwoDay+"/"+TwoYear))
 		{
-		   var msg ="<font color=red><b>¡Á</b></font>";
+		   var msg ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("time").innerHTML=msg;
 		  return false;
 		}
@@ -108,7 +108,7 @@
        }   
           
           
-           <%-- Í¨¹ıÊ±¼ä²éÑ¯--%>
+           <%-- é€šè¿‡æ—¶é—´æŸ¥è¯¢--%>
           function queryHQ(){
    			var txtDate1 = document.f1.txtDate1.value;
    			var txtDate2 = document.f1.txtDate2.value;
@@ -132,70 +132,70 @@
 	<c:if test="${UserSession.power.powerid==3}">
 		<center>
 			<h1>
-				¶©µ¥²éÑ¯
+				è®¢å•æŸ¥è¯¢
 			</h1>
 			<form name="f1" method="post">
 				<table border="1" class="t1">
 					<tr>
 						<td>
-							¶©µ¥ºÅ£º
+							è®¢å•å·ï¼š
 						</td>
 						<td align="center">
 							<input type="text" name="orderno" />
 						</td>
 						<td align="center">
-							<input type="button" value=" ²é  Ñ¯ "
+							<input type="button" value=" æŸ¥  è¯¢ "
 								onclick="queryOrderByOrderNo()" />
 						</td>
 					</tr>
 
 					<tr>
 						<td>
-							ÈÕÆÚ²éÑ¯:
+							æ—¥æœŸæŸ¥è¯¢:
 						</td>
 						<td>
-							´Ó
+							ä»
 							<input name="txtDate1" class="textborder" type="text" id="t1"
 								readonly="true" size="12" />
-							<a title=Ñ¡ÔñÈÕÆÚ
+							<a title=é€‰æ‹©æ—¥æœŸ
 								href="javascript:fPopCalendar(document.all.img1,document.f1.txtDate1,250);"
 								style="text-decoration:none"> <img id=img1
 									src="<%=path%>/images/img_date.gif" width="22" align=absMiddle
-									border=0></img> </a> ÖÁ
+									border=0></img> </a> è‡³
 							<input name="txtDate2" class="textborder" type="text" id="t2"
 								readonly="true" size="12" />
-							<a title=Ñ¡ÔñÈÕÆÚ
+							<a title=é€‰æ‹©æ—¥æœŸ
 								href="javascript:fPopCalendar(document.all.img2,document.f1.txtDate2,400);"
 								style="text-decoration:none"> <img id=img2
 									src="<%=path%>/images/img_date.gif" width="22" align=absMiddle
 									border=0></img> </a>
 						</td>
 						<td align="center">
-							<input type="button" value=" ²é  Ñ¯ " onclick="queryHQ()" />
+							<input type="button" value=" æŸ¥  è¯¢ " onclick="queryHQ()" />
 							<span id="time"></span>
 					</tr>
 					<tr>
 						<td>
-							¶©µ¥×´Ì¬
+							è®¢å•çŠ¶æ€
 						</td>
 						<td align="center">
 							<select name="orderstate" id="orderstate">
 							</select>
 						</td>
 						<td align="center">
-							<input type="button" value=" ²é  Ñ¯ "
+							<input type="button" value=" æŸ¥  è¯¢ "
 								onclick="queryOrderByOrderState()" />
 					</tr>
 					<tr>
 						<td>
-							ÅäËÍµã£º
+							é…é€ç‚¹ï¼š
 						</td>
 						<td align="center">
 							<select name="deliveryspot">
 							</select>
 						</td>
 						<td align="center">
-							<input type="button" value=" ²é  Ñ¯ "
+							<input type="button" value=" æŸ¥  è¯¢ "
 								onclick="queryOrderByDeliverySpot()" />
 					</tr>
 				</table>
@@ -205,33 +205,33 @@
 				<table cellpadding="0" cellspacing="0" class="t3" align="center">
 					<tr>
 						<th>
-							¶©µ¥±àºÅ
+							è®¢å•ç¼–å·
 						</th>
 						<th>
-							ÊÕ¼şµØ
+							æ”¶ä»¶åœ°
 						</th>
 						<th>
-							¼Ä¼şµØ
+							å¯„ä»¶åœ°
 						</th>
 						<th>
-							ÊÕ¼şÈËĞÕÃû
+							æ”¶ä»¶äººå§“å
 						</th>
 						<th>
-							¼Ä¼şÈËĞÕÃû
+							å¯„ä»¶äººå§“å
 						</th>
 						<th>
-							ÅäËÍµã
+							é…é€ç‚¹
 						</th>
 						<th>
-							¶©µ¥×´Ì¬
+							è®¢å•çŠ¶æ€
 						</th>
 						<th>
-							´´½¨Ê±¼ä
+							åˆ›å»ºæ—¶é—´
 						</th>
 					</tr>
 					<tbody>
 						<%--
-					Í¨¹ı¶©µ¥±àºÅ²éÑ¯½á¹û
+					é€šè¿‡è®¢å•ç¼–å·æŸ¥è¯¢ç»“æœ
 					--%>
 						<c:if test="${Flag=='1'}">
 							<tr>
@@ -266,7 +266,7 @@
 
 
 
-						<%--Í¨¹ı¶©µ¥×´Ì¬²éÑ¯½á¹û--%>
+						<%--é€šè¿‡è®¢å•çŠ¶æ€æŸ¥è¯¢ç»“æœ--%>
 						<c:if test="${Flag=='2'}">
 
 						<pg:pager items="${count}" isOffset="true" url="${path}/check/order.do"
@@ -308,14 +308,14 @@
 								</c:forEach>
 							
 							<div id="p">
-								<font color="red" size="3">${count}Ìõ¼ÇÂ¼</font>
+								<font color="red" size="3">${count}æ¡è®°å½•</font>
 								<pg:index>
 
 									<pg:first>
-										<a href="<%=path%><%=pageUrl%>">Ê×Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">é¦–é¡µ</a>
 									</pg:first>
 									<pg:prev>
-										<a href="<%=path%><%=pageUrl%>">ÉÏÒ»Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">ä¸Šä¸€é¡µ</a>
 									</pg:prev>
 									<%--<pg:pages>
 										<%
@@ -337,10 +337,10 @@
 										<b>&nbsp;<%=pageNumber%> </b></a>
 									</pg:pages>
 									<pg:next>
-										<a href="<%=path%><%=pageUrl%>">ÏÂÒ»Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">ä¸‹ä¸€é¡µ</a>
 									</pg:next>
 									<pg:last>
-										<a href="<%=path%><%=pageUrl%>">Ä©Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">æœ«é¡µ</a>
 									</pg:last>
 
 								</pg:index>
@@ -348,7 +348,7 @@
 						</pg:pager>
 </c:if>
 						<%--
-					Í¨¹ıÅäËÍµã²éÑ¯½á¹û
+					é€šè¿‡é…é€ç‚¹æŸ¥è¯¢ç»“æœ
 					--%>
 						
 							<c:if test="${Flag=='3'}">
@@ -388,13 +388,13 @@
 									</pg:item>
 								</c:forEach>
 								<div id="p">
-								<font color="red" size="3">${count}Ìõ¼ÇÂ¼</font>
+								<font color="red" size="3">${count}æ¡è®°å½•</font>
 								<pg:index>
 									<pg:first>
-										<a href="<%=path%><%=pageUrl%>">Ê×Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">é¦–é¡µ</a>
 									</pg:first>
 									<pg:prev>
-										<a href="<%=path%><%=pageUrl%>">ÉÏÒ»Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">ä¸Šä¸€é¡µ</a>
 									</pg:prev>
 									<pg:pages>
 										<%
@@ -412,10 +412,10 @@
 										%>
 									</pg:pages>
 									<pg:next>
-										<a href="<%=path%><%=pageUrl%>">ÏÂÒ»Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">ä¸‹ä¸€é¡µ</a>
 									</pg:next>
 									<pg:last>
-										<a href="<%=path%><%=pageUrl%>">Ä©Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">æœ«é¡µ</a>
 									</pg:last>
 
 								</pg:index>
@@ -427,7 +427,7 @@
 
 
 
-						<%--  Í¨¹ıÊ±¼ä²éÑ¯¶©µ¥ --%>
+						<%--  é€šè¿‡æ—¶é—´æŸ¥è¯¢è®¢å• --%>
                      	
 						<c:if test="${Flag=='4'}">
 						<pg:pager items="${count}" isOffset="true" url="${path}/check/order.do"
@@ -467,13 +467,13 @@
 								</pg:item>
 							</c:forEach>
 											<div id="p">
-								<font color="red" size="3">${count}Ìõ¼ÇÂ¼</font>
+								<font color="red" size="3">${count}æ¡è®°å½•</font>
 								<pg:index>
 									<pg:first>
-										<a href="<%=path%><%=pageUrl%>">Ê×Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">é¦–é¡µ</a>
 									</pg:first>
 									<pg:prev>
-										<a href="<%=path%><%=pageUrl%>">ÉÏÒ»Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">ä¸Šä¸€é¡µ</a>
 									</pg:prev>
 									<pg:pages>
 										<%
@@ -491,10 +491,10 @@
 										%>
 									</pg:pages>
 									<pg:next>
-										<a href="<%=path%><%=pageUrl%>">ÏÂÒ»Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">ä¸‹ä¸€é¡µ</a>
 									</pg:next>
 									<pg:last>
-										<a href="<%=path%><%=pageUrl%>">Ä©Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">æœ«é¡µ</a>
 									</pg:last>
 
 								</pg:index>
@@ -525,7 +525,7 @@
 			<br>
 			<br>
 			<h1>
-				ÄúÎŞÈ¨·ÃÎÊ´ËÒ³Ãæ£¡£¡£¡
+				æ‚¨æ— æƒè®¿é—®æ­¤é¡µé¢ï¼ï¼ï¼
 			</h1>
 		</c:if>
 	</body>

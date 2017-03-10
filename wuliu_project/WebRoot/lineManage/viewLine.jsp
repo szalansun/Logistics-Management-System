@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://jsptags.com/tags/navigation/pager" prefix="pg"%>
 <%
@@ -11,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---²é¿´ÏßÂ·</title>
+    <title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---æŸ¥çœ‹çº¿è·¯</title>
     <link rel="stylesheet" type="text/css" href="<%=path %>/style/wuliu_back.css" />
     
 	<meta http-equiv="pragma" content="no-cache">
@@ -37,10 +37,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					}
 					
 					if(!result){
-						alert("ÇëÑ¡ÔñÒªÉ¾³ıµÄ¼ÇÂ¼£¡");
+						alert("è¯·é€‰æ‹©è¦åˆ é™¤çš„è®°å½•ï¼");
 						return;
 					}else{
-						if(confirm("ÕæµÄÒªÉ¾³ı¼ÇÂ¼Âğ?")){
+						if(confirm("çœŸçš„è¦åˆ é™¤è®°å½•å—?")){
 							f.action = "<%=path %>/check/line.do?methodName=deleteLine";
 							f.submit();
 						}else{
@@ -54,20 +54,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		
 				function selectAll() {
 					var f = document.forms[0];
-					if(f.sb.value=="È«Ñ¡"){
+					if(f.sb.value=="å…¨é€‰"){
 						for( i=0 ; i<f.elements.length ; i++) {
 							if (f.elements[i].name=='lineids') {
 								f.elements[i].checked=true;
 							}
 						}
-						f.sb.value = "·´Ñ¡";
+						f.sb.value = "åé€‰";
 					}else{
 						for( i=0 ; i<f.elements.length ; i++) {
 							if (f.elements[i].name=='lineids') {
 								f.elements[i].checked=false;
 							}
 						}
-						f.sb.value = "È«Ñ¡";
+						f.sb.value = "å…¨é€‰";
 					}
 				}
 
@@ -77,7 +77,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <center>
 			<h1>
-				²é¿´ÏßÂ·
+				æŸ¥çœ‹çº¿è·¯
 			</h1>
 			<hr>
 			<form action="#" method="post">
@@ -85,17 +85,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<tr>
 						<th>&nbsp;</th>
 						<th>
-							ÏßÂ·±àºÅ
+							çº¿è·¯ç¼–å·
 						</th>
 						<th>
-							ÏßÂ·Ãû³Æ
+							çº¿è·¯åç§°
 						</th>
 						<th>
-							ÏßÂ·Àï³Ì
+							çº¿è·¯é‡Œç¨‹
 						</th>
 					<c:if test="${UserSession.power.powerid == 1}">
 						<th>
-							É¾³ı
+							åˆ é™¤
 						</th>
 				    </c:if>
 					</tr>
@@ -125,11 +125,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</pg:item>
 					</c:forEach>
 					<div id="p">
-                    <font color="red" size="3">${count}Ìõ¼ÇÂ¼</font>
+                    <font color="red" size="3">${count}æ¡è®°å½•</font>
                  <pg:index>
 
-				      <pg:first><a href="<%=path%><%=pageUrl %>">Ê×Ò³</a></pg:first>
-				      <pg:prev><a href="<%=path%><%=pageUrl %>">ÉÏÒ»Ò³</a></pg:prev>
+				      <pg:first><a href="<%=path%><%=pageUrl %>">é¦–é¡µ</a></pg:first>
+				      <pg:prev><a href="<%=path%><%=pageUrl %>">ä¸Šä¸€é¡µ</a></pg:prev>
 				      <pg:pages>
 				      <% 
 				     if (pageNumber.intValue() < 10) { 
@@ -142,8 +142,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				      }
 				      %>
 				      </pg:pages>
-				      <pg:next><a href="<%=path%><%=pageUrl %>">ÏÂÒ»Ò³</a></pg:next>
-				      <pg:last><a href="<%=path%><%=pageUrl %>">Ä©Ò³</a></pg:last>
+				      <pg:next><a href="<%=path%><%=pageUrl %>">ä¸‹ä¸€é¡µ</a></pg:next>
+				      <pg:last><a href="<%=path%><%=pageUrl %>">æœ«é¡µ</a></pg:last>
 
 			  </pg:index>
 				</div>
@@ -153,8 +153,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				  	<c:if test="${UserSession.power.powerid == 1}">
 					    
 							<tr>
-								<td colspan="2" align="right"><input type="button" onClick="selectAll()" value="È«Ñ¡" name="sb"></td>
-						        <td align="center" colspan="3"><input type="button" onClick="del()" value="É¾³ı"></td>
+								<td colspan="2" align="right"><input type="button" onClick="selectAll()" value="å…¨é€‰" name="sb"></td>
+						        <td align="center" colspan="3"><input type="button" onClick="del()" value="åˆ é™¤"></td>
 							</tr>
 					</c:if>	
 					</tfoot>

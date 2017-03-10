@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
+import javax.swing.DefaultButtonModel;
+
+import org.apache.commons.io.IOUtils;
 import org.hibernate.Session;
 import org.springframework.jdbc.core.JdbcTemplate;
 import java.sql.*;
@@ -13,11 +16,10 @@ import com.global.db.HibernateSessionFactory;
 import com.global.util.ConnectionUtil;
 import com.global.vo.Car;
 
-public class CarDaoImpl extends BaseDaoImpl implements CarDao{
+public class CarDaoImpl extends BaseDaoImpl implements CarDao {
 
-	
 	public void addCar(Car car) {
-        super.save(car);		
+		super.save(car);
 	}
 
 	public void deleteCar(Car car) {
@@ -34,12 +36,12 @@ public class CarDaoImpl extends BaseDaoImpl implements CarDao{
 	}
 
 	public List queryCarByCarNO(String carNO) {
-		String hql = "from Car where carNo='"+carNO+"'";
-	    return  super.list(hql);
+		String hql = "from Car where carNo='" + carNO + "'";
+		return super.list(hql);
 	}
 
 	public List queryCarByCarStateID(int carStateID) {
-		String hql = " from Car where carstateid =" + carStateID +"order by carid desc";
+		String hql = " from Car where carstateid =" + carStateID + "order by carid desc";
 		return super.list(hql);
 	}
 
@@ -54,8 +56,8 @@ public class CarDaoImpl extends BaseDaoImpl implements CarDao{
 	}
 
 	public List queryCarByWorkNO(String workNO) {
-		String hql = "from Car where workNO='"+workNO+"'";
-		return  super.list(hql);
+		String hql = "from Car where workNO='" + workNO + "'";
+		return super.list(hql);
 	}
 
 	public List queryCarStateFromCarState() {
@@ -65,7 +67,7 @@ public class CarDaoImpl extends BaseDaoImpl implements CarDao{
 
 	public void updateCar(Car car) {
 		super.update(car);
-		
+
 	}
 
 	public List listAllDeliveryspot() {
@@ -78,41 +80,48 @@ public class CarDaoImpl extends BaseDaoImpl implements CarDao{
 		return super.list(hql);
 	}
 
-	public void update(Integer carid,Integer carstateid) {
-        String sql = "update car set carstateid="+carstateid+" where carid="+carid;
-        ConnectionUtil util = new ConnectionUtil();
+	public void update(Integer carid, Integer carstateid) {
+		String sql = "update car set carstateid=" + carstateid + " where carid=" + carid;
+		ConnectionUtil util = new ConnectionUtil();
 		Connection conn = util.getConnection();
 		try {
 			Statement stmt = conn.createStatement();
 			stmt.executeUpdate(sql);
-			
+
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			if (conn != null) {
+				try {
+					conn.close();
+				} catch (Exception e) {
+				}
+			}
 		}
 	}
 
 	public boolean checkCarNO(String carNO) {
-		String hql = "from Car where carNO='"+carNO+"'";
+		String hql = "from Car where carNO='" + carNO + "'";
 		List list = super.list(hql);
-		if(list.size()>0){
+		if (list.size() > 0) {
 			return false;
-		}else{
+		} else {
 			return true;
 		}
 	}
 
 	public boolean checkWorkNO(String workNO) {
-		String hql = "from Car where workNO='"+workNO+"'";
+		String hql = "from Car where workNO='" + workNO + "'";
 		List list = super.list(hql);
-		if(list.size()>0){
+		if (list.size() > 0) {
 			return false;
-		}else{
+		} else {
 			return true;
 		}
 	}
 
 	public List queryCarByCarStateID2(int carStateID, int intOffset, int munber) {
-		String hql = " from Car where carstateid =" + carStateID +" order by carid desc";
+		String hql = " from Car where carstateid =" + carStateID + " order by carid desc";
 		Session session = HibernateSessionFactory.getSession();
 		List list = session.createQuery(hql).setFirstResult(intOffset).setMaxResults(munber).list();
 		HibernateSessionFactory.closeSession();
@@ -120,7 +129,7 @@ public class CarDaoImpl extends BaseDaoImpl implements CarDao{
 	}
 
 	public int countqueryCarByCarStateID2(int carStateID) {
-		String hql = " from Car where carstateid =" + carStateID +" order by carid desc";
+		String hql = " from Car where carstateid =" + carStateID + " order by carid desc";
 		return super.list(hql).size();
 	}
 

@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://jsptags.com/tags/navigation/pager" prefix="pg"%>
 <%
@@ -11,7 +11,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>GLOBAL��������ϵͳ��̨����---�鿴���ӵ�</title>
+		<title>GLOBAL物流管理系统后台管理---查看交接单</title>
 		<meta http-equiv="pragma" content="no-cache">
 		<meta http-equiv="cache-control" content="no-cache">
 		<meta http-equiv="expires" content="0">
@@ -57,7 +57,7 @@
 	<c:if test="${UserSession.power.powerid==3}">
 		<center>
 		<h1> 
-				��ѯ���ӵ�
+				查询交接单
 			</h1>
 			<form name="f1" id="f1" method="post">
 			
@@ -69,18 +69,18 @@
 				<table  class="t1" >
 					<tr>
 						<td>
-							���ӵ��ţ�
+							交接单号：
 						</td>
 						<td>
 							<input type="text" name="RID"/>
 						</td>
 						<td align="center">
-							<input type="button" onclick="selectByReceiptNo()" value=" ��  ѯ " />
+							<input type="button" onclick="selectByReceiptNo()" value=" 查  询 " />
 						</td>
 					</tr>
 					<tr>
 						<td>
-							���͵㣺
+							配送点：
 						</td>
 						<td align="center">
 							<select name="psd" id="psd">
@@ -88,7 +88,7 @@
 							</select>
 						</td>
 						<td align="center">
-							<input type="button" onclick="selectByDeliverySpot()" value=" ��  ѯ " />
+							<input type="button" onclick="selectByDeliverySpot()" value=" 查  询 " />
 						</td>
 					</tr>
 				</table>
@@ -98,16 +98,16 @@
 				 <table cellpadding="0" cellspacing="0" class="t2" align="center">
 					<tr>
 						<th>
-							���ӵ���
+							交接单号
 						</th>
 						<th>
-							�������
+							车辆编号
 						</th>
 						<th>
-							����ʱ��
+							发货时间
 						</th>
 						<th>
-							���ӵ�
+							交接地
 						</th>
 					</tr>
 					<c:if test="${flag == '1'}">
@@ -151,11 +151,11 @@
 							</pg:item>
 						</c:forEach>
 						<div id="p">
-		                    <font color="red" size="3">${count}����¼</font>
+		                    <font color="red" size="3">${count}条记录</font>
 		                 	<pg:index>
 		
-						      <pg:first><a href="<%=path%><%=pageUrl %>">��ҳ</a></pg:first>
-						      <pg:prev><a href="<%=path%><%=pageUrl %>">��һҳ</a></pg:prev>
+						      <pg:first><a href="<%=path%><%=pageUrl %>">首页</a></pg:first>
+						      <pg:prev><a href="<%=path%><%=pageUrl %>">上一页</a></pg:prev>
 						      <pg:pages>
 						      <% 
 						     if (pageNumber.intValue() < 10) { 
@@ -168,8 +168,8 @@
 						      }
 						      %>
 						      </pg:pages>
-						      <pg:next><a href="<%=path%><%=pageUrl %>">��һҳ</a></pg:next>
-						      <pg:last><a href="<%=path%><%=pageUrl %>">ĩҳ</a></pg:last>
+						      <pg:next><a href="<%=path%><%=pageUrl %>">下一页</a></pg:next>
+						      <pg:last><a href="<%=path%><%=pageUrl %>">末页</a></pg:last>
 					 	 </pg:index>
 						</div>
 					</pg:pager>
@@ -199,7 +199,7 @@
 			<br>
 			<br>
 			<h1>
-				����Ȩ���ʴ�ҳ�棡����
+				您无权访问此页面！！！
 			</h1>
 		</c:if>
 	</body>

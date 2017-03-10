@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
 	String path = request.getContextPath();
@@ -12,7 +12,7 @@
 	<head>
 		<base href="<%=basePath%>">
 
-		<title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---ÏÔÊ¾ÓÃ»§µÄÏêÏ¸ĞÅÏ¢¼°ËüµÄÔ±¹¤Éí·İµÄĞÅÏ¢</title>
+		<title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---æ˜¾ç¤ºç”¨æˆ·çš„è¯¦ç»†ä¿¡æ¯åŠå®ƒçš„å‘˜å·¥èº«ä»½çš„ä¿¡æ¯</title>
 
 		<meta http-equiv="pragma" content="no-cache">
 		<meta http-equiv="cache-control" content="no-cache">
@@ -31,13 +31,13 @@
 			<table border="0" class="t1" width="550">
 				<tr>
 					<td>
-						Ô±¹¤±àºÅ£º
+						å‘˜å·¥ç¼–å·ï¼š
 					</td>
 					<td>
 						${UserList.employee.empno}
 					</td>
 					<td>
-						ÅäËÍµã£º
+						é…é€ç‚¹ï¼š
 					</td>
 					<td>
 						${UserList.deliveryspot.name }
@@ -46,13 +46,13 @@
 				</tr>
 				<tr>
 					<td>
-						ÓÃ»§Ãû£º
+						ç”¨æˆ·åï¼š
 					</td>
 					<td>
 						${UserList.username }
 					</td>
 					<td>
-						È¨ÏŞ£º
+						æƒé™ï¼š
 					</td>
 					<td>
 						<font color="red">${UserList.power.name }</font>
@@ -65,32 +65,32 @@
 				</tr>
 				<tr>
 					<td>
-						ĞÕÃû£º
+						å§“åï¼š
 					</td>
 					<td>
 						${EmployeeList.name }
 					</td>
 					<td>
-						ĞÔ±ğ£º
+						æ€§åˆ«ï¼š
 					</td>
 					<td>
 						<c:if test="${EmployeeList.gender == '1'}">
-						  ÄĞ
+						  ç”·
 						</c:if>
 						<c:if test="${EmployeeList.gender == '0'}">
-						  Å®
+						  å¥³
 				</c:if>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						ËùÊôÅäËÍµã£º
+						æ‰€å±é…é€ç‚¹ï¼š
 					</td>
 					<td>
 						${EmployeeList.deliveryspot.name }
 					</td>
 					<td>
-						Ö°Î» £º
+						èŒä½ ï¼š
 					</td>
 					<td>
 						${EmployeeList.position.name }
@@ -98,13 +98,13 @@
 				</tr>
 				<tr>
 					<td>
-						ÈëÖ°ÈÕÆÚ£º
+						å…¥èŒæ—¥æœŸï¼š
 					</td>
 					<td>
 						${EmployeeList.startwordtime }
 					</td>
 					<td>
-						Ğ½Ë®£º
+						è–ªæ°´ï¼š
 					</td>
 					<td>
 						${EmployeeList.salary }
@@ -112,13 +112,13 @@
 				</tr>
 				<tr>
 					<td>
-						³öÉúÈÕÆÚ£º
+						å‡ºç”Ÿæ—¥æœŸï¼š
 					</td>
 					<td>
 						${EmployeeList.birthday }
 					</td>
 					<td>
-						Éí·İÖ¤ºÅ£º
+						èº«ä»½è¯å·ï¼š
 					</td>
 					<td>
 						${EmployeeList.cardid }
@@ -126,13 +126,13 @@
 				</tr>
 				<tr>
 					<td>
-						µØÖ·£º
+						åœ°å€ï¼š
 					</td>
 					<td>
 						${EmployeeList.address }
 					</td>
 					<td>
-						µç»°ºÅÂë£º
+						ç”µè¯å·ç ï¼š
 					</td>
 					<td>
 						${EmployeeList.tel }
@@ -140,7 +140,7 @@
 				</tr>
 				<tr>
 					<td>
-						µç×ÓÓÊÏä£º
+						ç”µå­é‚®ç®±ï¼š
 					</td>
 					<td>
 						${EmployeeList.email }

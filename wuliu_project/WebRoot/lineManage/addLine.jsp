@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="gbk"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-bean"
 	prefix="bean"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-html"
@@ -7,7 +7,7 @@
  <%String path = request.getContextPath(); %>
 <html>
 	<head>
-		<title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---Ìí¼ÓÏßÂ·</title>
+		<title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---æ·»åŠ çº¿è·¯</title>
 		<link rel="stylesheet" type="text/css" href="<%=path %>/style/wuliu_back.css" />
 		<SCRIPT language="javascript" src="../js/line.js"></SCRIPT>
 		<script type="text/javascript">
@@ -24,22 +24,22 @@
 		   function checkLength(){
 			var length = document.getElementById("length").value;
 			if(length == ""){
-				  var msglength ="<font color=red><b>¡Á</b></font>";
+				  var msglength ="<font color=red><b>Ã—</b></font>";
 				  document.getElementById("checklength").innerHTML=msglength;
 				  return false;
 		   }
 		   else if(!(/^\d+(\.\d+)?$/.test(length))){
-			     var msglength ="<font color=red><b>¡Á</b></font>";
+			     var msglength ="<font color=red><b>Ã—</b></font>";
 			     document.getElementById("checklength").innerHTML=msglength;
 			     return false;
 		   }
 		   else if(length<=0||length>9999999){
-		         var msglength ="<font color=red><b>¡Á</b></font>";
+		         var msglength ="<font color=red><b>Ã—</b></font>";
 			     document.getElementById("checklength").innerHTML=msglength;
 			     return false;
 		   }
 		   else{
-			     var msglength ="<font color=green><b>¡Ì</b></font>";
+			     var msglength ="<font color=green><b>âˆš</b></font>";
 			     document.getElementById("checklength").innerHTML=msglength;
 			     return true;
 		     }
@@ -48,12 +48,12 @@
 		    function checkSelect(){
 			var f = document.forms[0];
 			if(f.right_select.length <= 1){
-				  var msglength ="<font color=red><b>¡Á</b></font>";
+				  var msglength ="<font color=red><b>Ã—</b></font>";
 				  document.getElementById("r").innerHTML=msglength;
 				  return false;
 		   }
 		   else{
-			     var msglength ="<font color=green><b>¡Ì</b></font>";
+			     var msglength ="<font color=green><b>âˆš</b></font>";
 			     document.getElementById("r").innerHTML=msglength;
 			     return true;
 		     }
@@ -87,10 +87,10 @@
 	<c:if test="${UserSession.power.powerid==1}">
 		<center>
 			<h1>
-				Ìí¼ÓÏßÂ·
+				æ·»åŠ çº¿è·¯
 			</h1>
 			<hr>
-			×¢Òâ£ºÇë°´ÕÕÏßÂ·ÉÏÅäËÍµãµÄË³ĞòÀ´Ñ¡Ôñ
+			æ³¨æ„ï¼šè¯·æŒ‰ç…§çº¿è·¯ä¸Šé…é€ç‚¹çš„é¡ºåºæ¥é€‰æ‹©
 			<form action="<%=path %>/check/line.do?methodName=saveLine" method="post" name="form1">
 				<table class="t1">
 					<tr>
@@ -105,13 +105,13 @@
 								<tr>
 									<td>
 										<input name="btn_select_addany" type="button" title="Add any"
-											onclick="fun_select_addany(form1)" value="Ìí¼Ó"
+											onclick="fun_select_addany(form1)" value="æ·»åŠ "
 											language="javascript" />
 									</td>
 									<td>
 										<input name="btn_select_dltany" type="button"
 											title="delete any" onclick="fun_select_dltany(form1)"
-											value="É¾³ı" />
+											value="åˆ é™¤" />
 									</td>
 								</tr>
 								<tr>
@@ -157,12 +157,12 @@
 								<tr>
 									<td>
 										<input name="btn_select_addall" type="button" title="Add all"
-											onclick="fun_select_addall(form1)" value="È«Ñ¡">
+											onclick="fun_select_addall(form1)" value="å…¨é€‰">
 									</td>
 									<td>
 										<input name="btn_select_dltall" type="button"
 											title="delete all" onclick="fun_select_dltall(form1)"
-											value="È«É¾">
+											value="å…¨åˆ ">
 									</td>
 								</tr>
 							</table>
@@ -176,11 +176,11 @@
 					</tr>
 				</table>
 				<br />
-	            ÏßÂ·Àï³Ì£º<input type=text name="length" id="length" onblur="checkLength()"/>£¨¹«Àï£©<font>
+	            çº¿è·¯é‡Œç¨‹ï¼š<input type=text name="length" id="length" onblur="checkLength()"/>ï¼ˆå…¬é‡Œï¼‰<font>
 	            <span id="checklength"></span>
 				<br />
 				<input  type="button"  onclick="checkAll(form1)"
-											value="±£´æÏßÂ·">
+											value="ä¿å­˜çº¿è·¯">
 			</form>
 		</center>
 		
@@ -193,7 +193,7 @@
 			<br>
 			<br>
 			<h1>
-				ÄúÎŞÈ¨·ÃÎÊ´ËÒ³Ãæ£¡£¡£¡
+				æ‚¨æ— æƒè®¿é—®æ­¤é¡µé¢ï¼ï¼ï¼
 			</h1>
 		</c:if>
 	</body>

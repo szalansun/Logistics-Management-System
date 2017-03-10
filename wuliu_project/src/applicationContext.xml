@@ -6,9 +6,7 @@
     http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
     http://www.directwebremoting.org/schema/spring-dwr
     http://www.directwebremoting.org/schema/spring-dwr-2.0.xsd">
-
-	<!-- <bean/> definitions here -->
-	
+    
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
@@ -136,24 +134,24 @@
 	<bean id="dataSource"
 		class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName"
-			value="oracle.jdbc.driver.OracleDriver">
+			value="org.mariadb.jdbc.Driver">
 		</property>
-		<property name="url"
-			value="jdbc:oracle:thin:@10.0.3.11:1521:ora9i">
-		</property>
-		<property name="username" value="amaker"></property>
-		<property name="password" value="123"></property>
+		<property name="url" value="jdbc:mariadb://localhost:3306/LMS?useUnicode=true&amp;characterEncoding=UTF-8"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="admin"></property>
 	</bean>
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
 		<property name="dataSource">
 			<ref bean="dataSource"></ref>
-		</property>
+		</property>		
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect">
-					org.hibernate.dialect.Oracle9Dialect
+					org.hibernate.dialect.MySQL5Dialect
 				</prop>
+				<prop key="show_sql">true</prop>
+				<prop key="format_sql">true</prop>
 			</props>
 		</property>
 		<property name="mappingResources">

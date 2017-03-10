@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
 String path = request.getContextPath();
@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 <head>
 <base href="<%=basePath%>">
-<title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---ÏßÂ·ÏêÏ¸ĞÅÏ¢</title>
+<title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---çº¿è·¯è¯¦ç»†ä¿¡æ¯</title>
 <link rel="stylesheet" type="text/css" href="<%=path %>/style/wuliu_back.css" />
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
@@ -23,15 +23,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <center>
     <table width="622" border="0" class="t1">
       <tr>
-        <td>${line.lineno }-<font color="red">${line.linename }</font>Ïß</td>
-        <td align="right">${line.length }&nbsp;¹«Àï</td>
+        <td>${line.lineno }-<font color="red">${line.linename }</font>çº¿</td>
+        <td align="right">${line.length }&nbsp;å…¬é‡Œ</td>
       </tr>
       <tr>
         <td colspan="2"><hr></td>
       </tr>
       <tr>
-        <td colspan="2">Â·Ïß£º <c:forEach var="ldl" items="${lineDetaileList}" varStatus="status"> ${ldl.deliveryspot.name }
-            <c:if test="${!status.last}">¡ª</c:if>
+        <td colspan="2">è·¯çº¿ï¼š <c:forEach var="ldl" items="${lineDetaileList}" varStatus="status"> ${ldl.deliveryspot.name }
+            <c:if test="${!status.last}">â€”</c:if>
           </c:forEach>
         </td>
       </tr>
@@ -39,21 +39,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <td colspan="2"><hr></td>
       </tr>
       <tr>
-        <td  colspan="2">Åä±¸³µÁ¾£º</td>
+        <td  colspan="2">é…å¤‡è½¦è¾†ï¼š</td>
       </tr>
       <tr>
       <td valign="top"></td>
         <td align="center">
         <table class="t1">
         <tr>
-        <td colspan="2" align="left">(³µÅÆºÅ)</td>
+        <td colspan="2" align="left">(è½¦ç‰Œå·)</td>
         <td></td>
-        <td align="left">(·¢³µÊ±¼ä)</td>
+        <td align="left">(å‘è½¦æ—¶é—´)</td>
         </tr>
         <c:forEach var="cll" items="${carOfLineList}" varStatus="status">
          <tr>
            <td><a href="<%=path%>/check/car.do?methodName=carDetail&&carid=${cll.carid}">${cll.carno}</a><td>
-           <td>¡ª¡ª¡ª¡ª</td>
+           <td>â€”â€”â€”â€”</td>
            <td>${cll.leavetime}</td>
          </tr>
           </c:forEach>

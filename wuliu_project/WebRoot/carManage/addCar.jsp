@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="gbk"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-bean"
 	prefix="bean"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-html"
@@ -9,7 +9,7 @@ String path = request.getContextPath();
 %>
 <html>
 	<head>
-		<title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---ĞÂ¹º³µÁ¾µÇ¼Ç</title>
+		<title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---æ–°è´­è½¦è¾†ç™»è®°</title>
 		<link rel="stylesheet" type="text/css"
 			href="<%=path%>/style/wuliu_back.css" />
 		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
@@ -60,7 +60,7 @@ String path = request.getContextPath();
 			 	{
 			 		var msg = xmlhttp.responseText;
 			 		document.getElementById("checkCarNO").innerHTML=msg;
-			 		if(msg=="<font color=red>³µÅÆºÅÒÑÖØ¸´</font>"){
+			 		if(msg=="<font color=red>è½¦ç‰Œå·å·²é‡å¤</font>"){
 			 		     return false;
 			 		}else{
 			 		     return true;
@@ -79,7 +79,7 @@ String path = request.getContextPath();
 			
 			 		var msg = xmlhttp.responseText;
 			 		document.getElementById("checkWorkNO").innerHTML=msg;
-			 		if(msg=="<font color=red>ÔËÓªÖ¤ºÅÒÑÖØ¸´</font>"){
+			 		if(msg=="<font color=red>è¿è¥è¯å·å·²é‡å¤</font>"){
 			 		     return false;
 			 		}else{
 			 		     return true;
@@ -92,12 +92,12 @@ String path = request.getContextPath();
 		 function checkCarNO2(){
 		  var carNO = document.getElementById("carno").childNodes[0].value;
 		  if(carNO == ""){
-		    var msgn ="<font color=red><b>¡Á</b></font>";
+		    var msgn ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checkCarNO").innerHTML=msgn;
 		    return false;
 		 }
 		 else if(!(/^\S{1,19}$/.test(carNO))){
-		   var msgn ="<font color=red><b>¡Á</b></font>";
+		   var msgn ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("checkCarNO").innerHTML=msgn;
 		   return false;
 		   }
@@ -109,12 +109,12 @@ String path = request.getContextPath();
 		 function checkWorkNO2(){
 		 var workNO = document.getElementById("workno").childNodes[0].value;
 		  if(workNO == ""){
-		    var msgn ="<font color=red><b>¡Á</b></font>";
+		    var msgn ="<font color=red><b>Ã—</b></font>";
 		    document.getElementById("checkWorkNO").innerHTML=msgn;
 		    return false;
 		 }
 		 else if(!(/^\S{1,19}$/.test(workNO))){
-		   var msgn ="<font color=red><b>¡Á</b></font>";
+		   var msgn ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("checkWorkNO").innerHTML=msgn;
 		   return false;
 		   }
@@ -126,12 +126,12 @@ String path = request.getContextPath();
 	   function checkCarSize(){
 	      var carSize = document.getElementById("size").childNodes[0].value;
 	      if(carSize!=""&&(carSize>0&&carSize<=9999999)){
-	         var msgs = "<font color=green><b>¡Ì</b></font>";
+	         var msgs = "<font color=green><b>âˆš</b></font>";
 	         document.getElementById("s").innerHTML=msgs;
 	         return true;
 	      }
 	      else{
-	        var msgs= "<font color=red><b>¡Á</b></font>";
+	        var msgs= "<font color=red><b>Ã—</b></font>";
 	        document.getElementById("s").innerHTML=msgs;
 	        return false;
 	      }
@@ -139,11 +139,11 @@ String path = request.getContextPath();
 	   function checkTonnage(){
 	      var weight = document.getElementById("weight").childNodes[0].value;
 	      if(weight!=""&&(weight>0&&weight<=9999999)){
-	         var msgs = "<font color=green><b>¡Ì</b></font>";
+	         var msgs = "<font color=green><b>âˆš</b></font>";
 	        document.getElementById("t").innerHTML=msgs;
 	         return true;
 	      }else{
-	        var msgs= "<font color=red><b>¡Á</b></font>";
+	        var msgs= "<font color=red><b>Ã—</b></font>";
 	        document.getElementById("t").innerHTML=msgs;
 	        return false;
 	      }
@@ -153,7 +153,7 @@ String path = request.getContextPath();
 	   function checkDate(){
 	      var date = document.forms[0].txtDate.value;
 	      if(date==""){
-	          var msgs= "<font color=red><b>¡Á</b></font>";
+	          var msgs= "<font color=red><b>Ã—</b></font>";
 	         document.getElementById("d").innerHTML=msgs;
 	         return false;
 	      }
@@ -165,11 +165,11 @@ String path = request.getContextPath();
 	   function checkRemark(){
 	    var remark = document.forms[0].remark.value;
 	    if(remark != "" && remark.length >200){
-	         var msgs= "<font color=red><b>¡Á</b></font>";
+	         var msgs= "<font color=red><b>Ã—</b></font>";
 	         document.getElementById("r").innerHTML=msgs;
 	         return false;
 	      }else{
-	         var msgs= "<font color=green><b>¡Ì</b></font>";
+	         var msgs= "<font color=green><b>âˆš</b></font>";
 	         document.getElementById("r").innerHTML=msgs;
 	        return true;
 	      }
@@ -187,7 +187,7 @@ String path = request.getContextPath();
 	        f.action = "<%=path%>/check/car.do?methodName=saveCar";
 	        f.submit();
 	        }else{
-	         var msgs= "<font color=red><b>¡Á</b></font>";
+	         var msgs= "<font color=red><b>Ã—</b></font>";
 	         document.getElementById("d").innerHTML=msgs;
 	        }	        
 	   }else{
@@ -202,13 +202,13 @@ String path = request.getContextPath();
 	<c:if test="${UserSession.power.powerid==1}">
 		<center>
 			<h1>
-				ĞÂ¹º³µÁ¾µÇ¼Ç
+				æ–°è´­è½¦è¾†ç™»è®°
 			</h1>
 			<html:form action="/check/car?methodName=saveCar">
 				<table border="1" class="t1" width="450">
 					<tr>
 						<td>
-							³µÅÆºÅ£º
+							è½¦ç‰Œå·ï¼š
 						</td>
 						<td id="carno">
 							<html:text property="carNO" onblur="checkCarNO()" />
@@ -218,7 +218,7 @@ String path = request.getContextPath();
 					</tr>
 					<tr>
 						<td>
-							ÓªÔËÖ¤ºÅ£º
+							è¥è¿è¯å·ï¼š
 						</td>
 						<td id="workno">
 							<html:text property="workNO" onblur="checkWorkNO()"/>
@@ -228,25 +228,25 @@ String path = request.getContextPath();
 					</tr>
 					<tr>
 						<td>
-							³µĞÍ£º
+							è½¦å‹ï¼š
 						</td>
 						<td>
 							<select name="carTypeID">
 								<option value="1">
-									´óĞÍ
+									å¤§å‹
 								</option>
 								<option value="2">
-									ÖĞĞÍ
+									ä¸­å‹
 								</option>
 								<option value="3">
-									Ğ¡ĞÍ
+									å°å‹
 								</option>
 							</select>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							Èİ»ı(m3)£º
+							å®¹ç§¯(m3)ï¼š
 						</td>
 						<td id="size">
 							<html:text property="carSize" onblur="checkCarSize()" />
@@ -256,23 +256,23 @@ String path = request.getContextPath();
 					</tr>
 					<tr>
 						<td>
-							¶ÖÎ»£º
+							å¨ä½ï¼š
 						</td>
 						<td id="weight">
 							<html:text property="tonnage" onblur="checkTonnage()" />
 							<html:errors property="tonnage" />
-							(¶Ö)
+							(å¨)
 							<span id="t"></span>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							¹ºÂòÈÕÆÚ£º
+							è´­ä¹°æ—¥æœŸï¼š
 						</td>
 						<td>
   			       <input name="txtDate" class="textborder" type="text"
 								readonly="true" size="12" />
-							<a title=Ñ¡ÔñÈÕÆÚ
+							<a title=é€‰æ‹©æ—¥æœŸ
 								href="javascript:fPopCalendar(document.all.img1,document.forms[0].txtDate,330);"
 								style="text-decoration:none"> <img id=img1
 									src="<%=path%>/images/img_date.gif" width="22" align=absMiddle
@@ -281,7 +281,7 @@ String path = request.getContextPath();
 					</tr>
 					<tr>
 						<td>
-							Ë¾»ú£º
+							å¸æœºï¼š
 						</td>
 						<td>
 							<select name="empID">
@@ -296,11 +296,11 @@ String path = request.getContextPath();
 					</tr>
 					<tr>
 						<td>
-							±¸×¢£º
+							å¤‡æ³¨ï¼š
 						</td>
 						<td>
 							<html:textarea property="remark"  onblur="checkRemark()" cols="30" rows="4"/>
-							<html:errors property="remark" />(Ñ¡Ìî|200)<span id="r"></span>
+							<html:errors property="remark" />(é€‰å¡«|200)<span id="r"></span>
 						</td>
 					</tr>
 					<tr>
@@ -308,9 +308,9 @@ String path = request.getContextPath();
 					&nbsp;
 					</td>
 						<td>
-							<input type="button" value="±£´æ" onclick="check()" />
+							<input type="button" value="ä¿å­˜" onclick="check()" />
 							 &nbsp;&nbsp;&nbsp;&nbsp;
-							<html:reset>ÖØÖÃ</html:reset>
+							<html:reset>é‡ç½®</html:reset>
 						</td>
 					</tr>
 				</table>
@@ -325,7 +325,7 @@ String path = request.getContextPath();
 			<br>
 			<br>
 			<h1>
-				ÄúÎŞÈ¨·ÃÎÊ´ËÒ³Ãæ£¡£¡£¡
+				æ‚¨æ— æƒè®¿é—®æ­¤é¡µé¢ï¼ï¼ï¼
 			</h1>
 		</c:if>
 	

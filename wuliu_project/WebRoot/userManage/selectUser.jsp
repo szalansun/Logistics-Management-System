@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://jsptags.com/tags/navigation/pager" prefix="pg"%>
 <%
@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
  <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
-		<title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---²é¿´ÓÃ»§ĞÅÏ¢</title>
+		<title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---æŸ¥çœ‹ç”¨æˆ·ä¿¡æ¯</title>
 		<link rel="stylesheet" type="text/css" href="<%=path %>/style/wuliu_back.css" />
    
    <script type="text/javascript">
@@ -19,13 +19,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		}
 		function callback(list){
 		  dwr.util.removeAllOptions("dsid");
-		  dwr.util.addOptions("dsid",["---ÇëÑ¡Ôñ---"]);
+		  dwr.util.addOptions("dsid",["---è¯·é€‰æ‹©---"]);
 		  dwr.util.addOptions("dsid",list,"deliveryspotid","name");
 		}
  
 		function look(){
 		  var f = document.forms[0];
-		  if(f.dsid.value != "---ÇëÑ¡Ôñ---"){
+		  if(f.dsid.value != "---è¯·é€‰æ‹©---"){
             f.action="<%=path %>/check/user.do?methodName=list";
             f.submit();
             }
@@ -49,18 +49,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<c:if test="${UserSession.power.powerid==2}">
 					 ${UserSession.deliveryspot.name}
 					</c:if>
-				ÓÃ»§²éÑ¯
+				ç”¨æˆ·æŸ¥è¯¢
 			</h1>
 			<c:if test="${UserSession.power.powerid==1}">
 			<form name="f1" id="f1" action="<%=path%>/check/user.do?methodName=list" method="post">
 				<table border="0" class="t1">
 					<tr>
 						<td>
-							ÅäËÍµã£º
+							é…é€ç‚¹ï¼š
 						</td>
 						<td>
 							<select name="dsid" id="dsid">
-							</select> <input type="button" value="²éÑ¯" onclick="look()">
+							</select> <input type="button" value="æŸ¥è¯¢" onclick="look()">
 						</td>
 					</tr>
 				</table>
@@ -71,22 +71,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				 <table cellpadding="0" cellspacing="0" class="t2" align="center">
 					<tr>
 						<th>
-							Ô±¹¤±àºÅ
+							å‘˜å·¥ç¼–å·
 						</th>
 						<th>
-							ÓÃ»§Ãû
+							ç”¨æˆ·å
 						</th>
 						<th>
-							È¨ÏŞ
+							æƒé™
 						</th>
 						<th>
-							ÅäËÍµã
+							é…é€ç‚¹
 						</th>
 						<th>
-							ĞŞ¸Ä
+							ä¿®æ”¹
 						</th>
 						<th>
-							É¾³ı
+							åˆ é™¤
 						</th>
 			</tr>
 			<tbody>
@@ -104,9 +104,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     			<td>${user.power.name }</td>
     			<td>${user.deliveryspot.name }</td>
     			<c:if test="${user.power.powerid !=UserSession.power.powerid}">
-    			<td><a href="<%=path %>/check/user.do?methodName=modification&userid=${user.userid}">ĞŞ¸Ä</a></td>
+    			<td><a href="<%=path %>/check/user.do?methodName=modification&userid=${user.userid}">ä¿®æ”¹</a></td>
     			<td align="center">
-					<a href="<%=path %>/check/user.do?methodName=del&userid=${user.userid}&dsid=${user.deliveryspot.deliveryspotid }" onclick="return confirm('È·¶¨ÒªÉ¾³ı¸Ã¼ÇÂ¼Âğ?')">É¾³ı</a>
+					<a href="<%=path %>/check/user.do?methodName=del&userid=${user.userid}&dsid=${user.deliveryspot.deliveryspotid }" onclick="return confirm('ç¡®å®šè¦åˆ é™¤è¯¥è®°å½•å—?')">åˆ é™¤</a>
 				</td>
 			   </c:if>
 			   <c:if test="${user.power.powerid ==UserSession.power.powerid}">
@@ -116,14 +116,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		 </pg:item>
     		 </c:forEach>
     		<div id="p">
-								<font color="red" size="3">${count}Ìõ¼ÇÂ¼</font>
+								<font color="red" size="3">${count}æ¡è®°å½•</font>
 								<pg:index>
 
 									<pg:first>
-										<a href="<%=path%><%=pageUrl%>">Ê×Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">é¦–é¡µ</a>
 									</pg:first>
 									<pg:prev>
-										<a href="<%=path%><%=pageUrl%>">ÉÏÒ»Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">ä¸Šä¸€é¡µ</a>
 									</pg:prev>
 									<pg:pages>
 										<%
@@ -143,10 +143,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										%>
 									</pg:pages>
 									<pg:next>
-										<a href="<%=path%><%=pageUrl%>">ÏÂÒ»Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">ä¸‹ä¸€é¡µ</a>
 									</pg:next>
 									<pg:last>
-										<a href="<%=path%><%=pageUrl%>">Ä©Ò³</a>
+										<a href="<%=path%><%=pageUrl%>">æœ«é¡µ</a>
 									</pg:last>
 
 								</pg:index>
@@ -178,7 +178,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<br>
 			<br>
 			<h1>
-				ÄúÎŞÈ¨·ÃÎÊ´ËÒ³Ãæ£¡£¡£¡
+				æ‚¨æ— æƒè®¿é—®æ­¤é¡µé¢ï¼ï¼ï¼
 			</h1>
 		</c:if>
 	</body>

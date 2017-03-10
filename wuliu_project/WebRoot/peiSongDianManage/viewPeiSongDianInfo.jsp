@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -7,7 +7,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 <head>
 <base href="<%=basePath%>">
-<title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---²é¿´ÅäËÍµã¾ßÌåĞÅÏ¢</title>
+<title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---æŸ¥çœ‹é…é€ç‚¹å…·ä½“ä¿¡æ¯</title>
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
@@ -22,37 +22,37 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <center>
   <table width="632" border="0" class="t1">
     <tr>
-      <td>Õ¾µãÃû³Æ£º <font color="red">${Deliveryspot.name }</font> </td>
-      <td align="right">TEL£º ${Deliveryspot.tel } </td>
+      <td>ç«™ç‚¹åç§°ï¼š <font color="red">${Deliveryspot.name }</font> </td>
+      <td align="right">TELï¼š ${Deliveryspot.tel } </td>
     </tr>
     <tr>
       <td   colspan="2"><hr></td>
     </tr>
     <tr>
-      <td colspan="2">Õ¾µãµØÖ·£º ${Deliveryspot.province.name }--${Deliveryspot.city.name } </td>
+      <td colspan="2">ç«™ç‚¹åœ°å€ï¼š ${Deliveryspot.province.name }--${Deliveryspot.city.name } </td>
     </tr>
      <tr>
       <td colspan="2"><hr></td>
     </tr>
     <tr>
-      <td>Ê×¹«½ï·¶Î§£º${Deliveryspot.startscope }&nbsp;¹«½ï </td>
-      <td >Ê×¹«½ï¼Û¸ñ£º£¤${Deliveryspot.startprice }&nbsp;Ôª</td>
+      <td>é¦–å…¬æ–¤èŒƒå›´ï¼š${Deliveryspot.startscope }&nbsp;å…¬æ–¤ </td>
+      <td >é¦–å…¬æ–¤ä»·æ ¼ï¼šï¿¥${Deliveryspot.startprice }&nbsp;å…ƒ</td>
     </tr>
     <tr>
       <td></td>
-      <td>´Î¹«½ï¼Û¸ñ£º£¤${Deliveryspot.secondprice }&nbsp;Ôª/¹«½ï </td>
+      <td>æ¬¡å…¬æ–¤ä»·æ ¼ï¼šï¿¥${Deliveryspot.secondprice }&nbsp;å…ƒ/å…¬æ–¤ </td>
     </tr>
      <tr>
       <td colspan="2"><hr></td>
     </tr>
     
     <tr>
-      <td>Ê×Ìå»ı·¶Î§£º${Deliveryspot.startvolumescope }&nbsp;Á¢·½Ã× </td>
-      <td >Ê×Ìå»ı¼Û¸ñ£º£¤${Deliveryspot.startvolumeprice }&nbsp;Ôª</td>
+      <td>é¦–ä½“ç§¯èŒƒå›´ï¼š${Deliveryspot.startvolumescope }&nbsp;ç«‹æ–¹ç±³ </td>
+      <td >é¦–ä½“ç§¯ä»·æ ¼ï¼šï¿¥${Deliveryspot.startvolumeprice }&nbsp;å…ƒ</td>
     </tr>
     <tr>
       <td></td>
-      <td>´ÎÌå»ı¼Û¸ñ£º£¤${Deliveryspot.secondvolumeprice }&nbsp;Ôª/Á¢·½Ã× </td>
+      <td>æ¬¡ä½“ç§¯ä»·æ ¼ï¼šï¿¥${Deliveryspot.secondvolumeprice }&nbsp;å…ƒ/ç«‹æ–¹ç±³ </td>
     </tr>
   </table>
 </center>

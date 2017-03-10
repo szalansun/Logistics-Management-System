@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -19,7 +19,7 @@
 		<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-		<title>GLOBAL��������ϵͳ��̨����---�鿴������ϸ��Ϣ</title>
+		<title>GLOBAL物流管理系统后台管理---查看车辆详细信息</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
 		<link rel="stylesheet" type="text/css"
 			href="<%=path%>/style/wuliu_back.css" />
@@ -28,20 +28,20 @@
 
 	<body>
 		<h1> 
-			${car.carno }������Ϣ 
+			${car.carno }车辆信息 
 		</h1>
 		<center>
 			<table border="0" class="t1" width="550">
 				<tr>
 					<td>
-						���ƺţ�
+						车牌号：
 					</td>
 					<td>
 						${car.carno }
 						<br>
 					</td>
 					<td>
-						Ӫ��֤�ţ�
+						营运证号：
 					</td>
 					<td>
 						${car.workno }
@@ -54,13 +54,13 @@
 				</tr>
 				<tr>
 					<td>
-						�ݻ�
+						容积
 					</td>
 					<td>
-						${car.carsize }�������ף�
+						${car.carsize }（立方米）
 					</td>
 					<td>
-						���ͣ�
+						车型：
 					</td>
 					<td>
 						${car.cartype.name }
@@ -68,14 +68,14 @@
 				</tr>
 				<tr>
 					<td>
-						��λ��
+						吨位：
 					</td>
 					<td>
-						${car.tonnage }���֣�
+						${car.tonnage }（吨）
 					</td>
 
 					<td>
-						����״̬��
+						车辆状态：
 					</td>
 					<td>
 						<font color="red">${car.carstate.name}</font>
@@ -88,7 +88,7 @@
 				</tr>
 				<tr>
 					<td>
-						�������ڣ�
+						购买日期：
 					</td>
 					<td>
 						${car.buytime }
@@ -96,7 +96,7 @@
 				</tr>
 				<tr>
 					<td>
-						˾����
+						司机：
 					</td>
 					<td>
 						<a href="<%=path %>/check/selectEmployee.do?method=listEmp&empNO=${car.employee.empno }">${car.employee.empno }</a>
@@ -104,7 +104,7 @@
 				</tr>
 				<tr>
 					<td>
-						��ע��
+						备注：
 					</td>
 					<td>
 						${car.remark }

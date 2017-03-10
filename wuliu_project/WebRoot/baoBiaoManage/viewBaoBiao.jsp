@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-bean"
 	prefix="bean"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-html"
@@ -10,7 +10,7 @@ String path = request.getContextPath();
 %>
 <html>
 	<head>
-		<title>GLOBALÎïÁ÷¹ÜÀíÏµÍ³ºóÌ¨¹ÜÀí---Éú³É±¨±í</title>
+		<title>GLOBALç‰©æµç®¡ç†ç³»ç»Ÿåå°ç®¡ç†---ç”ŸæˆæŠ¥è¡¨</title>
 		<link rel="stylesheet" type="text/css"
 			href="<%=path%>/style/wuliu_back.css" />
 		<script language="javascript" src="<%=path%>/js/baobiao.js"></script>
@@ -40,12 +40,12 @@ String path = request.getContextPath();
 		var TwoDay = DateTwo.substring(DateTwo.length,DateTwo.lastIndexOf ("-")+1);
 		var TwoYear = DateTwo.substring(0,DateTwo.indexOf ("-"));
 		if (DateOne == ""){
-		   var msg ="<font color=red><b>¡Á</b></font>";
+		   var msg ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("time").innerHTML=msg;
 		   return false;
 		}
 		else if(DateTwo == ""){
-		   var msg ="<font color=red><b>¡Á</b></font>";
+		   var msg ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("time").innerHTML=msg;
 		   return false;
 		}
@@ -53,7 +53,7 @@ String path = request.getContextPath();
 		if (Date.parse(OneMonth+"/"+OneDay+"/"+OneYear) >
 		Date.parse(TwoMonth+"/"+TwoDay+"/"+TwoYear))
 		{
-		   var msg ="<font color=red><b>¡Á</b></font>";
+		   var msg ="<font color=red><b>Ã—</b></font>";
 		   document.getElementById("time").innerHTML=msg;
 		  return false;
 		}
@@ -109,14 +109,14 @@ String path = request.getContextPath();
 function putDataInExcel(sTitle, aDataList, iCount) 
 {
 //*******************************
-//²ÎÊıËµÃ÷£ºsTitle---------±¨±íÌâÄ¿
-//        aDataList-------Êı¾İ¶ÔÏó
+//å‚æ•°è¯´æ˜ï¼šsTitle---------æŠ¥è¡¨é¢˜ç›®
+//        aDataList-------æ•°æ®å¯¹è±¡
 //*******************************
 
 //NO.1 Step: get Excel Sheet.
 //***********************************************************************************************
     if (iCount == 0) {
-	    alert("ÎŞÊı¾İ£¬²»ÄÜ½øĞĞ¸Ã²Ù×÷£¡")
+	    alert("æ— æ•°æ®ï¼Œä¸èƒ½è¿›è¡Œè¯¥æ“ä½œï¼")
 		return false;
     }
 
@@ -125,7 +125,7 @@ function putDataInExcel(sTitle, aDataList, iCount)
 	{
 		theSheet = getExcelSheet();
 	} catch(exception) {
-        alert("Error!" + "\n" + "¿ÉÄÜÔ­ÒòÊÇÄãµÄä¯ÀÀÆ÷µÄ°²È«¼¶±ğÌ«¸ß£¡");
+        alert("Error!" + "\n" + "å¯èƒ½åŸå› æ˜¯ä½ çš„æµè§ˆå™¨çš„å®‰å…¨çº§åˆ«å¤ªé«˜ï¼");
 	    return false;
     }
 //***********************************************************************************************
@@ -133,8 +133,8 @@ function putDataInExcel(sTitle, aDataList, iCount)
 //***********************************************************************************************
     theSheet.Cells(1,1).Value = sTitle;
     with (theSheet.Range("A1:C2")) {
-        Font.Name = "¿¬Ìå_GB2312"
-	    Font.FontStyle = "¼Ó´Ö"
+        Font.Name = "æ¥·ä½“_GB2312"
+	    Font.FontStyle = "åŠ ç²—"
 	    Font.Size = 14
 	    RowHeight = 30
 	    HorizontalAlignment = -4108
@@ -146,33 +146,33 @@ function putDataInExcel(sTitle, aDataList, iCount)
 //NO.3 Step:draw theSheet
 //***********************************************************************************************
 
-    theSheet.Cells(3, 1).Value = "¶©µ¥ºÅ";
+    theSheet.Cells(3, 1).Value = "è®¢å•å·";
     with (theSheet.Range("A3")) 
     {
-        Font.Name = "¿¬Ìå_GB2312"
-	    Font.FontStyle = "¼Ó´Ö"
+        Font.Name = "æ¥·ä½“_GB2312"
+	    Font.FontStyle = "åŠ ç²—"
 	    Font.Size = 12
 	    RowHeight = 25
 	    HorizontalAlignment = -4131
 	    VerticalAlignment = -4108
 	    Mergecells = true
     }
-	theSheet.Cells(3, 2).Value = "¼Û¸ñ(Ôª)";
+	theSheet.Cells(3, 2).Value = "ä»·æ ¼(å…ƒ)";
 	with (theSheet.Range("B3")) 
     {
-        Font.Name = "¿¬Ìå_GB2312"
-	    Font.FontStyle = "¼Ó´Ö"
+        Font.Name = "æ¥·ä½“_GB2312"
+	    Font.FontStyle = "åŠ ç²—"
 	    Font.Size = 12
 	    RowHeight = 25
 	    HorizontalAlignment = -4131
 	    VerticalAlignment = -4108
 	    Mergecells = true
     }
-	theSheet.Cells(3, 3).Value = "´´½¨Ê±¼ä";
+	theSheet.Cells(3, 3).Value = "åˆ›å»ºæ—¶é—´";
 	with (theSheet.Range("C3")) 
     {
-        Font.Name = "¿¬Ìå_GB2312"
-	    Font.FontStyle = "¼Ó´Ö"
+        Font.Name = "æ¥·ä½“_GB2312"
+	    Font.FontStyle = "åŠ ç²—"
 	    Font.Size = 12
 	    RowHeight = 25
 	    HorizontalAlignment = -4131
@@ -189,8 +189,8 @@ function putDataInExcel(sTitle, aDataList, iCount)
     	theSheet.Cells((4 + i), 3).Value = aDataList[i].a3;
     }
 	with (theSheet.Range("A3:C3")) {
-        Font.Name = "ËÎÌå"
-	    Font.FontStyle = "¼Ó´Ö"
+        Font.Name = "å®‹ä½“"
+	    Font.FontStyle = "åŠ ç²—"
 	    Font.Size = 9
 	    RowHeight = 30
 	    HorizontalAlignment = -4108
@@ -204,8 +204,8 @@ function putDataInExcel(sTitle, aDataList, iCount)
     }
     cons = "A4:C" + (3 + parseInt(iCount));
     with (theSheet.Range(cons)) {
-	    Font.Name = "ËÎÌå"
-	    Font.FontStyle = "³£¹æ"
+	    Font.Name = "å®‹ä½“"
+	    Font.FontStyle = "å¸¸è§„"
 	    Font.Size = 9
 	    RowHeight = 20
 	    HorizontalAlignment = -4152
@@ -220,8 +220,8 @@ function putDataInExcel(sTitle, aDataList, iCount)
     
     cons = "A" + (4 +parseInt(iCount)) + ":C" + (4 +parseInt(iCount));
 	with (theSheet.Range(cons)) {
-	    Font.Name = "ËÎÌå"
-	    Font.FontStyle = "³£¹æ"
+	    Font.Name = "å®‹ä½“"
+	    Font.FontStyle = "å¸¸è§„"
 	    Font.Size = 9
 	    RowHeight = 20
 	    HorizontalAlignment = -4108
@@ -231,14 +231,14 @@ function putDataInExcel(sTitle, aDataList, iCount)
 	    Borders.ColorIndex = 1
 		MergeCells = true
     }
-    theSheet.Cells((4 + parseInt(iCount)), 1).Value = "×ÜÓªÒµ¶î£º£¤" + total + "        " + t;
+    theSheet.Cells((4 + parseInt(iCount)), 1).Value = "æ€»è¥ä¸šé¢ï¼šï¿¥" + total + "        " + t;
 	theSheet.Columns("A:A").ColumnWidth = 30;
 	theSheet.Columns("B:B").ColumnWidth = 20;
 	theSheet.Columns("C:C").ColumnWidth = 20;
 //***********************************************************************************************
 }
 
-function getExcelSheet() {//µÃµ½Excel¹¤×÷±í
+function getExcelSheet() {//å¾—åˆ°Excelå·¥ä½œè¡¨
     var theSheet;
     theApp = new ActiveXObject("Excel.Application");
 	theApp.Visible = true;
@@ -248,7 +248,7 @@ function getExcelSheet() {//µÃµ½Excel¹¤×÷±í
 	return theSheet
 }
 
-function GetAlphabet(number) {//ÊäÈëÊı×ÖµÃµ½×ÖÄ¸£¬Èç0----A, 1-----B
+function GetAlphabet(number) {//è¾“å…¥æ•°å­—å¾—åˆ°å­—æ¯ï¼Œå¦‚0----A, 1-----B
 	var iCount;
 	var iRemainder;
 	var tmpstr;
@@ -281,7 +281,7 @@ function getE(){
 	<body onload="test()">
 		<c:if test="${UserSession.power.powerid != 3}">
 		<h1>
-			Éú³É±¨±í
+			ç”ŸæˆæŠ¥è¡¨
 		</h1>
 		<center>
 			<form action="<%=path%>/check/report.do?methodName=queryHQ" name="f1"
@@ -294,10 +294,10 @@ function getE(){
 							<td>
 								<input type="radio" name="op" id="hq" value="1"
 									checked="checked" onClick="points1();">
-								×Ü²¿
+								æ€»éƒ¨
 								<br>
 								<input type="radio" name="op" value="2" onClick="points();">
-								ÅäËÍµã
+								é…é€ç‚¹
 								<div id="points" style="display:none; ">
 									<select name="dsid" id="dsid">
 									</select>
@@ -308,17 +308,17 @@ function getE(){
 							<c:if test="${UserSession.power.powerid == 2}">
 								<b>${UserSession.deliveryspot.name}</b>
 							</c:if>
-							&nbsp;´Ó
+							&nbsp;ä»
 							<input name="txtDate1" id="t1" class="textborder" type="text"
 								readonly="true" size="12" />
-							<a title=Ñ¡ÔñÈÕÆÚ
+							<a title=é€‰æ‹©æ—¥æœŸ
 								href="javascript:fPopCalendar(document.all.img1,document.f1.txtDate1,250);"
 								style="text-decoration:none"> <img id=img1
 									src="<%=path%>/images/img_date.gif" width="22" align=absMiddle
-									border=0></img> </a> ÖÁ
+									border=0></img> </a> è‡³
 							<input name="txtDate2" id="t2" class="textborder" type="text"
 								readonly="true" size="12" />
-							<a title=Ñ¡ÔñÈÕÆÚ
+							<a title=é€‰æ‹©æ—¥æœŸ
 								href="javascript:fPopCalendar(document.all.img2,document.f1.txtDate2,400);"
 								style="text-decoration:none"> <img id=img2
 									src="<%=path%>/images/img_date.gif" width="22" align=absMiddle
@@ -327,11 +327,11 @@ function getE(){
 						<td align="center">
 							<font><span id="time"></span> <c:if
 									test="${UserSession.power.powerid == 1}">
-									<input type="button" value="Éú³É" onclick="submitFrom();" />
+									<input type="button" value="ç”Ÿæˆ" onclick="submitFrom();" />
 								</c:if> <c:if test="${UserSession.power.powerid == 2}">
 									<input type="hidden" name="dsid"
 										value="${UserSession.deliveryspot.deliveryspotid }" />
-									<input type="button" value="Éú³É" onclick="submitFrom2();" />
+									<input type="button" value="ç”Ÿæˆ" onclick="submitFrom2();" />
 								</c:if>
 						</td>
 					</tr>
@@ -343,20 +343,20 @@ function getE(){
 					<tr>
 						<th colspan="3" align="center">
 							<h2>
-								${msg }<font color="red">¹²${size }Ìõ¼ÇÂ¼</font>
+								${msg }<font color="red">å…±${size }æ¡è®°å½•</font>
 								<input type="hidden" id="msg" value="${msg }"/>
 							</h2>
 						</th>
 					</tr>
 					<tr>
 						<th>
-							¶©µ¥ºÅ
+							è®¢å•å·
 						</th>
 						<th>
-							¼Û¸ñ
+							ä»·æ ¼
 						</th>
 						<th>
-							Ê±¼ä
+							æ—¶é—´
 						</th>
 					</tr>
 					<tbody>
@@ -380,7 +380,7 @@ function getE(){
 						</c:forEach>
 						<tr>
 							<td colspan="2" align="right">
-								×ÜÓªÒµ¶î£º£¤${total }&nbsp;
+								æ€»è¥ä¸šé¢ï¼šï¿¥${total }&nbsp;
 								<input type="hidden" id="total" value="${total }">
 							</td>
 							<td>
@@ -392,7 +392,7 @@ function getE(){
 					<tfoot>
 						<tr>
 							<td colspan="3">
-								<input type="button" name="outToExcel" class="bt1" value="µ¼³öµ½Excel" onClick="getE()">
+								<input type="button" name="outToExcel" class="bt1" value="å¯¼å‡ºåˆ°Excel" onClick="getE()">
 							</td>
 						</tr>
 					</tfoot>
@@ -419,7 +419,7 @@ function getE(){
 			<br>
 			<br>
 			<h1>
-				ÄúÎŞÈ¨·ÃÎÊ´ËÒ³Ãæ£¡£¡£¡
+				æ‚¨æ— æƒè®¿é—®æ­¤é¡µé¢ï¼ï¼ï¼
 			</h1>
 		</c:if>
 	 

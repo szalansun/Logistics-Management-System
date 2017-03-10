@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://jakarta.apache.org/struts/tags-bean"
 	prefix="bean"%>
@@ -17,7 +17,7 @@
 	<head>
 		<base href="<%=basePath%>">
 
-		<title>GLOBAL��������ϵͳ��̨����---������Ϣ</title>
+		<title>GLOBAL物流管理系统后台管理---订单信息</title>
 
 		<meta http-equiv="pragma" content="no-cache">
 		<meta http-equiv="cache-control" content="no-cache">
@@ -33,28 +33,28 @@
 		<form name="f1" id="f1" action="" method="post">
 			<center>
 				<h1>
-					������Ϣ
+					订单信息
 				</h1>
-				�����ţ�${orderno }
+				订单号：${orderno }
 				<table border="1" class="t1">
 
 					<tr>
 						<td colspan="2" align="center">
-							�ռ�����ϸ��Ϣ
+							收件人详细信息
 						</td>
 						<td colspan="2" align="center">
-							�ļ�����ϸ��Ϣ
+							寄件人详细信息
 						</td>
 					</tr>
 					<tr>
 						<td>
-							����
+							姓名
 						</td>
 						<td>
 							<bean:write name="order" property="receivename" />
 						</td>
 						<td>
-							����
+							姓名
 						</td>
 						<td>
 							<bean:write name="order" property="sendname" />
@@ -62,13 +62,13 @@
 					</tr>
 					<tr>
 						<td>
-							��ַ
+							地址
 						</td>
 						<td>
 							<bean:write name="order" property="receiveaddress" />
 						</td>
 						<td>
-							��ַ
+							地址
 						</td>
 						<td>
 							<bean:write name="order" property="sendaddress" />
@@ -76,13 +76,13 @@
 					</tr>
 					<tr>
 						<td>
-							�̶��绰
+							固定电话
 						</td>
 						<td>
 							<bean:write name="order" property="receivetel" />
 						</td>
 						<td>
-							�̶��绰
+							固定电话
 						</td>
 						<td>
 							<bean:write name="order" property="sendtel" />
@@ -90,13 +90,13 @@
 					</tr>
 					<tr>
 						<td>
-							�绰
+							电话
 						</td>
 						<td>
 							<bean:write name="order" property="receivemobile" />
 						</td>
 						<td>
-							�绰
+							电话
 						</td>
 						<td>
 							<bean:write name="order" property="sendmobile" />
@@ -104,13 +104,13 @@
 					</tr>
 					<tr>
 						<td>
-							�ʱ�
+							邮编
 						</td>
 						<td>
 							<bean:write name="order" property="receivepostcode" />
 						</td>
 						<td>
-							�ʱ�
+							邮编
 						</td>
 						<td>
 							<bean:write name="order" property="sendpostcode" />
@@ -118,21 +118,21 @@
 					</tr>
 					<tr>
 						<td colspan="2" align="center">
-							������Ϣ
+							货物信息
 						</td>
 						<td colspan="2" align="center">
-							֧����Ϣ
+							支付信息
 						</td>
 					</tr>
 					<tr>
 						<td>
-							������kg��
+							重量（kg）
 						</td>
 						<td>
 							<bean:write name="order" property="weight" />
 						</td>
 						<td>
-							��Ʒ���ۣ���Ԫ��
+							物品估价（￥元）
 						</td>
 						<td>
 							<bean:write name="order" property="goodsprice" />
@@ -140,13 +140,13 @@
 					</tr>
 					<tr>
 						<td>
-							�����m3��
+							体积（m3）
 						</td>
 						<td>
 							<bean:write name="order" property="volume" />
 						</td>
 						<td>
-							���۷��ã���Ԫ��
+							保价费用（￥元）
 						</td>
 						<td>
 							<bean:write name="order" property="insureprice" />
@@ -154,13 +154,13 @@
 					</tr>
 					<tr>
 						<td>
-							��������ʱ��
+							订单创建时间
 						</td>
 						<td>
 							<bean:write name="order" property="createtime" />
 						</td>
 						<td>
-							�ܷ��ã���Ԫ��
+							总费用（￥元）
 						</td>
 						<td>
 							<bean:write name="order" property="totalprice" />
@@ -168,7 +168,7 @@
 					</tr>
 					<tr>
 						<td>
-							��ע��ע��������ϸ��
+							备注（注明货物明细）
 
 						</td>
 						<td colspan="3">
@@ -176,7 +176,7 @@
 						</td>
 					</tr>
 					<tfoot>
-						<font color="red">����״̬��${order.orderstate.name }</font>
+						<font color="red">订单状态：${order.orderstate.name }</font>
 					</tfoot>
 				</table>
 			</center>
@@ -190,7 +190,7 @@
 			<br>
 			<br>
 			<h1>
-				����Ȩ���ʴ�ҳ�棡����
+				您无权访问此页面！！！
 			</h1>
 		</c:if>
 	</body>

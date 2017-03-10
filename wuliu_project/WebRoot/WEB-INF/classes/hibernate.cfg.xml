@@ -7,20 +7,13 @@
 <hibernate-configuration>
 
 	<session-factory>
-		<property name="connection.username">amaker</property>
-		<property name="connection.url">
-			jdbc:oracle:thin:@10.0.3.11:1521:ora9i
-		</property>
-		<property name="dialect">
-			org.hibernate.dialect.Oracle9Dialect
-		</property>
-		<property name="myeclipse.connection.profile">
-			Oracle_Project
-		</property>
-		<property name="connection.password">123</property>
-		<property name="connection.driver_class">
-			oracle.jdbc.driver.OracleDriver
-		</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<property name="connection.url">jdbc:mariadb://localhost:3306/LMS?useUnicode=true&amp;characterEncoding=UTF-8</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>		
+		<property name="connection.username">root</property>
+		<property name="connection.password">admin</property>
+		<property name="connection.driver_class">org.mariadb.jdbc.Driver</property>
 		<!--<property name="show_sql">true</property>
 		--><mapping resource="com/global/vo/Receipt.hbm.xml" />
 		<mapping resource="com/global/vo/Employee.hbm.xml" />
