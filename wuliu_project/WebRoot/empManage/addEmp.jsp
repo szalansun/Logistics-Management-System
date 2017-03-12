@@ -199,9 +199,7 @@
                             </c:if>
                            </c:if>
                             <c:if test="${UserSession.power.powerid ==1}">
-                            <c:if test="${pl.positionid == 1 }">
-                            <html:option value="${pl.positionid}">${pl.name}</html:option> 
-                            </c:if>
+                            <html:option value="${pl.positionid}">${pl.name}</html:option>                            
                            </c:if>
                            </c:forEach>
                          

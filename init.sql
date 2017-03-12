@@ -1055,3 +1055,61 @@ VALUES ('台湾省', '000000', 34);
 INSERT INTO CITY( NAME, ZIPCODE,PROVINCEID)
 VALUES ('三亚市', NULL, 21);
 
+
+
+
+
+INSERT INTO `position`
+(NAME)
+VALUES('总裁');
+
+INSERT INTO `position`
+(NAME)
+VALUES('副总裁');
+
+INSERT INTO `position`
+(NAME)
+VALUES('部门总监');
+
+
+INSERT INTO `position`
+(NAME)
+VALUES('部门经理');
+
+INSERT INTO `position`
+(NAME)
+VALUES('组长');
+
+INSERT INTO `position`
+(NAME)
+VALUES('普通员工');
+
+INSERT INTO `position`
+(NAME)
+VALUES('试用员工');
+
+INSERT INTO `position`
+(NAME)
+VALUES('实习员工');
+
+INSERT INTO `position`
+(NAME)
+VALUES('外包合同工');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
