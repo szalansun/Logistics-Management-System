@@ -8,7 +8,7 @@
     <class name="com.global.vo.Line" table="LINE" schema="LMS" lazy="false">
         <id name="lineid" type="java.lang.Integer">
             <column name="LINEID"/>
-            <generator class="increment"/>
+            <generator class="identity"/>
         </id>
         <property name="lineno" type="java.lang.String">
             <column name="LINENO" length="20" />

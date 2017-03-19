@@ -8,7 +8,7 @@
     <class name="com.global.vo.Deliveryspot" table="DELIVERYSPOT" schema="LMS" lazy="false">
         <id name="deliveryspotid" type="java.lang.Integer">
             <column name="DELIVERYSPOTID"/>
-            <generator class="increment"/>
+            <generator class="identity"/>
         </id>
         <many-to-one name="province" class="com.global.vo.Province" fetch="select"  lazy="false">
             <column name="PROVINCEID"/>

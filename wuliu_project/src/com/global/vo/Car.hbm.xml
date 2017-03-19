@@ -8,7 +8,7 @@
     <class name="com.global.vo.Car" table="CAR" schema="LMS">
         <id name="carid" type="java.lang.Integer">
             <column name="CARID"/>
-            <generator class="increment"/>
+            <generator class="identity"/>
         </id>
         <many-to-one name="line" class="com.global.vo.Line" fetch="select">
             <column name="LINEID"/>

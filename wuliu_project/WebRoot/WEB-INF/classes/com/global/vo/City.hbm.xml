@@ -8,7 +8,7 @@
     <class name="com.global.vo.City" table="CITY" schema="LMS">
         <id name="cityid" type="java.lang.Integer">
             <column name="CITYID"/>
-            <generator class="increment"/>
+            <generator class="identity"/>
         </id>
         <property name="name" type="java.lang.String">
             <column name="NAME" length="20" />

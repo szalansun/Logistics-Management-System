@@ -8,7 +8,7 @@
     <class name="com.global.vo.Orderstate" table="ORDERSTATE" schema="LMS">
         <id name="orderstateid" type="java.lang.Integer">
             <column name="ORDERSTATEID"/>
-            <generator class="increment"/>
+            <generator class="identity"/>
         </id>
         <property name="name" type="java.lang.String">
             <column name="NAME" length="20" />

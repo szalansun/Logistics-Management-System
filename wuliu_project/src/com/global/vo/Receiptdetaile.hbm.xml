@@ -8,7 +8,7 @@
     <class name="com.global.vo.Receiptdetaile" table="RECEIPTDETAILE" schema="LMS" lazy="false">
         <id name="rdid" type="java.lang.Integer">
             <column name="RDID"/>
-            <generator class="increment"/>
+            <generator class="identity"/>
         </id>
         <many-to-one name="receipt" class="com.global.vo.Receipt" fetch="select" lazy="false">
             <column name="RECEIPTID"/>
